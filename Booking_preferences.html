@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookings | Look My Cook</title>
+    <link rel="stylesheet" href="components/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+   
+</head>
+<body>
+    <div class="pre_bk_kart_mainpage">
+        <div class="pre_bk_kart_page">
+
+            <!-- selection box -->
+            <a class="pre_bk_slect_sec">
+               <p class="para_p">Date</p>
+               <div class="pre_bk_box">
+                 <p class="para_h">Select date</p>
+                 <i class="fa-solid fa-chevron-down"></i>
+               </div>
+            </a>
+            <!-- selection box -->
+            <!-- selection box -->
+            <a onclick="openModal('modal3')"class="pre_bk_slect_sec">
+               <p class="para_p">Serving time</p>
+               <div class="pre_bk_box">
+                 <p class="para_h"  id="time_select">Select serving time</p>
+                 <i class="fa-solid fa-chevron-down"></i>
+               </div>
+            </a>
+            <!-- selection box -->
+            <!-- selection box -->
+            <a onclick="openModal('modal2')" class="pre_bk_slect_sec">
+               <p class="para_p">Number of people</p>
+               <div class="pre_bk_box">
+                 <p class="para_h">Select number of people</p>
+                 <i class="fa-solid fa-chevron-down"></i>
+               </div>
+            </a>
+            <!-- selection box -->
+            <!-- selection box -->
+            <a onclick="openModal('modal1')" class="pre_bk_slect_sec">
+               <p class="para_p">Number of dishes</p>
+               <div class="pre_bk_box">
+                 <p class="para_h">Select number of dishes</p>
+                 <i class="fa-solid fa-chevron-down"></i>
+               </div>
+            </a>
+            <!-- selection box -->
+
+        </div>
+
+     <!-- pop up of filter -->
+      <div id="modal1" class="modal">
+        <div class="popup1">
+          <p class="heading_p">Number of dishes</p>
+          <a class="close" href="#"><svg width="20" height="20" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+            <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
+          </svg></a>
+          <div class="content1">
+           <p class="para_p">What would you love to serve your guests?</p>
+            <div class="increase_decrease_container">
+
+                <!-- dishes box -->
+                <div class="increase_decrease_box">
+                    <div class="incre_decre_contnt">
+                        <p class="para_h">Main course</p>
+                        <p class="para_p space_top">Dive into the grand feast</p>
+                    </div>
+                    <div class="incre_dcre_daba">
+                        <div class="decree_w decree minus_plus" id="minusButton1">
+                          <i class="fa-solid fa-minus"></i>
+                        </div>
+                        <div class="decree_w incre_no_dcree number">
+                          <p class="number" id="displayedNumber1">0</p>
+                        </div>
+                        <div class="decree_w decree plus_minus incree" id="plusButton1">
+                          <i class="fa-solid fa-plus"></i>
+                        </div>
+                      </div>
+                    
+                </div>
+                <!-- dishes box -->
+                <!-- dishes box -->
+                <div class="increase_decrease_box">
+                    <div class="incre_decre_contnt">
+                        <p class="para_h">Main course</p>
+                        <p class="para_p space_top">Dive into the grand feast</p>
+                    </div>
+                    <div class="incre_dcre_daba">
+                        <div class="decree_w decree minus_plus" id="minusButton2">
+                          <i class="fa-solid fa-minus"></i>
+                        </div>
+                        <div class="decree_w incre_no_dcree number">
+                          <p class="number" id="displayedNumber2">0</p>
+                        </div>
+                        <div class="decree_w decree plus_minus incree" id="plusButton2">
+                          <i class="fa-solid fa-plus"></i>
+                        </div>
+                      </div>
+                </div>
+                <!-- dishes box -->
+                <!-- dishes box -->
+                <div class="increase_decrease_box">
+                    <div class="incre_decre_contnt">
+                        <p class="para_h">Main course</p>
+                        <p class="para_p space_top">Dive into the grand feast</p>
+                    </div>
+                    <div class="incre_dcre_daba">
+                        <div class="decree_w decree minus_plus" id="minusButton3">
+                          <i class="fa-solid fa-minus"></i>
+                        </div>
+                        <div class="decree_w incre_no_dcree number">
+                          <p class="number" id="displayedNumber3">0</p>
+                        </div>
+                        <div class="decree_w decree plus_minus incree" id="plusButton3">
+                          <i class="fa-solid fa-plus"></i>
+                        </div>
+                      </div>
+                    
+                </div>
+                <!-- dishes box -->
+                <!-- dishes box -->
+                <div class="increase_decrease_box">
+                    <div class="incre_decre_contnt">
+                        <p class="para_h">Main course</p>
+                        <p class="para_p space_top">Dive into the grand feast</p>
+                    </div>
+                    <div class="incre_dcre_daba">
+                        <div class="decree_w decree minus_plus" id="minusButton4">
+                          <i class="fa-solid fa-minus"></i>
+                        </div>
+                        <div class="decree_w incre_no_dcree number">
+                          <p class="number" id="displayedNumber4">0</p>
+                        </div>
+                        <div class="decree_w decree plus_minus incree" id="plusButton4">
+                          <i class="fa-solid fa-plus"></i>
+                        </div>
+                      </div>
+                </div>
+                <!-- dishes box -->
+                <button class="batun">Confirm</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- pop up of filter -->
+     <!-- pop up of filter -->
+      <div id="modal2" class="modal">
+        <div class="popup1">
+          <p class="heading_p">Number of dishes</p>
+          <a class="close" href="#"><svg width="20" height="20" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+            <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
+          </svg></a>
+          <div class="content1">
+           <p class="para_p">What would you love to serve your guests?</p>
+            <div class="increase_decrease_container">
+
+                <!-- dishes box -->
+                <div class="increase_decrease_box">
+                    <div class="incre_decre_contnt">
+                        <p class="para_h">Adult</p>
+                        <p class="para_p space_top">12 years and above</p>
+                    </div>
+                    <div class="incre_dcre_daba">
+                        <div class="decree_w decree minus_plus" id="minusButton5">
+                          <i class="fa-solid fa-minus"></i>
+                        </div>
+                        <div class="decree_w incre_no_dcree number">
+                          <p class="number" id="displayedNumber5">0</p>
+                        </div>
+                        <div class="decree_w decree plus_minus incree" id="plusButton5">
+                          <i class="fa-solid fa-plus"></i>
+                        </div>
+                      </div>
+                    
+                </div>
+                <!-- dishes box -->
+                <!-- dishes box -->
+                <div class="increase_decrease_box">
+                    <div class="incre_decre_contnt">
+                        <p class="para_h">Children</p>
+                        <p class="para_p space_top">2 - 12years</p>
+                    </div>
+                    <div class="incre_dcre_daba">
+                        <div class="decree_w decree minus_plus" id="minusButton6">
+                          <i class="fa-solid fa-minus"></i>
+                        </div>
+                        <div class="decree_w incre_no_dcree number">
+                          <p class="number" id="displayedNumber6">0</p>
+                        </div>
+                        <div class="decree_w decree plus_minus incree" id="plusButton6">
+                          <i class="fa-solid fa-plus"></i>
+                        </div>
+                      </div>
+                </div>
+                <!-- dishes box -->
+                <button class="batun">Confirm</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- pop up popup of dishes -->
+      <div id="modal3" class="modal">
+        <div class="popup1">
+          <p class="heading_p">Number of dishes</p>
+          <a class="close" href="#">
+            <svg width="20" height="20" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+              <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+            </svg>
+          </a>
+          <div class="content1">
+            <p class="para_p">What would you love to serve your guests?</p>
+            <div class="time_bx_section" id="timeContainer">
+              <a href="#" class="time-option">09:00 AM</a>
+              <a href="#" class="time-option">09:30 AM</a>
+              <a href="#" class="time-option">10:00 AM</a>
+              <a href="#" class="time-option">10:30 AM</a>
+              <a href="#" class="time-option">11:00 AM</a>
+              <a href="#" class="time-option">09:00 AM</a>
+              <a href="#" class="time-option">09:30 AM</a>
+              <a href="#" class="time-option">10:00 AM</a>
+              <a href="#" class="time-option">10:30 AM</a>
+              <a href="#" class="time-option">11:00 AM</a>
+              <a href="#" class="time-option">09:00 AM</a>
+              <a href="#" class="time-option">09:30 AM</a>
+              <a href="#" class="time-option">10:00 AM</a>
+              <a href="#" class="time-option">10:30 AM</a>
+              <a href="#" class="time-option">11:00 AM</a>
+              <a href="#" class="time-option">09:00 AM</a>
+              <a href="#" class="time-option">09:30 AM</a>
+              <a href="#" class="time-option">10:00 AM</a>
+              <a href="#" class="time-option">10:30 AM</a>
+              <a href="#" class="time-option">11:00 AM</a>
+              <a href="#" class="time-option">09:00 AM</a>
+              <a href="#" class="time-option">09:30 AM</a>
+              <a href="#" class="time-option">10:00 AM</a>
+              <a href="#" class="time-option">10:30 AM</a>
+              <a href="#" class="time-option">11:00 AM</a>
+            </div>
+          </div>
+        </div>
+      </div>
+       <!-- pop up popup of dishes -->
+
+    </div>
+    <script src="components/js/js.js"></script>
+
+    <script>
+        function setupCounter(minusId, plusId, numberId) {
+          const plus = document.getElementById(plusId);
+          const minus = document.getElementById(minusId);
+          let number_el = document.getElementById(numberId);
+      
+          plus.addEventListener('click', () => {
+            let val = parseInt(number_el.innerText);
+            number_el.innerText = ++val;
+            updateOpacity();
+          });
+      
+          minus.addEventListener('click', () => {
+            let val = parseInt(number_el.innerText);
+            // Ensure the value doesn't go below 0
+            if (val > 0) {
+              number_el.innerText = --val;
+              updateOpacity();
+            }
+          });
+      
+          function updateOpacity() {
+            let val = parseInt(number_el.innerText);
+            // Set opacity to 0.5 if the value is 0, otherwise set it to 1
+            minus.style.opacity = val === 0 ? 0.5 : 1;
+          }
+      
+          // Initial update of opacity
+          updateOpacity();
+        }
+      
+        // Example usage for the first set of elements
+        setupCounter('minusButton1', 'plusButton1', 'displayedNumber1');
+      
+        // Example usage for the second set of elements
+        setupCounter('minusButton2', 'plusButton2', 'displayedNumber2');
+        // Example usage for the first set of elements
+        setupCounter('minusButton1', 'plusButton3', 'displayedNumber3');
+      
+        // Example usage for the second set of elements
+        setupCounter('minusButton2', 'plusButton4', 'displayedNumber4');
+        // Example usage for the first set of elements
+        setupCounter('minusButton1', 'plusButton5', 'displayedNumber5');
+      
+        // Example usage for the second set of elements
+        setupCounter('minusButton2', 'plusButton6', 'displayedNumber6');
+      
+        // Repeat as needed for additional sets of elements
+      </script>
+      
+
+      <!-- number for dishes popup dishes -->
+      <script>
+        // Get the time container and add click event listeners to each time option
+        const timeContainer = document.getElementById('timeContainer');
+        const timeOptions = document.querySelectorAll('.time-option');
+      
+        timeOptions.forEach(option => {
+          option.addEventListener('click', function () {
+            // Update the content based on the selected time
+            document.getElementById('time_select').innerText = "" + this.innerText;
+            // Close the modal or perform any other actions as needed
+          });
+        });
+      </script>
+         <!-- number for dishes popup dishes -->
+</body>
+</html>
