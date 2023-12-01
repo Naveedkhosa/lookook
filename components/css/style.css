@@ -34,17 +34,24 @@ a:hover{
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   margin: 15px 0px;
   max-height: 440px;
   overflow-y: auto;
   
 }
+.time_bx_section::-webkit-scrollbar {
+  display: none;
+}
 .time_bx_section a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-decoration: none;
   padding: 12px;
+  width: 105px;
   border: 1px solid #1c1c1c4b;
-  margin: 10px 15px 10px 0px;
+  margin: 10px 10px 10px 0px;
   border-radius: 8px;
   font-size: 13px;
   font-weight: 300;
