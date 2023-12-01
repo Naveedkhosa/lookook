@@ -285,8 +285,8 @@ a:hover{
   justify-content: center;
   flex-direction: column;
   padding: 20px;
-  width: 25%;
-  margin: 1px 0px;
+  width: 24%;
+  margin: 1px 10px 0px 0px;
   border-radius: 5px;
   background-color: #2195f315;
   border: 1px solid #ccc;
@@ -330,15 +330,19 @@ a:hover{
   --t: 10px; /* the top offset */
   position: absolute;
   inset: var(--t) calc(-1*var(--f)) auto auto;
-  padding: 5px 10px var(--f) calc(10px + var(--r));
+  padding: 1px 10px var(--f) calc(10px + var(--r));
   clip-path: 
     polygon(0 0,100% 0,100% calc(100% - var(--f)),calc(100% - var(--f)) 100%,
       calc(100% - var(--f)) calc(100% - var(--f)),0 calc(100% - var(--f)),
       var(--r) calc(50% - var(--f)/2));
-  background: #BD1550;
+  background: #ff003c;
   box-shadow: 0 calc(-1*var(--f)) 0 inset #0005;
   color: #fff;
   font-weight: bold;
+}
+.ribbon-2 span{
+  font-size: 10px !important;
+  font-weight: 300 !important;
 }
 
 .kart_card_block img{
@@ -561,7 +565,7 @@ a:hover{
     margin-top: 50px;
   }
   .service_kart_card{
-    width: 48%;
+    width: 45%;
   }
   .container_kart {
     border: none;
