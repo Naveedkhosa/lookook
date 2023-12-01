@@ -13,16 +13,16 @@
         <div class="pre_bk_kart_page">
 
             <!-- selection box -->
-            <a class="pre_bk_slect_sec">
+            <a onclick="openModall('modal4')" class="pre_bk_slect_sec">
                <p class="para_p">Date</p>
                <div class="pre_bk_box">
-                 <p class="para_h">Select date</p>
+                 <p class="para_h" id="date_select">Select date</p>
                  <i class="fa-solid fa-chevron-down"></i>
                </div>
             </a>
             <!-- selection box -->
             <!-- selection box -->
-            <a onclick="openModal('modal3')"class="pre_bk_slect_sec">
+            <a onclick="openModall('modal3')"class="pre_bk_slect_sec">
                <p class="para_p">Serving time</p>
                <div class="pre_bk_box">
                  <p class="para_h"  id="time_select">Select serving time</p>
@@ -243,6 +243,25 @@
         </div>
       </div>
        <!-- pop up popup of dishes -->
+      <!-- pop up popup of dishes -->
+      <div id="modal4" class="modal">
+        <div class="popup1">
+          <p class="heading_p">Select Date</p>
+          <a class="close" href="#">
+            <svg width="20" height="20" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+              <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+            </svg>
+          </a>
+          <div class="content1">
+            <p class="para_p">What would you love to serve your guests?</p>
+            <div class="time_bx_section" id="dateContainer">
+              <!-- Add an ID to the element you want to update dynamically -->
+              <a href="#" class="date-option" id="currentDate"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+       <!-- pop up popup of dishes -->
 
     </div>
     <script src="components/js/js.js"></script>
@@ -309,9 +328,76 @@
             // Update the content based on the selected time
             document.getElementById('time_select').innerText = "" + this.innerText;
             // Close the modal or perform any other actions as needed
+            document.getElementById('modal3').classList.remove('active'); 
+        
           });
         });
       </script>
          <!-- number for dishes popup dishes -->
+      <!-- number for dishes popup dishes -->
+      <script>
+        // Get the time container and add click event listeners to each time option
+        const dateContainer = document.getElementById('dateContainer');
+        const dateOptions = document.querySelectorAll('.date-option');
+      
+        dateOptions.forEach(option => {
+          option.addEventListener('click', (e)=> {
+            // Update the content based on the selected time
+            // document.getElementById('time_select').innerText = "" + this.innerText;
+            document.getElementById('date_select').innerHTML = this.innerText;
+            // Close the modal or perform any other actions as needed
+            // document.getElementById('modal3').classList.remove('active'); 
+            document.getElementById('modal4').classList.remove('active'); 
+          });
+        });
+      </script>
+        
+       
+        <script>
+          // Function to update the selected date
+          function updateSelectedDate(selectedDate) {
+            document.getElementById('date_select').innerText = selectedDate;
+            // console.log(selectedDate);
+          }
+        
+          // Function to handle date selection
+          function handleDateSelection(dayOfWeek, dayOfMonth, monthAbbreviation) {
+            const selectedDate = `${dayOfWeek}, ${monthAbbreviation} ${dayOfMonth}`;
+            updateSelectedDate(selectedDate);
+           
+        
+            // Close the modal or perform any other actions as needed
+            document.getElementById('modal4').classList.remove('active');
+          }
+        
+          // Get the current date
+          const currentDate = new Date();
+        
+          // Get the first day of the current month
+          const firstDayOfMonth = new Date(currentDate.getFullYear(), currentDate.getMonth(), 1);
+        
+          // Array of month names
+          const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+        
+          // Get the number of days in the current month
+          const numberOfDays = new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 0).getDate();
+        
+          // Initialize the HTML content
+          let daysHtml = '';
+        
+          // Loop through each day of the month
+          for (let i = 1; i <= numberOfDays; i++) {
+            const currentDay = new Date(currentDate.getFullYear(), currentDate.getMonth(), i);
+            const dayOfWeek = currentDay.toLocaleString('en-US', { weekday: 'short' });
+            const dayOfMonth = currentDay.getDate();
+            const monthAbbreviation = months[currentDate.getMonth()];
+        
+            // Append the day to the HTML content with an onclick event
+            daysHtml += `<a href="#" class="date-option" onclick="handleDateSelection('${dayOfWeek}', ${dayOfMonth}, '${monthAbbreviation}')">${dayOfWeek}, ${monthAbbreviation} ${dayOfMonth}</a>`;
+          }
+        
+          // Update the content of the element with the days of the current month
+          document.getElementById('dateContainer').innerHTML = daysHtml;
+        </script>
 </body>
 </html>

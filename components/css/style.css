@@ -34,18 +34,23 @@ a:hover{
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
-  margin: 15px 10px;
+  justify-content: flex-start;
+  margin: 15px 0px;
   max-height: 440px;
   overflow-y: auto;
   
 }
 .time_bx_section a{
   text-decoration: none;
-  padding: 15px;
+  padding: 12px;
   border: 1px solid #1c1c1c4b;
-  margin: 10px 10px;
+  margin: 10px 15px 10px 0px;
   border-radius: 8px;
+  font-size: 13px;
+  font-weight: 300;
+  color: rgba(28, 28, 28, 0.831);
+  line-height: calc(14 * 1.3px);
+
 }
 .batun:hover{
   opacity: 0.5;
@@ -136,7 +141,32 @@ a:hover{
     text-decoration: none;
     cursor: pointer;
   }
+  #modal3 {
+    display: none; /* Initially hide the modal */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* Add other styles for your modal */
+  }
   
+  #modal3.active {
+    display: block; /* Show the modal when it has the 'active' class */
+    /* You can also use other styles to control the appearance of the modal when active */
+  }
+  #modal4 {
+    display: none; /* Initially hide the modal */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* Add other styles for your modal */
+  }
+  
+  #modal4.active {
+    display: block; /* Show the modal when it has the 'active' class */
+    /* You can also use other styles to control the appearance of the modal when active */
+  }
   .popup1 {
   
     width: 100%;
@@ -213,8 +243,10 @@ a:hover{
   padding: 7px;
   width: 30px;
   color: rgba(28, 28, 28, 0.831);
-
+  font-size: 12px;
+  font-weight: 300;
 }
+
 .unactive{
   color: #999999;
 }
