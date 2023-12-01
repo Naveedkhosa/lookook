@@ -233,7 +233,7 @@ a:hover{
 .incre_dcre_daba{
   display: flex;
   align-items: center;
-  width: 90px;
+  width: 75px;
   border-radius: 5px;
   z-index: 1000;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
