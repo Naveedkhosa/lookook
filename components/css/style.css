@@ -81,6 +81,7 @@ a:hover{
   letter-spacing: 0.5px;
   line-height: calc(14 * 1.3px);
 }
+
 .Ord_active{
   margin: auto;
   background: #4caf7c;
@@ -237,6 +238,7 @@ a:hover{
   border-radius: 5px;
   z-index: 1000;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin-bottom: 10px;
 }
 .incre_no_dcree{
   background: rgb(16, 238, 168);
@@ -507,12 +509,25 @@ a:hover{
 }
 
 /* bookings css */
+.carrd_kart_content{
+  width: 100%;
+}
+.card_con_heading{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.incre_dcre_daba{
+  opacity: 1;
+}
 .kart_booking_card{
   width: 100%;
   display: flex;
   align-items: center;
   border-radius: 8px;
   padding: 20px;
+  cursor: pointer;
   margin: 20px 0px;
   border: 1px solid #1c1c1c1f;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -565,7 +580,7 @@ a:hover{
     margin-top: 50px;
   }
   .service_kart_card{
-    width: 45%;
+    width: 45.6%;
   }
   .container_kart {
     border: none;
