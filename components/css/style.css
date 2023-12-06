@@ -236,7 +236,7 @@ a:hover{
   align-items: center;
   width: 75px;
   border-radius: 5px;
-  z-index: 1000;
+  z-index: 10;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   margin-bottom: 10px;
 }
@@ -518,9 +518,7 @@ a:hover{
   justify-content: space-between;
   width: 100%;
 }
-.incre_dcre_daba{
-  opacity: 1;
-}
+
 .kart_booking_card{
   width: 100%;
   display: flex;
