@@ -16,6 +16,12 @@ a:hover{
   transition: 0.5s;
 
 }
+.safe i{
+  color: #01c962;
+}
+.danger i{
+  color: #ff003c;
+}
 .batun{
   padding: 13px 10px;
   width: 100%;
@@ -40,6 +46,7 @@ a:hover{
   overflow-y: auto;
   
 }
+
 .time_bx_section::-webkit-scrollbar {
   display: none;
 }
@@ -59,6 +66,33 @@ a:hover{
   line-height: calc(14 * 1.3px);
 
 }
+.date_bx_section{
+  display: flex;
+  /* flex-direction: column; */
+  /* align-items: center;
+  justify-content: center; */
+  margin: 1px 0px;
+  /* max-height: 440px; */
+  /* overflow-y: auto; */
+
+}
+.date_bx_section a{
+  width: 100%;
+  display: flex;
+  border: none;
+  border-radius: 2px;
+  margin: 2px 0px;
+  align-items: center;
+  justify-content: flex-start;
+  background: #cccccc4c;
+}
+.date_bx_section a:hover{
+  background: #4CAF50;
+  color: #fff;
+  opacity: 1;
+
+}
+
 .batun:hover{
   opacity: 0.5;
   transition: 0.5s;
@@ -530,11 +564,19 @@ a:hover{
   border: 1px solid #1c1c1c1f;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
+.included_kart{
+  box-shadow: none;
+  padding:0;
+}
 .cardkart_booking_img{
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 20%;
+  width: 60px;
+  margin-right: 15px;
+}
+.included_kart_img{
+  width: 60px;
   margin-right: 15px;
 }
 .cardkart_imgimg{
@@ -545,11 +587,22 @@ a:hover{
   border: 1px solid #ccc;
   background: #f3bf2136;
 }
+.included_imgkart_img{
+  width: 60px;
+  height: 100%;
+  border-radius:0;
+  border: none;
+  border-radius:7px 0px 0px 7px;
+
+}
 .cardkart_imgimg_pink{
   background: #f321912b !important;
 }
 .cardkart_imgimg_blue{
   background: #2195f336!important;
+}
+.cardkart_imgimg_sabz{
+  background: #21f3b136!important;
 }
 .cardkart_imgimg img{
   width: 100%;
@@ -561,6 +614,32 @@ a:hover{
 }
 .margin_after_head{
   margin-bottom: 10px;
+}
+
+
+/* start know page chef_party  */
+.now_hero_img{
+  width: 100%;
+  height: 100vh;
+}
+.now_hero_img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.now_hero_al_contnt{
+  width: 94%;
+  margin: 0 auto;
+  padding: 15px 0px;
+}
+
+/* start know page chef_party  */
+
+@media screen and (max-width: 1105px) {
+  .now_hero_img{
+    width: 100%;
+    height: 100%;
+  }
 }
 @media screen and (max-width: 685px) {
   /* .content{

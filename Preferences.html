@@ -12,7 +12,7 @@
     <div class="pre_bk_kart_mainpage">
         <div class="pre_bk_kart_page">
 
-            <!-- selection box -->
+            <!-- selection box -->  
             <a onclick="openModall('modal4')" class="pre_bk_slect_sec">
                <p class="para_p">Date</p>
                <div class="pre_bk_box">
@@ -50,7 +50,7 @@
             <!-- selection box -->
 
        <!-- Add Extra section start -->
-    
+       <p class="para_p">Select additional services</p>
          <!-- booking card  -->
          <div class="kart_booking_card">
              <div class="cardkart_booking_img">
@@ -365,8 +365,8 @@
             </svg>
           </a>
           <div class="content1">
-            <p class="para_p">What would you love to serve your guests?</p>
-            <div class="time_bx_section" id="dateContainer">
+          
+            <div class="time_bx_section date_bx_section " id="dateContainer">
               <!-- Add an ID to the element you want to update dynamically -->
               <a href="#" class="date-option" id="currentDate"></a>
             </div>
@@ -474,50 +474,73 @@
         
        
         <script>
-          // Function to update the selected date
-          function updateSelectedDate(selectedDate) {
-            document.getElementById('date_select').innerText = selectedDate;
-            // console.log(selectedDate);
-          }
-        
-          // Function to handle date selection
-          function handleDateSelection(dayOfWeek, dayOfMonth, monthAbbreviation) {
-            const selectedDate = `${dayOfWeek}, ${monthAbbreviation} ${dayOfMonth}`;
-            updateSelectedDate(selectedDate);
-           
-        
-            // Close the modal or perform any other actions as needed
-            document.getElementById('modal4').classList.remove('active');
-          }
-        
-          // Get the current date
-          const currentDate = new Date();
-        
-          // Get the first day of the current month
-          const firstDayOfMonth = new Date(currentDate.getFullYear(), currentDate.getMonth(), 1);
-        
-          // Array of month names
-          const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-        
-          // Get the number of days in the current month
-          const numberOfDays = new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 0).getDate();
-        
-          // Initialize the HTML content
-          let daysHtml = '';
-        
-          // Loop through each day of the month
-          for (let i = 1; i <= numberOfDays; i++) {
-            const currentDay = new Date(currentDate.getFullYear(), currentDate.getMonth(), i);
-            const dayOfWeek = currentDay.toLocaleString('en-US', { weekday: 'short' });
-            const dayOfMonth = currentDay.getDate();
-            const monthAbbreviation = months[currentDate.getMonth()];
-        
-            // Append the day to the HTML content with an onclick event
-            daysHtml += `<a href="#" class="date-option" onclick="handleDateSelection('${dayOfWeek}', ${dayOfMonth}, '${monthAbbreviation}')">${dayOfWeek}, ${monthAbbreviation} ${dayOfMonth}</a>`;
-          }
-        
-          // Update the content of the element with the days of the current month
-          document.getElementById('dateContainer').innerHTML = daysHtml;
-        </script>
+/// Function to check if a date is a special event or festival
+function isSpecialEvent(day, month) {
+    // Define an array of special events with their corresponding dates
+    const specialEvents = [
+        { month: 12, day: 1, name: "New Year" },
+        { month: 12, day: 9, name: "Diwali" },
+        { month: 10, day: 25, name: "Christmas" },
+        // Add more events as needed
+    ];
+
+    // Check if the given date corresponds to a special event
+    const event = specialEvents.find(event => event.month === month && event.day === day);
+
+    return event ? event.name : null;
+}
+
+// Function to update the selected date
+function updateSelectedDate(selectedDate) {
+    document.getElementById('date_select').innerText = selectedDate;
+}
+
+// Function to handle date selection
+function handleDateSelection(dayOfWeek, dayOfMonth, monthAbbreviation) {
+    const selectedDate = `${dayOfWeek}, ${monthAbbreviation} ${dayOfMonth}`;
+    updateSelectedDate(selectedDate);
+
+    // Close the modal or perform any other actions as needed
+    document.getElementById('modal4').classList.remove('active');
+}
+
+// Get the current date
+const currentDate = new Date();
+
+// Get the first day of the current month
+const firstDayOfMonth = new Date(currentDate.getFullYear(), currentDate.getMonth(), 1);
+
+// Array of month names
+const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
+// Get the number of days in the current month
+const numberOfDays = new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 0).getDate();
+
+// Initialize the HTML content
+let daysHtml = '';
+
+// Loop through each day of the month
+for (let i = 1; i <= numberOfDays; i++) {
+    const currentDay = new Date(currentDate.getFullYear(), currentDate.getMonth(), i);
+    const dayOfWeek = currentDay.toLocaleString('en-US', { weekday: 'long' });
+    const dayOfMonth = currentDay.getDate();
+    const monthAbbreviation = months[currentDate.getMonth()];
+
+    // Check if the date is a special event or festival
+    const specialEvent = isSpecialEvent(dayOfMonth, currentDate.getMonth());
+
+    // Append the day to the HTML content with an onclick event
+    if (specialEvent) {
+        daysHtml += `<a href="#" class="date-option special-event" onclick="handleDateSelection('${dayOfWeek}', ${dayOfMonth}, '${monthAbbreviation}')">${dayOfMonth} ${monthAbbreviation}, ${dayOfWeek} (${specialEvent})</a>`;
+    } else {
+        daysHtml += `<a href="#" class="date-option" onclick="handleDateSelection('${dayOfWeek}', ${dayOfMonth}, '${monthAbbreviation}')">${dayOfMonth} ${monthAbbreviation}, ${dayOfWeek}</a>`;
+    }
+}
+
+// Update the content of the element with the days of the current month
+document.getElementById('dateContainer').innerHTML = daysHtml;
+
+
+</script>
 </body>
 </html>
