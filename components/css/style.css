@@ -1,20 +1,31 @@
-@import url("https://fonts.googleapis.com/css?family=Just+Another+Hand");
+
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
 *{
   margin: 0;
   padding:0 ;
   box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  /*** remove tap highlight color*/
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
 }
 body, html {
   width: 100%;
   height: 100%;
   margin: 0;
-  font-family: sans-serif;
+  font-family: 'Inter', sans-serif;
   overflow-X: hidden;
 }
 a:hover{
   opacity: 0.5;
   transition: 0.5s;
 
+}
+a{
+  text-decoration: none;
+  list-style: none;
+  color: #02645e;
 }
 .safe i{
   color: #01c962;
@@ -36,6 +47,49 @@ a:hover{
   letter-spacing: 0.5px;
   line-height: calc(14 * 1.3px);
 }
+
+/* issue page style  */
+.gol_active{
+  background: #02645e;
+  color: #fff !important;
+  border: 3px solid #02645e !important;
+}
+.issue_page{
+  width: 92%;
+  margin: 0 auto;
+}
+.issue_top_section{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #bbb;
+  padding: 15px 0px;
+}
+.stipone{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.issue_top_section hr{
+  width: 40%;
+  margin-top: 17px;
+}
+.gol_circle{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 3px solid #585757;
+  color: #585757;
+  font-weight: 510;
+  margin: 7px 0px;
+
+}
+
+/* issue page style  */
 .time_bx_section{
   display: flex;
   flex-wrap: wrap;
@@ -108,6 +162,10 @@ a:hover{
   line-height: calc(14 * 1.3px);
   letter-spacing: 0.5px;
 
+}
+.para_p_active{
+  color: #1c1c1c;
+  font-weight: 500;
 }
 .para_h{
   font-size: 14px;
@@ -296,6 +354,9 @@ a:hover{
 .space_top{
   margin-top: 5px;
   font-size: 13px !important;
+}
+.space_topp{
+  padding: 20px 0px;
 }
 .decree{
   cursor: pointer;
@@ -578,6 +639,10 @@ a:hover{
 .included_kart_img{
   width: 60px;
   margin-right: 15px;
+  
+}
+.sml_img_kart{
+  padding: 10px;
 }
 .cardkart_imgimg{
   overflow: hidden;
@@ -587,14 +652,17 @@ a:hover{
   border: 1px solid #ccc;
   background: #f3bf2136;
 }
+
 .included_imgkart_img{
   width: 60px;
   height: 100%;
   border-radius:0;
   border: none;
   border-radius:7px 0px 0px 7px;
+  background: none;
 
 }
+
 .cardkart_imgimg_pink{
   background: #f321912b !important;
 }
@@ -618,9 +686,28 @@ a:hover{
 
 
 /* start know page chef_party  */
+.Faqs_card{
+  border: 1px solid #f3219189;
+  background: linear-gradient(to right ,#ffbee1, #fff);
+}
+.ceneter_heading{
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100%;
+  /* border: 1px solid red; */
+
+}
+.ceneter_heading p{
+  margin: 0px 10px;
+}
+.ceneter_heading hr{
+  width: 30%;
+  color: #999999;
+}
 .now_hero_img{
   width: 100%;
-  height: 100vh;
+  height: 84vh;
 }
 .now_hero_img img{
   width: 100%;
@@ -638,7 +725,7 @@ a:hover{
 @media screen and (max-width: 1105px) {
   .now_hero_img{
     width: 100%;
-    height: 100%;
+    height: 30vh;
   }
 }
 @media screen and (max-width: 685px) {
