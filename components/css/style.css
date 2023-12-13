@@ -210,7 +210,32 @@ a{
   width: 94%;
   margin: 0 auto;
 }
-
+/* bottom menu start here... */
+.bottm_menu_container{
+  width: 100%;
+  position: relative;
+  height: 50px;
+}
+.bottom_menu_box{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: fixed;
+  height: 50px;
+  bottom: 0;
+  background: #fff;
+  z-index: 100;
+  border: 1px solid #ccc;
+}
+.bottom_menu_box iconify-icon{
+  font-size: 30px;
+}
+.bottom_menu_box a:hover{
+  color: #f1063d;
+  opacity: 1;
+}
+/* bottom menu start here... */
 
   /* The Modal (background) */
   .modal {
