@@ -406,12 +406,12 @@ a{
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 20px;
+  padding: 13px;
   width: 24%;
-  margin: 1px 10px 0px 0px;
+  margin: 5px 10px 0px 0.5px;
   border-radius: 5px;
-  background-color: #2195f315;
-  border: 1px solid #ccc;
+  background-color: #fff;
+  border: 1px solid #ddd;
   position: relative;
 }
 .deal_kart{
@@ -441,24 +441,18 @@ a{
   font-weight: bold;
 }
 .fifty{
-  font-size: 22px !important;
+  font-size: 16px !important;
   font-weight: bold;
 }
 
 /* offer ribbon */
 .ribbon-2 {
-  --f: 12px; /* control the folded part*/
-  --r: 15px; /* control the ribbon shape */
-  --t: 10px; /* the top offset */
+  top: 0;
+  left: 0;
   position: absolute;
-  inset: var(--t) calc(-1*var(--f)) auto auto;
-  padding: 1px 10px var(--f) calc(10px + var(--r));
-  clip-path: 
-    polygon(0 0,100% 0,100% calc(100% - var(--f)),calc(100% - var(--f)) 100%,
-      calc(100% - var(--f)) calc(100% - var(--f)),0 calc(100% - var(--f)),
-      var(--r) calc(50% - var(--f)/2));
+  padding: 3px;
+  border-radius: 2px;
   background: #ff003c;
-  box-shadow: 0 calc(-1*var(--f)) 0 inset #0005;
   color: #fff;
   font-weight: bold;
 }
