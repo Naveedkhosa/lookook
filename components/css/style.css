@@ -399,6 +399,8 @@ a{
   /* border: 2px solid blue; */
   gap: 10px;
   margin-top:15px ;
+  align-items: center;
+  justify-content: center;
 
 }
 .service_kart_card{
@@ -761,6 +763,10 @@ a{
   }
   .kart_services_main{
     margin-top: 50px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
   }
   .service_kart_card{
     width: 40.6%;
