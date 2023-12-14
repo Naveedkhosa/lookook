@@ -374,12 +374,12 @@ a{
   display: flex;
   align-items: center;
   width: 65px;
-  border-radius: 5px;
+  border-radius: 5px 10px 5px 5px;
   z-index: 10;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 1px 6px;
   /* margin-bottom: 10px; */
   margin-right: -20px;
-  margin-top: -20px;
+  margin-top: -56px;
 }
 .incre_no_dcree{
   background: #01c962;
