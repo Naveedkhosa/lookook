@@ -149,6 +149,9 @@ a{
 .margten{
   margin: 0px 30px;
 }
+.marg_to_bo{
+  margin: 10px 0px;
+}
 .kard_timing{
   width: 100%;
   border-bottom: 1px solid #dddddd8d;
@@ -329,6 +332,7 @@ a{
   font-size: 14px;
   font-weight: 550;
   line-height: calc(14 * 1.3px);
+  margin-bottom: 7px;
 }
 
 .Ord_active{
