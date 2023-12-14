@@ -378,6 +378,8 @@ a{
   z-index: 10;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   margin-bottom: 10px;
+  margin-right: -10px;
+  margin-top: -10px;
 }
 .incre_no_dcree{
   background: #01c962;
