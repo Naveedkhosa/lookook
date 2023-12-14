@@ -57,7 +57,16 @@ a{
   justify-content: center;
 
 }
-.continuebtn a{
+.bookbtn{
+  width: 250px;
+  border-radius: 5px;
+  margin: 15px 0px;
+  background: #f29a03;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.continuebtn a,.bookbtn a{
   border: none;
   color: #fff;
   outline: none;
@@ -70,6 +79,16 @@ a{
   line-height: calc(14 * 1.3px);
 
 }
+
+/* no booking page style .... */
+.no_book_page{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-direction: column;
+}
+/* no booking page style .... */
 /* issue page style  */
 .gol_active{
   background: #02645e;
