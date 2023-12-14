@@ -466,8 +466,8 @@ a{
   height: 100%;
 }
 .kart_card_block svg{
-  width: 100px;
-  height: 100px;
+  width: 90px;
+  height: 90px;
 }
 .kart_card_block{
   width: 80px;
@@ -763,7 +763,7 @@ a{
     margin-top: 50px;
   }
   .service_kart_card{
-    width: 45.6%;
+    width: 40.6%;
   }
   .container_kart {
     border: none;
