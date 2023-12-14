@@ -373,10 +373,10 @@ a{
 .incre_dcre_daba{
   display: flex;
   align-items: center;
-  width: 75px;
+  width: 65px;
   border-radius: 5px;
   z-index: 10;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 1px 6px;
   margin-bottom: 10px;
   margin-right: -10px;
   margin-top: -10px;
@@ -408,6 +408,8 @@ a{
   padding: 20px 0px;
 }
 .decree{
+  padding: 5px;
+  width: 22px;
   cursor: pointer;
 }
 /* Booking preference style ending*/
