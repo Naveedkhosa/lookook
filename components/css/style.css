@@ -64,6 +64,8 @@ a{
   outline: none;
   font-size: 14px;
   font-weight: 550;
+  padding: 13px 10px;
+  width: 100%;
   letter-spacing: 0.5px;
   line-height: calc(14 * 1.3px);
 
