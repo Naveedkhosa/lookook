@@ -47,7 +47,27 @@ a{
   letter-spacing: 0.5px;
   line-height: calc(14 * 1.3px);
 }
+.continuebtn{
+  padding: 13px 10px;
+  width: 100%;
+  border-radius: 5px;
+  margin: 15px 0px;
+  background: #f29a03;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
+}
+.continuebtn a{
+  border: none;
+  color: #fff;
+  outline: none;
+  font-size: 14px;
+  font-weight: 550;
+  letter-spacing: 0.5px;
+  line-height: calc(14 * 1.3px);
+
+}
 /* issue page style  */
 .gol_active{
   background: #02645e;
@@ -646,6 +666,7 @@ a{
   border: 1px solid #1c1c1c1f;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
+
 .step_box_container{
   display: flex;
   align-items: center;
