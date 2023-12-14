@@ -792,6 +792,7 @@ a{
 /* bookings css */
 .carrd_kart_content{
   width: 100%;
+  padding: 10px;
 }
 .card_con_heading{
   display: flex;
@@ -810,6 +811,7 @@ a{
   margin: 20px 0px;
   border: 1px solid #1c1c1c1f;
   box-shadow: rgba(0, 0, 0, 0.20) 0px 1px 8px;
+  overflow: hidden;
 }
 
 .step_box_container{
