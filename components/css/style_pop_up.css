@@ -100,7 +100,7 @@ a{
   }
 
   .popup {
-    width: 80%;
+    width: 94%;
     max-width: 600px;
     background: #fff;
     border-radius: 10px;
@@ -148,7 +148,7 @@ a{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #ffff;
+    background: #fff;
     height: 75px;
     padding: 20px 0px;
     position: fixed;
