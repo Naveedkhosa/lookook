@@ -334,6 +334,12 @@ a{
   line-height: calc(14 * 1.3px);
   margin-bottom: 7px;
 }
+.para_h_{
+  font-size: 14px;
+  font-weight: 550;
+  line-height: calc(14 * 1.3px);
+  
+}
 
 .Ord_active{
   margin: auto;
@@ -517,8 +523,6 @@ a{
   z-index: 10;
   box-shadow: rgba(0, 0, 0, 0.20) 0px 1px 6px;
   margin-bottom: 10px;
-  margin-right: -12px;
-  margin-top: -15px;
 }
 .incre_no_dcree{
   background: #01c962;
