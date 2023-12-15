@@ -294,12 +294,12 @@ a{
   width: 100%;
   display: flex;
   border: none;
-  border-radius: 2px;
-  margin: 4px 0px;
+  border-radius: 4px;
+  margin: 6px 0px;
   align-items: center;
   justify-content: flex-start;
   background: #dddddd28;
-  border: 1px solid #ccc;
+  border: 1px solid #ddd;
 }
 .date_bx_section a:hover{
   background: #4CAF50;
