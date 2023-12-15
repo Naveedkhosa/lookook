@@ -116,6 +116,13 @@ svg{
   gap: 15px;
 
 }
+/* party detail style... */
+.party_detail_kard{
+  box-shadow: rgba(0, 0, 0, 0.20) 0px 2px 8px;
+  padding: 20px;
+
+}
+/* party detail style... */
 .kard_additional_sec{
   margin-top: 15px;
   border-top: 1px dashed #dddd;
