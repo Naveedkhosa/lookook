@@ -116,10 +116,7 @@ a{
   color: #585757;
   font-size: 12px;
 }
-.solid_smal{
-  font-size: 12px !important;
-  font-weight: 550 !important;
-}
+
 .status_booking{
   position: absolute;
   top: 50px;
@@ -151,6 +148,11 @@ a{
   font-size: 50px;
   margin-bottom: -10px;
 
+}
+.kard_timing iconify-icon{
+  margin-right: 5px !important;
+  margin-bottom: -5px;
+  font-size: 16px !important;
 }
 .margten{
   margin: 0px 30px;
@@ -1024,4 +1026,12 @@ a{
     width: 12px;
     height: 12px;
   }
+}
+.solid_smal{
+  font-size: 12px ;
+  font-weight: 550 ;
+}
+.solid_hsmal{
+  font-size: 10px ;
+  font-weight: 550 ;
 }
