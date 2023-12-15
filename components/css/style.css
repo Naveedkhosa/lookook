@@ -295,10 +295,11 @@ a{
   display: flex;
   border: none;
   border-radius: 2px;
-  margin: 2px 0px;
+  margin: 4px 0px;
   align-items: center;
   justify-content: flex-start;
-  background: #cccccc4c;
+  background: #ddddddac;
+  border: 1px solid #ccc;
 }
 .date_bx_section a:hover{
   background: #4CAF50;
