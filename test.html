@@ -1,54 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
-   
-</head>
-<body>
-    <div class="incre_dcre_daba">
-        <div class="decree_w decree minus_plus unactive" id="minusButton">
-          <i class="fa-solid fa-minus"></i>
-        </div>
-        <div class="decree_w incre_no_dcree number">
-          <p class="number" id="displayedNumber">0</p>
-        </div>
-        <div class="decree_w decree plus_minus incree" id="plusButton">
-          <i class="fa-solid fa-plus"></i>
-        </div>
-      </div>
-      
-      <script>
-        const plus = document.getElementById('plusButton');
-  const minus = document.getElementById('minusButton');
-  let number_el = document.getElementById('displayedNumber');
-
-  plus.addEventListener('click', () => {
-    let val = parseInt(number_el.innerText);
-    number_el.innerText = ++val;
-    updateOpacity();
-  });
-
-  minus.addEventListener('click', () => {
-    let val = parseInt(number_el.innerText);
-    // Ensure the value doesn't go below 0
-    if (val > 0) {
-      number_el.innerText = --val;
-      updateOpacity();
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+      overflow: hidden;
     }
-  });
 
-  function updateOpacity() {
-    let val = parseInt(number_el.innerText);
-    // Set opacity to 0.5 if the value is 0, otherwise set it to 1
-    minus.style.opacity = val === 0 ? 0.5 : 1;
+    .popup-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.8); /* white background with some opacity */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .popup {
+      width: 80%;
+      max-width: 600px;
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      max-height: 80%; /* Set a maximum height for the popup */
+    }
+
+    .back-button {
+      height: 40px;
+      width: 100%;
+      padding: 10px;
+      cursor: pointer;
+      border: none;
+      outline: none;
+      background: none;
+      font-size: 16px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1; /* Ensure it's above the popup */
+    }
+
+    .popup-content {
+      flex: 1;
+      overflow-y: auto;
+      padding: 20px;
+    }
+
+    .popup-buttons {
+      display: flex;
+      justify-content: space-between;
+      background: #f2f2f2;
+      height: 40px;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1; /* Ensure it's above the popup */
+    }
+
+    button {
+      padding: 10px;
+      cursor: pointer;
+      border: none;
+      outline: none;
+      background: none;
+      font-size: 16px;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- Add more buttons with different IDs -->
+<button onclick="openPopup('popupContainer1')">Open Popup 1</button>
+<button onclick="openPopup('popupContainer2')">Open Popup 2</button>
+
+<!-- Add more popup containers with different IDs -->
+<div id="popupContainer1" class="popup-container" style="display:none;">
+  <button class="back-button" onclick="closePopup('popupContainer1')">Back</button>
+  <div class="popup">
+    <div class="popup-content">
+      <!-- Your scrollable content goes here -->
+      <p>Popup Content 1</p>
+    </div>
+    <div class="popup-buttons">
+      <button onclick="confirmAction('popupContainer1')">Confirm</button>
+    </div>
+  </div>
+</div>
+
+<div id="popupContainer2" class="popup-container" style="display:none;">
+  <button class="back-button" onclick="closePopup('popupContainer2')">Back</button>
+  <div class="popup">
+    <div class="popup-content">
+      <!-- Your scrollable content goes here -->
+      <p>Popup Content 2</p>
+    </div>
+    <div class="popup-buttons">
+      <button onclick="confirmAction('popupContainer2')">Confirm</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  function openPopup(modId) {
+    var modal = document.getElementById(modId);
+    modal.style.display = "flex";
   }
 
-  // Initial update of opacity
-  updateOpacity();
+  function closePopup(modId) {
+    var modal = document.getElementById(modId);
+    modal.style.display = "none";
+  }
+
+  function confirmAction(modId) {
+    // Add your confirm action logic here
+    alert("Confirmed for " + modId + "!");
+    closePopup(modId); // Close the popup after confirming
+  }
 </script>
-      
+
 </body>
 </html>

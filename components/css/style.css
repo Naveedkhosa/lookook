@@ -20,6 +20,7 @@ body, html {
 a:hover{
   opacity: 0.5;
   transition: 0.5s;
+  
 
 }
 a{
@@ -27,11 +28,25 @@ a{
   list-style: none;
   color: #02645e;
 }
+svg{
+  width: 20px;
+  height: 20px;
+  color: #333;
+  margin: 0px 10px;
+}
 .btn{
   background: #f29a03;
   color: #fff;
   padding: 10px 10px;
   border-radius: 5px;
+}
+.btnt{
+  background: transparent;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: 1px solid #999999;
+  color: #1c1c1c;
 }
 .safe i{
   color: #01c962;
@@ -101,7 +116,11 @@ a{
   gap: 15px;
 
 }
-
+.kard_additional_sec{
+  margin-top: 15px;
+  border-top: 1px dashed #dddd;
+  padding: 10px 0px;
+}
 .service_booking_kard{
   position: relative;
   width: 100%;
@@ -110,13 +129,18 @@ a{
   box-shadow: rgba(0, 0, 0, 0.20) 0px 1px 8px;
   padding: 15px;
   border-radius: 15px;
-
+  cursor: pointer;
 }
 .para_gray{
   color: #585757;
   font-size: 12px;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
 }
-
+.para_gray iconify-icon{
+  margin-right: 5px;
+}
 .status_booking{
   position: absolute;
   top: 50px;
@@ -514,7 +538,26 @@ a{
 .content1{
   margin: 15px 0px;
 }
-
+.popup_2{
+  /* position: relative; */
+  height: 100%;
+  border-radius: 0;
+}
+.pop_up_top_sec{
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #01c962;
+}
+.count_service{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 .increase_decrease_box{
   display: flex;
   align-items: center;

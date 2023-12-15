@@ -34,4 +34,18 @@ function openModall(modalId) {
   }
 }
 
+function openPopup(modId) {
+  var modal = document.getElementById(modId);
+  modal.style.display = "flex";
+}
 
+function closePopup(modId) {
+  var modal = document.getElementById(modId);
+  modal.style.display = "none";
+}
+
+function confirmAction(modId) {
+  // Add your confirm action logic here
+  alert("Confirmed for " + modId + "!");
+  closePopup(modId); // Close the popup after confirming
+}
