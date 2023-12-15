@@ -115,9 +115,9 @@ a{
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    height: 55px;
+    height: 65px;
     width: 100%;
-    padding: 15px;
+    padding: 20px 0px;
     cursor: pointer;
     border: none;
     outline: none;
@@ -159,14 +159,13 @@ a{
   }
 
   .popup-buttons button {
-    padding: 10px;
     cursor: pointer;
     border: none;
     outline: none;
     background: #f29a03;
     color: #fff;
-    padding: 10px 20px;
+    padding: 15px 20px;
     border-radius: 5px;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: bold;
   }
