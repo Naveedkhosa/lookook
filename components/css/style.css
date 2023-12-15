@@ -120,6 +120,7 @@ svg{
 .party_detail_kard{
   box-shadow: rgba(0, 0, 0, 0.20) 0px 2px 8px;
   padding: 20px;
+  border-radius: 15px;
 
 }
 /* party detail style... */
