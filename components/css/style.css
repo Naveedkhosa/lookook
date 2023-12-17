@@ -53,6 +53,9 @@ svg{
 .danger i{
   color: #ff003c;
 }
+hr{
+  border-color: #dddddd50;
+}
 .batun{
   padding: 13px 10px;
   width: 100%;
