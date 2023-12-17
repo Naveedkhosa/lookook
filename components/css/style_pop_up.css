@@ -108,7 +108,7 @@ a{
     position: relative;
     display: flex;
     flex-direction: column;
-    top: 75px;
+    top: 85px;
   }
 
   .back-button {
