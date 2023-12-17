@@ -36,7 +36,7 @@ function openModall(modalId) {
 
 function openPopup(modId) {
   var modal = document.getElementById(modId);
-  modal.style.display = "flex";
+  modal.style.display = "block";
 }
 
 function closePopup(modId) {

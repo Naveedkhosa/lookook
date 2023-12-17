@@ -199,12 +199,12 @@
 
     <!-- popup for payment -->
     <!-- Add more popup containers with different IDs -->
-    <div id="popupContainer1" class="popup-container" style="display: none">
+    <div id="popupContainer1" class="popup-container" style="display: none;">
       <button class="back-button" onclick="closePopup('popupContainer1')">
         <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M244 400L100 256l144-144M120 256h292"/></svg>
         Party Detail
       </button>
-      <div class="pop_fixed_detail">
+      <div class="pop_fixed_detail" style="height: fit-content;margin-top: 55px;">
         <div class="fixed_detail_content">
           <p class="heading_p">Payment Pending</p>
           <p class=" space_ten para_p">Please pay token amount to place your request</p>
@@ -292,7 +292,7 @@
 
         </div>
         <div class="popup-buttons">
-          <button onclick="confirmAction('popupContainer1')">Pay Tokan Amount <svg xmlns="http://www.w3.org/2000/svg" style="margin-bottom: -5px;" width="14"  height="14" viewBox="0 0 24 24"><path fill="currentColor" d="M8 3h10l-1 2h-3.26c.48.58.84 1.26 1.05 2H18l-1 2h-2a5.558 5.558 0 0 1-4.8 4.96V14h-.7l6 7H13l-6-7v-2h2.5c1.76 0 3.22-1.3 3.46-3H7l1-2h4.66C12.1 5.82 10.9 5 9.5 5H7z"/></svg>200.00</button>
+          <button onclick="confirmAction('popupContainer1')">Pay Token Amount <svg xmlns="http://www.w3.org/2000/svg" style="margin-bottom: -5px;" width="14"  height="14" viewBox="0 0 24 24"><path fill="currentColor" d="M8 3h10l-1 2h-3.26c.48.58.84 1.26 1.05 2H18l-1 2h-2a5.558 5.558 0 0 1-4.8 4.96V14h-.7l6 7H13l-6-7v-2h2.5c1.76 0 3.22-1.3 3.46-3H7l1-2h4.66C12.1 5.82 10.9 5 9.5 5H7z"/></svg>200.00</button>
         </div>
       </div>
     </div>

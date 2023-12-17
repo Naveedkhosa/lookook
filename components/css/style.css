@@ -142,11 +142,11 @@ svg{
 /* party detail style... */
 .pop_fixed_detail{
   display: flex;
-  position: fixed;
+  /* position: absolute; */
   width: 100%;
   align-items: center;
   justify-content: space-between;
-  top: 55px;
+  /* top: 55px; */
   padding: 10px 0px;
   background: linear-gradient(#02645d2d, #fff);
 }
