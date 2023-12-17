@@ -109,7 +109,7 @@ a{
     display: flex;
     flex-direction: column;
     top: 175px;
-    height: calc(100% - 95px);
+    height: calc(100% - 55px);
     
     
   }
