@@ -146,7 +146,9 @@ svg{
   width: 100%;
   align-items: center;
   justify-content: space-between;
-  top: 60px;
+  top: 55px;
+  padding: 10px 0px;
+  background: linear-gradient(#02645d2d, #fff);
 }
 .fixed_detail_content{
   width: 200px;
