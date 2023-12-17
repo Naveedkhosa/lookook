@@ -421,9 +421,9 @@ hr{
   font-weight: 550;
 }
 .para_p{
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 300;
-  color: rgba(28, 28, 28, 0.831);
+  color: #333;
   line-height: calc(14 * 1.3px);
 
 }
