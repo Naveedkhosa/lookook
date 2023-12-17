@@ -108,7 +108,7 @@ a{
     position: relative;
     display: flex;
     flex-direction: column;
-    top: 175px;
+    /* top: 175px; */
     height: calc(100% - 55px);
     
     
