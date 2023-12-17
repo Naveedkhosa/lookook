@@ -108,8 +108,8 @@ a{
     position: relative;
     display: flex;
     flex-direction: column;
-    top: 110px;
-    bottom: 90px;
+    margin: 90px 0px;
+    
   }
 
   .back-button {
