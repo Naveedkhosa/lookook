@@ -108,8 +108,8 @@ a{
     position: relative;
     display: flex;
     flex-direction: column;
-    top: 120px;
-    height: calc(100% - 120px);
+    top: 150px;
+    height: calc(100% - 150px);
     
     
   }
