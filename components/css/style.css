@@ -2,8 +2,7 @@
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
 *{
-  margin: 0;
-  padding:0 ;
+ 
   box-sizing: border-box;
   font-family: 'Inter', sans-serif;
   /*** remove tap highlight color*/
@@ -263,6 +262,30 @@ svg{
 .need_help iconify-icon{
   font-size: 25px;
   margin-right: 10px;
+}
+.summary_section{
+  padding: 15px;
+  box-shadow: rgba(0, 0, 0, 0.20) 0px 1px 8px;
+  border-top: 1px solid #dddddd8d;
+  border-radius: 10px;
+
+}
+.note_summary{
+  background: #f1063d1b;
+  padding: 10px;
+  border-radius: 10px;
+}
+.note_summary p{
+  margin-top: 10px 0px;
+}
+.note_summary a{
+  font-weight: 550;
+  
+}
+.summary_top_box{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 /* service booking start style... */
 /* no booking page style .... */
