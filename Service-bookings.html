@@ -240,7 +240,7 @@
             </div>
 
                <!-- choose dishes -->  
-               <a class="pre_bk_slect_sec">
+               <a  onclick="openPopup('popupContainer2')" class="pre_bk_slect_sec">
                 <p class="para_p">Choose Dishes</p>
                 <div class="pre_bk_box">
                   <p class="para_h_" id="date_select">View Menu</p>
@@ -307,7 +307,7 @@
             </div>
 
             <div class="note_summary">
-              <p class="para_p"> <b>Note:</b> No refund is provided if you cancel when there is less than 8 hours remaining for the service. 100% refund id cancelled within 60 minutes of your booking. </p>
+              <p class="para_p"> <b>NOTE:</b> No refund is provided if you cancel when there is less than 8 hours remaining for the service. 100% refund id cancelled within 60 minutes of your booking. </p>
               <a class="solid_smal space_topp">Read Cancellation Policy</a>
             </div>
           </div>
@@ -320,6 +320,74 @@
     </div>
 
     <!-- popup of payment -->
+
+    <!-- choose dishes popup > popup of payment -->
+    <!-- Add more popup containers with different IDs -->
+    <div id="popupContainer2" class="popup-container" style="display: none;">
+      <button class="back-button" onclick="closePopup('popupContainer2')">
+        <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M244 400L100 256l144-144M120 256h292"/></svg>
+        Party Detail
+      </button>
+      <div class="popup">
+        <div class="popup-content">
+          <!-- Your scrollable content goes here -->
+
+          <div class="scadual_box">
+            <div class="scadual_one_sec">
+              <div class="kard_timing">
+                <p class="para_p_active solid_hsmal">
+                  <iconify-icon
+                    icon="lets-icons:date-today-duotone"
+                  ></iconify-icon>
+                  01 Dec 2023
+                </p>
+                <p class="para_p_active solid_hsmal margten">
+                  <iconify-icon icon="ic:twotone-access-time"></iconify-icon
+                  >12:00 AM
+                </p>
+                <p class="para_p_active solid_hsmal margten">
+                  <iconify-icon icon="icon-park-twotone:people-plus-one"></iconify-icon>People
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="cuisine_kart_msection">
+            <div class="cuisine_kart_section">
+               <div class="cuisine_kart">
+                  <div class="cui_kart_img">
+                    <img src="components/imag/a (1).jpg" alt="" loading="lazy">
+                  </div>
+                  <p class="solid_smal">CONTINENTAL</p>
+               </div>
+               <div class="cuisine_kart">
+                  <div class="cui_kart_img">
+                    <img src="components/imag/a (2).jpg" alt="" loading="lazy">
+                  </div>
+                  <p class="solid_smal">INDIAN</p>
+               </div>
+               <div class="cuisine_kart">
+                  <div class="cui_kart_img">
+                    <img src="components/imag/a (3).jpg" alt="" loading="lazy">
+                  </div>
+                  <p class="solid_smal">MAXICAN</p>
+               </div>
+               <div class="cuisine_kart">
+                  <div class="cui_kart_img">
+                    <img src="components/imag/a (4).jpg" alt="" loading="lazy">
+                  </div>
+                  <p class="solid_smal">ASIAN</p>
+               </div>
+            </div>
+          </div>
+      
+        </div>
+        <div class="popup-buttons">
+          <button onclick="confirmAction('popupContainer2')">Pay Token Amount <svg xmlns="http://www.w3.org/2000/svg" style="margin-bottom: -5px;" width="14"  height="14" viewBox="0 0 24 24"><path fill="currentColor" d="M8 3h10l-1 2h-3.26c.48.58.84 1.26 1.05 2H18l-1 2h-2a5.558 5.558 0 0 1-4.8 4.96V14h-.7l6 7H13l-6-7v-2h2.5c1.76 0 3.22-1.3 3.46-3H7l1-2h4.66C12.1 5.82 10.9 5 9.5 5H7z"/></svg>200.00</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- choose dishes popup > popup of payment -->
 
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
     <script src="components/js/js.js"></script>

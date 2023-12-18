@@ -476,6 +476,7 @@ hr{
    width: 100%;
    margin-top: 5px;
    border: 1px solid transparent;
+   cursor: pointer;
 }
 
 .pre_bk_kart_page{
@@ -507,7 +508,49 @@ hr{
   color: #f1063d;
   opacity: 1;
 }
-/* bottom menu start here... */
+/* bottom menu end here... */
+
+
+/* popup container 2 start */
+.scadual_box{
+  height: calc(100% - 150px);
+  margin-top: 55px;
+  padding: 20px 0px;
+  z-index: 200;
+}
+.scadual_one_sec{
+  padding: 15px;
+  box-shadow: rgba(0, 0, 0, 0.20) 0px 2px 8px;
+  border-radius: 15px;
+  width: 100%;
+
+}
+.cuisine_kart_section{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 15px;
+
+}
+.cuisine_kart{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.cui_kart_img{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 10px 0px;
+}
+.cui_kart_img img{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+/* popup container 2 end */
 
   /* The Modal (background) */
   .modal {

@@ -3,131 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body, html {
-      height: 100%;
-      margin: 0;
-      overflow: hidden;
-    }
-
-    .popup-container {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(255, 255, 255, 0.8); /* white background with some opacity */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .popup {
-      width: 80%;
-      max-width: 600px;
-      background: #fff;
-      border-radius: 10px;
-      overflow: hidden;
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      max-height: 80%; /* Set a maximum height for the popup */
-    }
-
-    .back-button {
-      height: 40px;
-      width: 100%;
-      padding: 10px;
-      cursor: pointer;
-      border: none;
-      outline: none;
-      background: none;
-      font-size: 16px;
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: 1; /* Ensure it's above the popup */
-    }
-
-    .popup-content {
-      flex: 1;
-      overflow-y: auto;
-      padding: 20px;
-    }
-
-    .popup-buttons {
-      display: flex;
-      justify-content: space-between;
-      background: #f2f2f2;
-      height: 40px;
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      z-index: 1; /* Ensure it's above the popup */
-    }
-
-    button {
-      padding: 10px;
-      cursor: pointer;
-      border: none;
-      outline: none;
-      background: none;
-      font-size: 16px;
-    }
-  </style>
+  <title>Document</title>
+  <link rel="stylesheet" href="components/css/style.css">
+  <link rel="stylesheet" href="components/css/style_pop_up.css">
 </head>
-
 <body>
+  <button   onclick="openPopup('popupContainer2')" >this Buttun</button>
+    <!-- popup for payment -->
+    <!-- Add more popup containers with different IDs -->
+    <div id="popupContainer2" class="popup-container" style="display: none;">
+      <button class="back-button" onclick="closePopup('popupContainer2')">
+        <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M244 400L100 256l144-144M120 256h292"/></svg>
+        Party Detail
+      </button>
+      <div class="popup">
+        <div class="popup-content">
+          <!-- Your scrollable content goes here -->
+      
+     
+    
 
-<!-- Add more buttons with different IDs -->
-<button onclick="openPopup('popupContainer1')">Open Popup 1</button>
-<button onclick="openPopup('popupContainer2')">Open Popup 2</button>
+        
 
-<!-- Add more popup containers with different IDs -->
-<div id="popupContainer1" class="popup-container" style="display:none;">
-  <button class="back-button" onclick="closePopup('popupContainer1')">Back</button>
-  <div class="popup">
-    <div class="popup-content">
-      <!-- Your scrollable content goes here -->
-      <p>Popup Content 1</p>
+        </div>
+        <div class="popup-buttons">
+          <button onclick="confirmAction('popupContainer2')">Pay Token Amount <svg xmlns="http://www.w3.org/2000/svg" style="margin-bottom: -5px;" width="14"  height="14" viewBox="0 0 24 24"><path fill="currentColor" d="M8 3h10l-1 2h-3.26c.48.58.84 1.26 1.05 2H18l-1 2h-2a5.558 5.558 0 0 1-4.8 4.96V14h-.7l6 7H13l-6-7v-2h2.5c1.76 0 3.22-1.3 3.46-3H7l1-2h4.66C12.1 5.82 10.9 5 9.5 5H7z"/></svg>200.00</button>
+        </div>
+      </div>
     </div>
-    <div class="popup-buttons">
-      <button onclick="confirmAction('popupContainer1')">Confirm</button>
-    </div>
-  </div>
-</div>
 
-<div id="popupContainer2" class="popup-container" style="display:none;">
-  <button class="back-button" onclick="closePopup('popupContainer2')">Back</button>
-  <div class="popup">
-    <div class="popup-content">
-      <!-- Your scrollable content goes here -->
-      <p>Popup Content 2</p>
-    </div>
-    <div class="popup-buttons">
-      <button onclick="confirmAction('popupContainer2')">Confirm</button>
-    </div>
-  </div>
-</div>
+    <!-- popup of payment -->
 
-<script>
-  function openPopup(modId) {
-    var modal = document.getElementById(modId);
-    modal.style.display = "flex";
-  }
-
-  function closePopup(modId) {
-    var modal = document.getElementById(modId);
-    modal.style.display = "none";
-  }
-
-  function confirmAction(modId) {
-    // Add your confirm action logic here
-    alert("Confirmed for " + modId + "!");
-    closePopup(modId); // Close the popup after confirming
-  }
-</script>
+    <script src="components/js/js.js"></script>
+    <script src="components/js/jquery-3.7.1.slim.min.js"></script>
 
 </body>
 </html>
