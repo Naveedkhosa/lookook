@@ -514,14 +514,13 @@ hr{
 /* popup container 2 start */
 .scadual_box{
   margin-top: 55px;
-  padding: 20px 0px;
+  padding: 10px 0px;
   z-index: 200;
 }
 .scadual_one_sec{
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 5px;
   box-shadow: rgba(0, 0, 0, 0.20) 0px 2px 8px;
   border-radius: 15px;
 
@@ -531,7 +530,7 @@ hr{
   align-items: center;
   justify-content: center;
   padding: 15px 5px;
-
+  border: none;
 }
 .cuisine_kart_section{
   display: flex;
