@@ -522,7 +522,7 @@ hr{
   align-items: center;
   justify-content: center;
   box-shadow: rgba(0, 0, 0, 0.20) 0px 2px 8px;
-  border-radius: 15px;
+  border-radius: 10px;
 
 }
 .timing_cenetr{
@@ -532,7 +532,6 @@ hr{
   padding: 15px 5px;
   border: none;
   width: 100%;
-  border: 1px solid red;
 }
 .cuisine_kart_section{
   display: flex;
