@@ -513,7 +513,6 @@ hr{
 
 /* popup container 2 start */
 .scadual_box{
-  height: calc(100% - 150px);
   margin-top: 55px;
   padding: 20px 0px;
   z-index: 200;
@@ -525,7 +524,13 @@ hr{
   padding: 5px;
   box-shadow: rgba(0, 0, 0, 0.20) 0px 2px 8px;
   border-radius: 15px;
-  width: 100%;
+
+}
+.timing_cenetr{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 5px;
 
 }
 .cuisine_kart_section{
