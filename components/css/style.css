@@ -8,6 +8,8 @@
   /*** remove tap highlight color*/
     -webkit-tap-highlight-color: transparent;
     -webkit-touch-callout: none;
+    margin: 0;
+    padding: 0;
 }
 body, html {
   width: 100%;
@@ -474,6 +476,23 @@ hr{
   padding: 0px 15px;
   border-radius: 5px;
   margin: 10px 0px;
+}
+.pre_img_text{
+  display: flex;
+  align-items: center;
+}
+.preimg{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background: #dddd;
+}
+.preimg iconify-icon{
+  font-size: 24px;
 }
 .pre_bk_slect_sec{
    width: 100%;
