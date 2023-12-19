@@ -344,6 +344,14 @@ hr{
   width: 40%;
   margin-top: 17px;
 }
+.isuue_bx{
+  margin: 20px 0px;
+  padding: 10px 20px;
+  border-radius: 4px;
+  border: 1px solid #dddddd79;
+  box-shadow: rgba(0, 0, 0, 0.20) 0px 2px 8px;
+  width: fit-content;
+}
 .gol_circle{
   display: flex;
   align-items: center;
