@@ -85,6 +85,21 @@ hr{
   justify-content: center;
 
 }
+.continuebtnn{
+  width: fit-content;
+  border-radius: 5px;
+  margin: 15px 0px;
+  background: #02645e;
+  display: flex;
+  padding: 10px 13px;
+  font-size: 13px;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+.continuebtnn a{
+  color: #fff;
+}
 .bookbtn{
   width: 250px;
   border-radius: 5px;
@@ -474,6 +489,12 @@ hr{
   width: 100%;
   margin: 15px 0px;
 
+}
+.amnt_detail_btn{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .pre_bk_box{
   display: flex;
