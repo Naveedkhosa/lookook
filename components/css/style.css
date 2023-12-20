@@ -310,6 +310,25 @@ hr{
   align-items: center;
   justify-content: space-between;
 }
+.choice_dish_container{
+  margin: 20px 0px;
+}
+.choc_d_box{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 15px 0px;
+}
+.choice_veg_icn_sec{
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+.choice_veg_icn_sec iconify-icon{
+  font-size: 12px;
+  margin-left: 10px;
+}
 /* service booking start style... */
 /* no booking page style .... */
 .no_book_page{
@@ -589,7 +608,7 @@ hr{
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding: 15px;
+  padding: 15px 0px;
 
 }
 .cuisine_kart{
@@ -1253,4 +1272,11 @@ hr{
 .solid_hsmal{
   font-size: 10px ;
   font-weight: 550 ;
+}
+.thin_smal{
+  font-size: 10px ;
+  color: #999999;
+}
+.malta{
+  color: #F44336;
 }
