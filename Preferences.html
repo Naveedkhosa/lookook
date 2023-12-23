@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bookings | Look My Cook</title>
     <link rel="stylesheet" href="components/css/style.css">
+    <link rel="stylesheet" href="components/css/style_pop_up.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
    
 </head>
@@ -167,13 +168,111 @@
           <p class="para_h_"><iconify-icon icon="ph:currency-inr-duotone"></iconify-icon>2350.00</p>
           <p class="para_gray">Amount Payable <span class="malta"> (DETAILS)</span> </p>
          </div>
-         <div class="continuebtnn" onclick="openPopup('popupContainer4')">
-          <a href="Preferences.html">Continue</a>
+         <div onclick="openPopup('popupContainer4')" class="continuebtnn"  >
+          Continue
          </div>
        </div>
           
         </div>
 
+    <!-- summary popup 4> popup of payment -->
+    <!-- Add more popup containers with different IDs -->
+    <div id="popupContainer4" class="popup-container" style="display: none;">
+      <button class="back-button" onclick="closePopup('popupContainer4')">
+        <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M244 400L100 256l144-144M120 256h292"/></svg>
+       Summary
+      </button>
+      <div class="popup">
+        <div class="popup-content">
+          <!-- Your scrollable content goes here -->
+
+          <div class="party_details_sec">
+        
+          </div>
+
+          <div class="summary_section">
+
+            <div class="space_ten summary_top_box">
+              <p class="solid_smal">Party Details</p>
+            </div>
+            <hr>
+            <div class="space_ten summary_top_box">
+              <p class="para_gray">Date</p>
+              <p class="para_gray">24 Dec 2023</p>
+            </div>
+            <div class="space_ten summary_top_box">
+              <p class="para_gray">Time</p>
+              <p class="para_gray">01:00 PM</p>
+            </div>
+            <div class="space_ten summary_top_box">
+              <p class="para_gray">No. of people</p>
+              <p class="para_gray">1</p>
+            </div>
+            <div class="space_ten summary_top_box">
+              <p class="para_gray">No. of dishes</p>
+              <p class="para_gray">2</p>
+            </div>
+
+          </div>
+
+          <div class="summary_section space_ten">
+
+            <div class="space_ten summary_top_box">
+              <p class="solid_hsmal">Party Details</p>
+            </div>
+            <hr>
+            <div class="summary_section space_ten">
+                <div class="space_ten summary_top_box">
+                  <p class="solid_smal">PARTY<p class="green_para_back">BEST OFFER</p></p>
+                  <p class="solid_smal malta">TAP TO APPLY</p>
+                </div>
+                <div class="space_ten summary_top_box">
+                    <p class="para_gray">You will save <span style="margin-left: 10px;" class="solid_smal"> 15% </span></p>
+                  </div>  
+              <div class="white_btn">
+                <button class="solid_smal">EXPLORE OFFER</button>
+              </div>
+              </div>
+          </div>
+
+          <div class="para_h ceneter_heading space_ten stepceneter_heading" style="margin: 15px 0px;">
+            <hr />
+            <p>BILL SUMMARY</p>
+            <hr />
+          </div>
+
+          <div class="summary_section">
+            <div class="space_ten summary_top_box">
+              <p class="solid_smal">Total Amount</p>
+              <p class="solid_smal">13235.00</p>
+            </div>
+            <hr>
+            <div class="space_ten summary_top_box">
+              <p class="para_gray">Token Amount</p>
+              <p class="para_gray">13235.00</p>
+            </div>
+
+            <div class="space_ten space_top summary_top_box">
+              <p class="para_h_">Remaining Amount</p>
+              <p class="para_h_">13235.00</p>
+            </div>
+
+            <div class="note_summary">
+              <p class="para_p"> <b>NOTE:</b> No refund is provided if you cancel when there is less than 8 hours remaining for the service. 100% refund id cancelled within 60 minutes of your booking. </p>
+              <a class="solid_smal space_topp">Read Cancellation Policy</a>
+            </div>
+          </div>
+
+        </div>
+      
+      </div>
+      <div class="popup-buttons">
+        <button onclick="confirmAction('popupContainer4')">Pay Token Amount <svg xmlns="http://www.w3.org/2000/svg" style="margin-bottom: -5px;" width="14"  height="14" viewBox="0 0 24 24"><path fill="currentColor" d="M8 3h10l-1 2h-3.26c.48.58.84 1.26 1.05 2H18l-1 2h-2a5.558 5.558 0 0 1-4.8 4.96V14h-.7l6 7H13l-6-7v-2h2.5c1.76 0 3.22-1.3 3.46-3H7l1-2h4.66C12.1 5.82 10.9 5 9.5 5H7z"/></svg>200.00</button>
+      </div>
+    </div>
+
+    <!-- summary popup 4> popup of payment end-->
+ 
      <!-- pop up of filter -->
       <div id="modal1" class="modal">
         <div class="popup1">
@@ -373,6 +472,10 @@
         </div>
       </div>
        <!-- pop up popup of dishes -->
+
+       
+
+ 
  <!-- bottom menu start ... -->
  <div class="bottm_menu_container">
   <div class="bottom_menu_box">
@@ -385,8 +488,6 @@
 <!-- bottom menu start ... -->
 
     </div>
-    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
-    <script src="components/js/js.js"></script>
 
     <script>
         function setupCounter(minusId, plusId, numberId) {
@@ -552,5 +653,10 @@ document.getElementById('dateContainer').innerHTML = daysHtml;
 
 
 </script>
+
+
+<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+<script src="components/js/js.js"></script>
+
 </body>
 </html>

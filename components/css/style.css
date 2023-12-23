@@ -99,6 +99,7 @@ hr{
   align-items: center;
   justify-content: center;
   color: #fff;
+  cursor: pointer;
 }
 .continuebtnn a{
   color: #fff;
@@ -174,6 +175,14 @@ hr{
   padding: 5px;
   border-radius: 0px 0px 5px 5px;
 
+}
+.green_para_back{
+  background: #01c96228;
+  color: #01c962;
+  font-size: 8px;
+  padding: 5px;
+  font-weight: 550;
+  border-radius: 2px;
 }
 /* party detail style... */
 .pop_fixed_detail{
