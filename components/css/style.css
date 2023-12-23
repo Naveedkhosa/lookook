@@ -52,6 +52,9 @@ svg{
   border: 1px solid #999999;
   color: #1c1c1c;
 }
+.para_w_six{
+  width: 60%;
+}
 .safe i{
   color: #01c962;
 }
@@ -123,6 +126,7 @@ hr{
 
 }
 /* service booking start style... */
+
 
 .service_booking_container{
   margin: 0 auto;
@@ -319,6 +323,7 @@ hr{
   justify-content: space-between;
   width: 100%;
   padding: 15px 0px;
+  
 }
 .choice_veg_icn_sec{
   display: flex;
@@ -329,7 +334,20 @@ hr{
   font-size: 12px;
   margin-left: 10px;
 }
-/* service booking start style... */
+.ingredS_list_top{
+  margin: 70px 0px;
+}
+.ingreds_right{
+  border: 1px solid red;
+  position: relative;
+}
+.ingreds_right_img{
+  border: 1px solid #2196F3;
+  position: absolute;
+  right: -10px;
+  bottom: -20px;
+}
+/* service booking end style... */
 /* no booking page style .... */
 .no_book_page{
   display: flex;
@@ -514,6 +532,12 @@ hr{
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: fixed;
+  bottom: 48PX;
+  left: 0px;
+  padding: 5px 15px;
+  background: #fff;
+  z-index: 10;
 }
 .pre_bk_box{
   display: flex;
@@ -552,6 +576,7 @@ hr{
 .pre_bk_kart_page{
   width: 94%;
   margin: 0 auto;
+  padding-bottom: 90px;
 }
 /* bottom menu start here... */
 .bottm_menu_container{
@@ -594,6 +619,9 @@ hr{
   box-shadow: rgba(0, 0, 0, 0.20) 0px 2px 8px;
   border-radius: 10px;
 
+}
+.padding_top{
+  padding-top: 50px;
 }
 .timing_cenetr{
   display: flex;
@@ -798,8 +826,8 @@ hr{
   padding: 20px 0px;
 }
 .decree{
-  padding: 5px;
-  width: 22px;
+  padding: 7px;
+  width: 25px;
   cursor: pointer;
 }
 /* Booking preference style ending*/
@@ -1060,7 +1088,7 @@ hr{
   padding: 15px;
   cursor: pointer;
   margin: 20px 0px;
-  border: 1px solid #1c1c1c1f;
+  /* border: 1px solid #1c1c1c1f; */
   box-shadow: rgba(0, 0, 0, 0.20) 0px 1px 8px;
   overflow: hidden;
 }
@@ -1080,7 +1108,7 @@ hr{
   padding: 0;
   margin: 10px 0px;
   height: 100px;
-  border: 1px solid #dddddd77;
+  /* border: 1px solid #dddddd77; */
   position: relative;
 }
 .numbrr{
@@ -1133,10 +1161,10 @@ hr{
   background: #f3bf2136;
 }
 .step_kart_img{
-  width: 100px;
-  height: 100px;
-  border-radius: 5px;
-   
+  width: 80px;
+  height: 80px;
+  border-radius: 12px;
+  padding: 5px;
 }
 .included_imgkart_img{
   width: 60px;
@@ -1217,7 +1245,7 @@ hr{
 @media screen and (max-width: 1105px) {
   .now_hero_img{
     width: 100%;
-    height: 30vh;
+    height: 25vh;
   }
 }
 @media screen and (max-width: 685px) {
@@ -1279,4 +1307,7 @@ hr{
 }
 .malta{
   color: #F44336;
+}
+.space_five{
+  margin: 5px 0px;
 }

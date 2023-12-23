@@ -10,6 +10,7 @@
 </head>
 <body>
     <div class="pre_bk_kart_mainpage">
+      <p class="para_h space_topp now_hero_al_contnt">Party Preferences</p>
         <div class="pre_bk_kart_page">
 
             <!-- selection box -->  
@@ -164,7 +165,7 @@
        <div class="amnt_detail_btn">
          <div class="amnt_det">
           <p class="para_h_"><iconify-icon icon="ph:currency-inr-duotone"></iconify-icon>2350.00</p>
-          <p class="para_gray">Amount Payable <span> (DETAILS)</span></p>
+          <p class="para_gray">Amount Payable <span class="malta"> (DETAILS)</span> </p>
          </div>
          <div class="continuebtnn">
           <a href="Preferences.html">Continue</a>
@@ -336,30 +337,18 @@
             <p class="para_p">What would you love to serve your guests?</p>
             <div class="time_bx_section" id="timeContainer">
               <a href="#" class="time-option">09:00 AM</a>
-              <a href="#" class="time-option">09:30 AM</a>
               <a href="#" class="time-option">10:00 AM</a>
-              <a href="#" class="time-option">10:30 AM</a>
               <a href="#" class="time-option">11:00 AM</a>
-              <a href="#" class="time-option">09:00 AM</a>
-              <a href="#" class="time-option">09:30 AM</a>
-              <a href="#" class="time-option">10:00 AM</a>
-              <a href="#" class="time-option">10:30 AM</a>
-              <a href="#" class="time-option">11:00 AM</a>
-              <a href="#" class="time-option">09:00 AM</a>
-              <a href="#" class="time-option">09:30 AM</a>
-              <a href="#" class="time-option">10:00 AM</a>
-              <a href="#" class="time-option">10:30 AM</a>
-              <a href="#" class="time-option">11:00 AM</a>
-              <a href="#" class="time-option">09:00 AM</a>
-              <a href="#" class="time-option">09:30 AM</a>
-              <a href="#" class="time-option">10:00 AM</a>
-              <a href="#" class="time-option">10:30 AM</a>
-              <a href="#" class="time-option">11:00 AM</a>
-              <a href="#" class="time-option">09:00 AM</a>
-              <a href="#" class="time-option">09:30 AM</a>
-              <a href="#" class="time-option">10:00 AM</a>
-              <a href="#" class="time-option">10:30 AM</a>
-              <a href="#" class="time-option">11:00 AM</a>
+              <a href="#" class="time-option">12:00 PM</a>
+              <a href="#" class="time-option">01:00 PM</a>
+              <a href="#" class="time-option">02:00 PM</a>
+              <a href="#" class="time-option">03:00 PM</a>
+              <a href="#" class="time-option">04:00 PM</a>
+              <a href="#" class="time-option">05:00 PM</a>
+              <a href="#" class="time-option">06:00 PM</a>
+              <a href="#" class="time-option">07:00 PM</a>
+              <a href="#" class="time-option">08:00 PM</a>
+              <a href="#" class="time-option">09:00 PM</a>
             </div>
           </div>
         </div>
@@ -376,7 +365,7 @@
           </a>
           <div class="content1">
           
-            <div class="time_bx_section date_bx_section " id="dateContainer">
+            <div class="time_bx_section " id="dateContainer">
               <!-- Add an ID to the element you want to update dynamically -->
               <a href="#" class="date-option" id="currentDate"></a>
             </div>
@@ -543,7 +532,7 @@ let daysHtml = '';
 // Loop through each day of the month
 for (let i = 1; i <= numberOfDays; i++) {
     const currentDay = new Date(currentDate.getFullYear(), currentDate.getMonth(), i);
-    const dayOfWeek = currentDay.toLocaleString('en-US', { weekday: 'long' });
+    const dayOfWeek = currentDay.toLocaleString('en-US', { weekday: 'short' });
     const dayOfMonth = currentDay.getDate();
     const monthAbbreviation = months[currentDate.getMonth()];
 
