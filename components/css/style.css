@@ -103,6 +103,16 @@ hr{
 .continuebtnn a{
   color: #fff;
 }
+.white_btn{
+  background: #dddddd8d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+}
+.white_btn button{
+  color: #585757;
+}
 .bookbtn{
   width: 250px;
   border-radius: 5px;
@@ -295,6 +305,7 @@ hr{
   box-shadow: rgba(0, 0, 0, 0.20) 0px 1px 8px;
   border-top: 1px solid #dddddd8d;
   border-radius: 10px;
+  margin-bottom: 25px;
 
 }
 .note_summary{
