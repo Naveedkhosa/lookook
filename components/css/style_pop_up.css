@@ -127,7 +127,7 @@ a{
     top: 0;
     left: 0;
     box-shadow: rgba(0, 0, 0, 0.20) 0px 1px 8px;
-    /* z-index: 102; */
+    z-index: 12;
      /* Ensure it's above the popup */
   }
 
