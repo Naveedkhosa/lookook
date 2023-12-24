@@ -396,8 +396,9 @@ hr{
   border: 3px solid #02645e !important;
 }
 .issue_page{
-  width: 92%;
-  margin: 0 auto;
+  width: 100%;
+  margin: 0px auto;
+  
 }
 .issue_top_section{
   display: flex;
@@ -423,6 +424,7 @@ hr{
   border: 1px solid #dddddd79;
   box-shadow: rgba(0, 0, 0, 0.20) 0px 2px 8px;
   width: fit-content;
+  cursor: pointer;
 }
 .gol_circle{
   display: flex;
