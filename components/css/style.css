@@ -1180,7 +1180,7 @@ hr{
   height: 60px;
   border-radius:50% ;
   border: 1px solid #ccc;
-  background: #f3bf2136;
+  /* background: #f3bf2136; */
 }
 .step_kart_img{
   width: 80px;
