@@ -1097,6 +1097,7 @@ hr{
 }
 .carrd_kart_content .w_s{
   width: 80%;
+  font-weight: bold;
 }
 .card_con_heading{
   display: flex;
