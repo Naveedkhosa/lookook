@@ -1143,13 +1143,13 @@ hr{
   position: absolute;
   right: 10px;
   top: 10px;
-  background: #dddddd8f;
+  background: #dddddd5a;
   border-radius: 50%;
   font-size: 13px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #dddd;
+  color: #ccc;
 }
 .included_kart{
   box-shadow: none;
