@@ -155,11 +155,6 @@ hr{
   overflow-x: auto;
 }
 
-.gallery_images {
-  display: flex;
-  flex-wrap: nowrap;
-}
-
 .gallery_img {
   flex: 0 0 auto;
   width: 120px;
