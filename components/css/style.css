@@ -150,7 +150,7 @@ hr{
   justify-content: flex-start;
   padding: 10px 0px;
   width: 100%;
-  overflow: hidden;
+  height: fit-content;
   overflow-x: auto;
 }
 
