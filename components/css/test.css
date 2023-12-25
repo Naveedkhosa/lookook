@@ -504,6 +504,6 @@ figure img {
     flex-wrap: nowrap;
   }
   .imageRoll {
-    gap: 2px;
+    margin-right: 2px;
   }
 }/*# sourceMappingURL=test.css.map */
