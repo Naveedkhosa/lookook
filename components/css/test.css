@@ -19,22 +19,22 @@ figure {
   perspective: 900px;
 }
 figure:nth-child(1) {
-  --imageUrl: url("/components/imag/a (1).jpg");
+  --imageUrl: url("components/imag/a (1).jpg");
 }
 figure:nth-child(2) {
-  --imageUrl: url("/components/imag/a (2).jpg");
+  --imageUrl: url("components/imag/a (2).jpg");
 }
 figure:nth-child(3) {
-  --imageUrl: url("/components/imag/a (3).jpg");
+  --imageUrl: url("components/imag/a (3).jpg");
 }
 figure:nth-child(4) {
-  --imageUrl: url("/components/imag/a (4).jpg");
+  --imageUrl: url("components/imag/a (4).jpg");
 }
 figure:nth-child(5) {
-  --imageUrl: url("/components/imag/img1 (4).webp");
+  --imageUrl: url("components/imag/img1 (4).webp");
 }
 figure:nth-child(6) {
-  --imageUrl: url("/components/imag/img1 (1).webp");
+  --imageUrl: url("components/imag/img1 (1).webp");
 }
 figure img {
   width: 100%;
