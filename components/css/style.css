@@ -58,8 +58,14 @@ svg{
 .safe i{
   color: #01c962;
 }
-.danger i{
+.danger iconify-icon{
   color: #ff003c;
+  font-size: 25px !important;
+  margin-right: 10px;
+}
+.danger{
+  display: flex;
+  align-items: center;
 }
 hr{
   border-color: #dddddd41;

@@ -1,0 +1,129 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+.gallery {
+  display: flex;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  margin: 20px 0px;
+  
+}
+
+
+figure {
+  width: 300px;
+  perspective: 900px;
+
+
+  &:nth-child(1) { --imageUrl: url('/components/imag/a\ \(1\).jpg'); }
+  &:nth-child(2) { --imageUrl: url('/components/imag/a\ \(2\).jpg'); }
+  &:nth-child(3) { --imageUrl: url('/components/imag/a\ \(3\).jpg'); }
+  &:nth-child(4) { --imageUrl: url('/components/imag/a\ \(4\).jpg'); }
+  &:nth-child(5) { --imageUrl: url('/components/imag/img1\ \(4\).webp'); }
+  &:nth-child(6) { --imageUrl: url('/components/imag/img1\ \(1\).webp'); }
+
+  img {
+    width: 100%;
+  }
+}
+
+.imageRoll {
+  flex: 0 0 auto;
+  scroll-snap-align: start; /* Align each card to the start of the container */
+  margin-right: 20px;
+  width: 300px;
+  height: 300px;
+  position: relative;
+  background-color: #fff;
+  box-shadow: 1em 0.5em 2em #1234, 0 0 5em #1234 inset;
+  gap: 5px;
+
+
+  & i {
+    position: absolute;
+    left: calc(100% - 1px);
+    width: 6px; height: 100%;
+    transform-style: preserve-3d;
+    transform-origin: left;
+    transition: transform 0.6s var(--delay, 0s) ease-in-out;
+    background-image:
+      linear-gradient(#0003, #0000 5% 95%, #0003),
+      var(--imageUrl, '');
+    background-position-x: calc(var(--bpx, 0) + 1px);
+    background-size: 300px 300px;
+  }
+
+  & > i {
+    left: 0;
+    width: 5px;
+  }
+
+  &:hover i { 
+    transform: rotateY(var(--angle, 0deg)) skewY(var(--skew, 0deg));
+    transition-delay: var(--delay2, 0s);
+  }
+
+  $count: 60;
+  $bpx: 0;
+  $delay: 0;
+  $angleChange: 0;
+  $skew: 0;
+
+  @for $i from 1 to $count {
+
+    $sel: '&';
+    @for $n from 0 to $i {
+      $sel: $sel + ' > i';
+    }
+
+    #{$sel} {
+      --bpx: #{$bpx}px;
+      --delay: #{$delay}s;
+      --delay2: #{0.6 - $delay}s;
+      --angle: #{-10 - $angleChange}deg;
+      --skew: #{$skew}deg;
+    }
+
+    $bpx: $bpx - 5;
+    $angleChange: $angleChange + 0.1;
+    $delay: $delay + 0.01;
+    $skew: $skew - 0.1;
+  }
+
+  & > figcaption {
+    position: absolute;
+    text-align: center;
+    padding-top: 2em;
+    padding-inline: 100px 25px;
+    z-index: -1;
+    font-size: 14px;
+    width: 100%; height: 100%;
+
+    & strong {
+      display: block;
+    }
+  }
+}
+
+@media  (max-width: 685px) {
+  .gallery {
+    flex-direction: row;
+    flex-wrap: nowrap;
+ 
+  }
+
+  .imageRoll {
+    // margin-right: 10px;
+    gap: 5px;
+  }
+
+}
