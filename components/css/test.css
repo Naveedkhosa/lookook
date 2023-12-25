@@ -19,10 +19,10 @@ figure {
   perspective: 900px;
 }
 figure:nth-child(1) {
-  --imageUrl: url("../components/imag/a (1).jpg");
+  --imageUrl: url("../../components/imag/a (1).jpg");
 }
 figure:nth-child(2) {
-  --imageUrl: url("components/imag/a (2).jpg");
+  --imageUrl: url("../../components/imag/a (2).jpg");
 }
 figure:nth-child(3) {
   --imageUrl: url("components/imag/a (3).jpg");

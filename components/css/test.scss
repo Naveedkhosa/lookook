@@ -24,8 +24,8 @@ figure {
   perspective: 900px;
 
 
-  &:nth-child(1) { --imageUrl: url('../components/imag/a\ \(1\).jpg'); }
-  &:nth-child(2) { --imageUrl: url('components/imag/a\ \(2\).jpg'); }
+  &:nth-child(1) { --imageUrl: url('../../components/imag/a\ \(1\).jpg'); }
+  &:nth-child(2) { --imageUrl: url('../../components/imag/a\ \(2\).jpg'); }
   &:nth-child(3) { --imageUrl: url('components/imag/a\ \(3\).jpg'); }
   &:nth-child(4) { --imageUrl: url('components/imag/a\ \(4\).jpg'); }
   &:nth-child(5) { --imageUrl: url('components/imag/img1\ \(4\).webp'); }
