@@ -49,7 +49,7 @@ figure img {
   position: relative;
   background-color: #fff;
   box-shadow: 1em 0.5em 2em rgba(17, 34, 51, 0.2666666667), 0 0 5em rgba(17, 34, 51, 0.2666666667) inset;
-  gap: 5px;
+  gap: 2px;
 }
 .imageRoll i {
   position: absolute;
@@ -504,6 +504,6 @@ figure img {
     flex-wrap: nowrap;
   }
   .imageRoll {
-    gap: 5px;
+    gap: 2px;
   }
 }/*# sourceMappingURL=test.css.map */
