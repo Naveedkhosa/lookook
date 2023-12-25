@@ -1252,6 +1252,9 @@ hr{
 .stepceneter_heading p{
   color: #585757;
 }
+.hero_how_sec{
+  padding: 0px 15px;
+}
 .now_hero_img{
   width: 100%;
   border-radius: 20px;
