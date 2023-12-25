@@ -1254,11 +1254,14 @@ hr{
 }
 .now_hero_img{
   width: 100%;
+  border-radius: 20px;
   height: 84vh;
+  margin-top: 55px;
 }
 .now_hero_img img{
   width: 100%;
   height: 100%;
+  border-radius: 20px;
   object-fit: cover;
 }
 .now_hero_al_contnt{
