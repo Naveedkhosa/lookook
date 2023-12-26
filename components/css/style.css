@@ -170,6 +170,19 @@ hr{
   object-fit: cover;
 }
 /* gallery style end */
+
+/* testimonial style  start */
+.al_rev_count{
+  display: flex;
+  align-items: center;
+}
+.al_rev_count iconify-icon{
+  color: #f29a03;
+  font-size: 30px;
+  margin-right: 10px;
+  
+}
+/* testimonial style end */
 .service_booking_container{
   margin: 0 auto;
   padding: 20px 0px;
