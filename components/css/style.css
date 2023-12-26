@@ -733,6 +733,65 @@ hr{
   opacity: 1;
 }
 /* bottom menu end here... */
+/* top menu start here... */
+.top_menu_container{
+  width: 100%;
+  position: relative;
+  height: 50px;
+}
+.top_menu_box{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  height: 50px;
+  top: 0;
+  background: #fff;
+  z-index: 100;
+  border: 1px solid #ccc;
+  padding: 0px 15px;
+}
+.top_menu_box iconify-icon{
+  font-size: 30px;
+}
+.top_menu_box a:hover{
+  color: #f1063d;
+  opacity: 1;
+}
+.top_side_nav{
+  position: relative;
+}
+.top_nav_ico{
+  position: absolute;
+  bottom: 1px;
+  right: 1px;
+  border: 1px solid #fff;
+  background: #02645e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  padding: 1px;
+
+}
+.top_nav_ico iconify-icon{
+  font-size: 13px;
+  color: #fff;
+}
+.profile_top_nav{
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 1px solid #02645e;
+  background: #dddddd79;
+}
+.profile_top_nav img{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+/* top menu end here... */
 
 
 /* popup container 2 start */
