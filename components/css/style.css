@@ -750,7 +750,7 @@ hr{
   background: #fff;
   z-index: 100;
   border: 1px solid #ccc;
-  padding: 0px 15px;
+  padding: 0px 50px;
 }
 .top_menu_box iconify-icon{
   font-size: 30px;
@@ -764,8 +764,8 @@ hr{
 }
 .top_nav_ico{
   position: absolute;
-  bottom: 1px;
-  right: 1px;
+  bottom: -2px;
+  right: -2px;
   border: 2px solid #fff;
   background: #02645e;
   display: flex;
@@ -1457,6 +1457,9 @@ hr{
 }
 /* gallery style end */
 @media screen and (max-width: 685px) {
+  .top_menu_box{
+    padding: 0px 15px;
+  }
   /* .content{
     display: flex;
     align-items: center;
