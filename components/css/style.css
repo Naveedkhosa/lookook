@@ -144,6 +144,31 @@ hr{
 }
 /* service booking start style... */
 /* gallery style start */
+.size_se{
+  font-size: 7px;
+  font-weight: 500;
+}
+.scroll_gallry{
+  position: absolute;
+  background: #dddddd79;
+  border: 1px solid #dddddd81;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  padding: 3px;
+  backdrop-filter: 5px;
+  -webkit-backdrop-filter: blur(5px);
+  right: 15px;
+  bottom: 10px;
+  border-radius: 2px;
+  color: #fff;
+}
+.scroll_gallry iconify-icon{
+  font-size: 10px;
+  margin-left: 5px;  
+  font-weight: bold;
+}
 .gallery_container {
   display: flex;
   align-items: center;
@@ -1333,6 +1358,8 @@ hr{
 }
 .hero_how_sec{
   padding: 0px 10px;
+  position: relative;
+  
 }
 .now_hero_img{
   width: 100%;
