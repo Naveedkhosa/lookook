@@ -17,6 +17,8 @@ body, html {
   margin: 0;
   font-family: 'Inter', sans-serif;
   overflow-X: hidden;
+  scroll-behavior: smooth;
+
 }
 a:hover{
   opacity: 0.5;
@@ -210,6 +212,7 @@ hr{
   margin-right: 10px;
   
 }
+
 .yelo_i{
   color: #f29a03;
 }
