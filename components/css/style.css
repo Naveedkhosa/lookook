@@ -766,7 +766,7 @@ hr{
   position: absolute;
   bottom: 1px;
   right: 1px;
-  border: 1px solid #fff;
+  border: 2px solid #fff;
   background: #02645e;
   display: flex;
   align-items: center;
@@ -783,7 +783,7 @@ hr{
   width: 35px;
   height: 35px;
   border-radius: 50%;
-  border: 1px solid #02645e;
+  border: 2px solid #02645e;
   background: #dddddd79;
 }
 .profile_top_nav img{
