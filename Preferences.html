@@ -11,29 +11,16 @@
 </head>
 <body>
     <div class="pre_bk_kart_mainpage">
-                 <!-- top menu start ... -->
-     <div class="bottm_menu_container">
-      <div class="top_menu_box">
-          <div class="_logo" href="#">
-              <img src="components/imag/logo.svg" alt="">
-          </div>
-          <div class="top_side_nav">
-              <div class="profile_top_nav">
-                  <img src="components/imag/a (3).jpg" alt="">
-              </div>
-              <div class="top_nav_ico">
-                  <iconify-icon icon="ei:navicon"></iconify-icon>
-              </div>
-          </div>
-      </div>
-   </div>
-  <!-- top menu start ... -->
-      <p class="para_h space_topp now_hero_al_contnt">Party Preferences</p>
+  
+  <button class="back-button"  onclick="history.back()">
+    <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M244 400L100 256l144-144M120 256h292"/></svg>
+   Party Prefrences
+  </button>
         <div class="pre_bk_kart_page">
 
             <!-- selection box -->  
             <a onclick="openModall('modal4')" class="pre_bk_slect_sec">
-               <p class="para_p">Date</p>
+               <p class="para_p">Event Date</p>
                <div class="pre_bk_box">
                  <p class="para_h_" id="date_select">Select date</p>
                  <i class="fa-solid fa-chevron-down"></i>
@@ -214,11 +201,11 @@
             </div>
             <hr>
             <div class="space_ten summary_top_box">
-              <p class="para_gray">Date</p>
+              <p class="para_gray">Event Date</p>
               <p class="para_gray">24 Dec 2023</p>
             </div>
             <div class="space_ten summary_top_box">
-              <p class="para_gray">Time</p>
+              <p class="para_gray">Serving Time</p>
               <p class="para_gray">01:00 PM</p>
             </div>
             <div class="space_ten summary_top_box">
@@ -265,17 +252,18 @@
             </div>
             <hr>
             <div class="space_ten summary_top_box">
-              <p class="para_gray">Token Amount</p>
+              <p class="para_gray">Pay Now (40% Advance)</p>
               <p class="para_gray">13235.00</p>
             </div>
 
             <div class="space_ten space_top summary_top_box">
-              <p class="para_h_">Remaining Amount</p>
+              <p class="para_h_">Balance Payment<br><p class="para_gray">(60% at end of Service)</p></p>
               <p class="para_h_">13235.00</p>
             </div>
 
             <div class="note_summary">
-              <p class="para_p"> <b>NOTE:</b> No refund is provided if you cancel when there is less than 8 hours remaining for the service. 100% refund id cancelled within 60 minutes of your booking. </p>
+              <p class="para_p"> <b>NOTE:</b> 40% Advance Payment is required as it blocks the Chef for that day.
+                100% Refund if Booking is cancelled within 4 Hours. No Refund is applicable after 4 Hours of Booking. </p>
               <a class="solid_smal space_topp">Read Cancellation Policy</a>
             </div>
           </div>
@@ -283,9 +271,28 @@
         </div>
       
       </div>
-      <div class="popup-buttons">
-        <button onclick="confirmAction('popupContainer4')">Pay Token Amount <svg xmlns="http://www.w3.org/2000/svg" style="margin-bottom: -5px;" width="14"  height="14" viewBox="0 0 24 24"><path fill="currentColor" d="M8 3h10l-1 2h-3.26c.48.58.84 1.26 1.05 2H18l-1 2h-2a5.558 5.558 0 0 1-4.8 4.96V14h-.7l6 7H13l-6-7v-2h2.5c1.76 0 3.22-1.3 3.46-3H7l1-2h4.66C12.1 5.82 10.9 5 9.5 5H7z"/></svg>200.00</button>
+      <div class="amnt_detail_btn">
+        <div class="amnt_det">
+         <p class="para_h_"><iconify-icon icon="ph:currency-inr-duotone"></iconify-icon>2350.00</p>
+         <p class="para_gray">Amount Payable <span class="malta"> (DETAILS)</span> </p>
+        </div>
+        <div onclick="openPopup('popupContainer4')" class="continuebtnn"  >
+          Pay Now (40% Advance)
+        </div>
       </div>
+  <!-- bottom menu start ... -->
+ <div class="bottm_menu_container">
+  <div class="bottom_menu_box">
+      <a href="index.html"><iconify-icon icon="carbon:home"></iconify-icon></a>
+      <a href="Bookings.html"><iconify-icon icon="tabler:brand-booking"></iconify-icon></a>
+      <a href=""><iconify-icon icon="carbon:star-review"></iconify-icon></a>
+      <a href="FAQs.html"><iconify-icon icon="fluent:person-support-16-filled"></iconify-icon></a>
+  </div>
+</div>
+<!-- bottom menu start ... -->
+    
+ 
+
     </div>
 
     <!-- summary popup 4> popup of payment end-->
