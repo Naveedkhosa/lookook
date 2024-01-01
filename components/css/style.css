@@ -38,8 +38,9 @@ svg{
   margin: 0px 10px;
 }
 .space_botom{
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
+
 mrg_btn
 .btn{
   background: #f29a03;
@@ -163,8 +164,8 @@ hr{
 }
 .scroll_gallry{
   position: absolute;
-  background: #02d2c434;
-  border: 1px solid #02645d85;
+  background: #dddddd5a;
+  border: 1px solid #ccc;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -175,7 +176,7 @@ hr{
   right: 0px;
   bottom: -15px;
   border-radius: 2px;
-  color: #02645e;
+  color: #ccc;
 }
 .scroll_gallry iconify-icon{
   font-size: 10px;
@@ -253,6 +254,7 @@ hr{
 }
 .re_r_t_img iconify-icon{
   font-size: 30px;
+  color: #333;
 }
 .review_r_top{
   display: flex;
@@ -321,6 +323,11 @@ hr{
   /* top: 55px; */
   padding: 10px 0px;
   background: linear-gradient(#02645d2d, #fff);
+}
+.line{
+  width: 40%;
+  color: #000;
+  border: 1px dotted #dddddd6d;
 }
 .fixed_detail_content{
   width: 200px;
@@ -1314,7 +1321,10 @@ ul li{
   box-shadow: rgba(0, 0, 0, 0.20) 0px 1px 8px;
   overflow: hidden;
 }
-
+.n_include_kart{
+  padding: 0px 10px;
+  margin: 0px;
+}
 .step_box_container{
   display: flex;
   align-items: center;
