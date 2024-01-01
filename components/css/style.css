@@ -353,7 +353,8 @@ ul li{
   /* padding: 5px 0px; */
   color: #585757;
   font-size: 13px;
-  line-height: 22px;
+  line-height: calc(14 * 1.3px);
+  margin: 10px 0px;
 }
 .service_booking_kard{
   position: relative;
