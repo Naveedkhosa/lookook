@@ -1,98 +1,287 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Support</title>
-  <link rel="stylesheet" href="components/css/style.css">
-  <link rel="stylesheet" href="components/css/style_pop_up.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Support</title>
+    <link rel="stylesheet" href="components/css/style.css" />
+    <link rel="stylesheet" href="components/css/style_pop_up.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
-      </style>
-</head>
-<body>
-  <button   onclick="openPopup('popupContainer12')" >this Buttun</button>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+    </style>
+    <style>
+      .tab_body {
+        margin: 0;
+        font-family: "Arial", sans-serif;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        background-color: #f0efef;
+      }
+      .tab_contnet_main {
+        background: #f0efef;
+      }
+      /* Style the tab */
+      .tab {
+        float: left;
+        background-color: #fff;
+        width: fit-content;
+        height: 300px;
+        width: 60px;
+      }
 
- 
-   
+      /* Style the buttons inside the tab */
+      .tab button {
+        display: block;
+        background-color: inherit;
+        color: black;
+        padding: 10px 5px;
+        width: 100%;
+        border: none;
+        outline: none;
+        text-align: left;
+        cursor: pointer;
+        transition: 0.3s;
+        font-size: 13px;
+      }
+
+      /* Change background color of buttons on hover */
+      .tab button:hover {
+        background-color: #fff;
+      }
+
+      /* Create an active/current "tab button" class */
+      .tab button.active {
+        background: #02645e;
+        color: #ffff;
+      }
+
+      /* Style the tab content */
+      .tabcontent {
+        float: left;
+        /* padding: 0px 5px; */
+        width: calc(100% - 60px);
+        border-left: none;
+        height: 300px;
+      }
+      .popup_w_100 {
+        width: 100%;
+      }
+      .tabs_topspace {
+        margin-top: 55px;
+      }
+      .tabs_cards{
+        display: flex;
+        flex-wrap: wrap;
+      
+       
+      }
+      .tab_card {
+        width: calc(50% - 20px);
+        height: fit-content;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 15px;
+        border: 1px solid #f0efef;
+        background: #fff;
+        margin: 10px 0px 0px 10px;
+      }
+      .tabimg {
+        width: 45px;
+        height: 45px;
+      }
+      .tabimg img {
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="openPopup('popupContainer12'); openDefaultCategory()">
+      this Buttun
+    </button>
 
     <!-- support popup 12> popup of payment -->
     <!-- Add more popup containers with different IDs -->
-    <div id="popupContainer12" class="popup-container" style="display: none;">
+    <div
+      id="popupContainer12"
+      class="popup-container tab_body"
+      style="display: none"
+    >
       <button class="back-button" onclick="closePopup('popupContainer12')">
-        <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M244 400L100 256l144-144M120 256h292"/></svg>
-       Summary
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="512"
+          height="512"
+          viewBox="0 0 512 512"
+        >
+          <path
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="48"
+            d="M244 400L100 256l144-144M120 256h292"
+          />
+        </svg>
+        Select Dishes Now
       </button>
-      <div class="popup">
-        <div class="popup-content">
+      <div class="popup popup_w_100">
+        <div class="tab_contnet_main popup-content">
           <!-- Your scrollable content goes here -->
 
-          <div class="party_details_sec">
-        
-          </div>
+          <div class="tabs_topspace"></div>
 
-          <div class="issue_page">
-
-            <div class="issue_top_section">
-                <div class="stipone">
-                    <p class="para_p para_p_active">Issue</p>
-                    <div class="gol_circle gol_active">
-                        1
-                    </div>
-                </div>
-                <hr>
-                <div class="stipone">
-                    <p class="para_p para_p_active">Details</p>
-                    <div class="gol_circle gol_active">
-                        2
-                    </div>
-                </div>
-                <hr>
-                <div class="stipone">
-                    <p class="para_p">Answer</p>
-                    <div class="gol_circle">
-                        3
-                    </div>
-                </div>
+          <div id="tabs-container">
+            <div class="tab">
+              <button
+                class="tablinks"
+                onclick="openCity(event, 'London')"
+                id="defaultOpen"
+              >
+                London
+              </button>
+              <button class="tablinks" onclick="openCity(event, 'Paris')">
+                Paris
+              </button>
+              <button class="tablinks" onclick="openCity(event, 'Tokyo')">
+                Tokyo
+              </button>
             </div>
-            <p class="para_h space_topp">Ok, how can I make this right?</p>
-             <div class="isuue_sect">
-                <div class="isuue_bx">
-                    <p>Chefit</p>
-                </div>
-                <div class="isuue_bx">
-                    <p>Chef for Party</p>
-                </div>
-                <div class="isuue_bx">
-                    <p>Payment Declined</p>
-                </div>
-                <div class="isuue_bx">
-                    <p>Bartender</p>
-                </div>
-             </div>
-        </div>
 
-        </div>
-      
-      </div>
-        <!-- bottom menu start ... -->
-        <div class="bottm_menu_container">
-          <div class="bottom_menu_box">
-              <a href="index.html"><iconify-icon icon="carbon:home"></iconify-icon></a>
-              <a href="Bookings.html"><iconify-icon icon="tabler:brand-booking"></iconify-icon></a>
-              <a href=""><iconify-icon icon="carbon:star-review"></iconify-icon></a>
-              <a href="FAQs.html"><iconify-icon icon="fluent:person-support-16-filled"></iconify-icon></a>
+            <div id="London" class="tabcontent">
+              <!-- categoris card.. start -->
+              <div class="tabs_cards">
+                <!-- tabs card..  -->
+                <div class="tab_card">
+                  <div class="tabimg">
+                    <img src="components/imag/chef.png" alt="" />
+                  </div>
+                  <p>The name</p>
+                </div>
+                <!-- tabs card..  -->
+                <!-- tabs card..  -->
+                <div class="tab_card">
+                  <div class="tabimg">
+                    <img src="components/imag/bartendar_11zon.png" alt="" />
+                  </div>
+                  <p>the name</p>
+                </div>
+                <!-- tabs card..  -->
+                <!-- tabs card..  -->
+                <div class="tab_card">
+                  <div class="tabimg">
+                    <img src="components/imag/bartendar_11zon.png" alt="" />
+                  </div>
+                  <p>the name</p>
+                </div>
+                <!-- tabs card..  -->
+                <!-- tabs card..  -->
+                <div class="tab_card">
+                  <div class="tabimg">
+                    <img src="components/imag/bartendar_11zon.png" alt="" />
+                  </div>
+                  <p>the name</p>
+                </div>
+                <!-- tabs card..  -->
+              </div>
+              <!-- categoris card.. end -->
+            </div>
+
+            <div id="Paris" class="tabcontent">
+              <!-- categoris card.. start -->
+              <div class="tabs_cards">
+                <!-- tabs card..  -->
+                <div class="tab_card">
+                  <div class="tabimg">
+                    <img src="" alt="" />
+                  </div>
+                  <p></p>
+                </div>
+                <!-- tabs card..  -->
+                <!-- tabs card..  -->
+                <div class="tab_card">
+                  <div class="tabimg">
+                    <img src="" alt="" />
+                  </div>
+                  <p></p>
+                </div>
+                <!-- tabs card..  -->
+              </div>
+              <!-- categoris card.. end -->
+            </div>
+
+            <div id="Tokyo" class="tabcontent">
+              <!-- categoris card.. start -->
+              <div class="tabs_cards">
+                <!-- tabs card..  -->
+                <div class="tab_card">
+                  <div class="tabimg">
+                    <img src="" alt="" />
+                  </div>
+                  <p></p>
+                </div>
+                <!-- tabs card..  -->
+                <!-- tabs card..  -->
+                <div class="tab_card">
+                  <div class="tabimg">
+                    <img src="" alt="" />
+                  </div>
+                  <p></p>
+                </div>
+                <!-- tabs card..  -->
+              </div>
+              <!-- categoris card.. end -->
+            </div>
           </div>
-       </div>
+        </div>
+      </div>
+      <!-- bottom menu start ... -->
+      <div class="bottm_menu_container">
+        <div class="bottom_menu_box">
+          <a href="index.html"
+            ><iconify-icon icon="carbon:home"></iconify-icon
+          ></a>
+          <a href="Bookings.html"
+            ><iconify-icon icon="tabler:brand-booking"></iconify-icon
+          ></a>
+          <a href=""><iconify-icon icon="carbon:star-review"></iconify-icon></a>
+          <a href="FAQs.html"
+            ><iconify-icon icon="fluent:person-support-16-filled"></iconify-icon
+          ></a>
+        </div>
+      </div>
       <!-- bottom menu start ... -->
     </div>
 
     <!-- support popup 12> popup of payment end-->
- 
 
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
     <script src="components/js/js.js"></script>
+    <script>
+      function openCity(evt, cityName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
 
-</body>
+      // Get the element with id="defaultOpen" and click on it
+      document.getElementById("defaultOpen").click();
+    </script>
+  </body>
 </html>
