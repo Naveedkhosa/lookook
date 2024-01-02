@@ -22,6 +22,8 @@
         flex-direction: column;
         height: 100vh;
         background-color: #f0efef;
+        overflow: hidden;
+        
       }
       .tab_contnet_main {
         background: #f0efef;
@@ -30,9 +32,9 @@
       .tab {
         float: left;
         background-color: #fff;
-        width: fit-content;
-        height: 300px;
         width: 60px;
+        overflow-y: auto;
+        height: calc(100vh - 105px);
       }
 
       /* Style the buttons inside the tab */
@@ -57,7 +59,7 @@
 
       /* Create an active/current "tab button" class */
       .tab button.active {
-        background: #02645e;
+        background: #02645d;
         color: #ffff;
       }
 
@@ -67,7 +69,9 @@
         /* padding: 0px 5px; */
         width: calc(100% - 60px);
         border-left: none;
-        height: 300px;
+        overflow-y: auto;
+        height: calc(100vh - 105px);
+
       }
       .popup_w_100 {
         width: 100%;
@@ -100,6 +104,22 @@
       .tabimg img {
         width: 100%;
         height: 100%;
+      }
+      .tablink_img{
+        width: 30px;
+        height: 30px;
+        margin-bottom: 5px;
+      }
+      .tablink_img img{
+        width: 100%;
+        height: 100%;
+      }
+      .tablinks{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
       }
     </style>
   </head>
@@ -141,24 +161,232 @@
 
           <div id="tabs-container">
             <div class="tab">
-              <button
-                class="tablinks"
-                onclick="openCity(event, 'London')"
-                id="defaultOpen"
-              >
-                London
-              </button>
-              <button class="tablinks" onclick="openCity(event, 'Paris')">
+              
+              <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">
+              <div class="tablinks_container" style="margin: 0 auto; width: fit-content;">
+                <div class="tablink_img">
+                  <img src="components/imag/categorie_tab/Indian-Food-PNG-Clipart.png" alt="">
+                </div>
                 Paris
+              </div>
               </button>
+
+              <button class="tablinks" onclick="openCity(event, 'Paris')">
+                  <div class="tablinks_container" style="margin: 0 auto; width: fit-content;">
+                    <div class="tablink_img">
+                      <img src="components/imag/categorie_tab/Indian-Food-PNG-Pic.png" alt="">
+                    </div>
+                    Paris
+                  </div>
+              </button>
+
               <button class="tablinks" onclick="openCity(event, 'Tokyo')">
-                Tokyo
+                <div class="tablinks_container" style="margin: 0 auto; width: fit-content;">
+                  <div class="tablink_img">
+                    <img src="components/imag/categorie_tab/Indian-Food-PNG-Image.png" alt="">
+                  </div>
+                  Paris
+                </div>
               </button>
+              
+              <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">
+              <div class="tablinks_container" style="margin: 0 auto; width: fit-content;">
+                <div class="tablink_img">
+                  <img src="components/imag/categorie_tab/Indian-Food-PNG-Clipart.png" alt="">
+                </div>
+                Paris
+              </div>
+              </button>
+
+              <button class="tablinks" onclick="openCity(event, 'Paris')">
+                  <div class="tablinks_container" style="margin: 0 auto; width: fit-content;">
+                    <div class="tablink_img">
+                      <img src="components/imag/categorie_tab/Indian-Food-PNG-Pic.png" alt="">
+                    </div>
+                    Paris
+                  </div>
+              </button>
+
+              <button class="tablinks" onclick="openCity(event, 'Tokyo')">
+                <div class="tablinks_container" style="margin: 0 auto; width: fit-content;">
+                  <div class="tablink_img">
+                    <img src="components/imag/categorie_tab/Indian-Food-PNG-Image.png" alt="">
+                  </div>
+                  Paris
+                </div>
+              </button>
+
+              <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">
+              <div class="tablinks_container" style="margin: 0 auto; width: fit-content;">
+                <div class="tablink_img">
+                  <img src="components/imag/categorie_tab/Indian-Food-PNG-Clipart.png" alt="">
+                </div>
+                Paris
+              </div>
+              </button>
+
+              <button class="tablinks" onclick="openCity(event, 'Paris')">
+                  <div class="tablinks_container" style="margin: 0 auto; width: fit-content;">
+                    <div class="tablink_img">
+                      <img src="components/imag/categorie_tab/Indian-Food-PNG-Pic.png" alt="">
+                    </div>
+                    Paris
+                  </div>
+              </button>
+
+              <button class="tablinks" onclick="openCity(event, 'Tokyo')">
+                <div class="tablinks_container" style="margin: 0 auto; width: fit-content;">
+                  <div class="tablink_img">
+                    <img src="components/imag/categorie_tab/Indian-Food-PNG-Image.png" alt="">
+                  </div>
+                  Paris
+                </div>
+              </button>
+
+              <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">
+              <div class="tablinks_container" style="margin: 0 auto; width: fit-content;">
+                <div class="tablink_img">
+                  <img src="components/imag/categorie_tab/Indian-Food-PNG-Clipart.png" alt="">
+                </div>
+                Paris
+              </div>
+              </button>
+
+              <button class="tablinks" onclick="openCity(event, 'Paris')">
+                  <div class="tablinks_container" style="margin: 0 auto; width: fit-content;">
+                    <div class="tablink_img">
+                      <img src="components/imag/categorie_tab/Indian-Food-PNG-Pic.png" alt="">
+                    </div>
+                    Paris
+                  </div>
+              </button>
+
+              <button class="tablinks" onclick="openCity(event, 'Tokyo')">
+                <div class="tablinks_container" style="margin: 0 auto; width: fit-content;">
+                  <div class="tablink_img">
+                    <img src="components/imag/categorie_tab/Indian-Food-PNG-Image.png" alt="">
+                  </div>
+                  Paris
+                </div>
+              </button>
+
             </div>
 
             <div id="London" class="tabcontent">
               <!-- categoris card.. start -->
               <div class="tabs_cards">
+                <!-- tabs card..  -->
+                <div class="tab_card">
+                  <div class="tabimg">
+                    <img src="components/imag/chef.png" alt="" />
+                  </div>
+                  <p>The name</p>
+                </div>
+                <!-- tabs card..  -->
+                <!-- tabs card..  -->
+                <div class="tab_card">
+                  <div class="tabimg">
+                    <img src="components/imag/bartendar_11zon.png" alt="" />
+                  </div>
+                  <p>the name</p>
+                </div>
+                <!-- tabs card..  -->
+                <!-- tabs card..  -->
+                <div class="tab_card">
+                  <div class="tabimg">
+                    <img src="components/imag/bartendar_11zon.png" alt="" />
+                  </div>
+                  <p>the name</p>
+                </div>
+                <!-- tabs card..  -->
+                <!-- tabs card..  -->
+                <div class="tab_card">
+                  <div class="tabimg">
+                    <img src="components/imag/bartendar_11zon.png" alt="" />
+                  </div>
+                  <p>the name</p>
+                </div>
+                <!-- tabs card..  -->
+                <!-- tabs card..  -->
+                <div class="tab_card">
+                  <div class="tabimg">
+                    <img src="components/imag/chef.png" alt="" />
+                  </div>
+                  <p>The name</p>
+                </div>
+                <!-- tabs card..  -->
+                <!-- tabs card..  -->
+                <div class="tab_card">
+                  <div class="tabimg">
+                    <img src="components/imag/bartendar_11zon.png" alt="" />
+                  </div>
+                  <p>the name</p>
+                </div>
+                <!-- tabs card..  -->
+                <!-- tabs card..  -->
+                <div class="tab_card">
+                  <div class="tabimg">
+                    <img src="components/imag/bartendar_11zon.png" alt="" />
+                  </div>
+                  <p>the name</p>
+                </div>
+                <!-- tabs card..  -->
+                <!-- tabs card..  -->
+                <div class="tab_card">
+                  <div class="tabimg">
+                    <img src="components/imag/bartendar_11zon.png" alt="" />
+                  </div>
+                  <p>the name</p>
+                </div>
+                <!-- tabs card..  -->
+                <!-- tabs card..  -->
+                <div class="tab_card">
+                  <div class="tabimg">
+                    <img src="components/imag/chef.png" alt="" />
+                  </div>
+                  <p>The name</p>
+                </div>
+                <!-- tabs card..  -->
+                <!-- tabs card..  -->
+                <div class="tab_card">
+                  <div class="tabimg">
+                    <img src="components/imag/chef.png" alt="" />
+                  </div>
+                  <p>The name</p>
+                </div>
+                <!-- tabs card..  -->
+                <!-- tabs card..  -->
+                <div class="tab_card">
+                  <div class="tabimg">
+                    <img src="components/imag/chef.png" alt="" />
+                  </div>
+                  <p>The name</p>
+                </div>
+                <!-- tabs card..  -->
+                <!-- tabs card..  -->
+                <div class="tab_card">
+                  <div class="tabimg">
+                    <img src="components/imag/chef.png" alt="" />
+                  </div>
+                  <p>The name</p>
+                </div>
+                <!-- tabs card..  -->
+                <!-- tabs card..  -->
+                <div class="tab_card">
+                  <div class="tabimg">
+                    <img src="components/imag/chef.png" alt="" />
+                  </div>
+                  <p>The name</p>
+                </div>
+                <!-- tabs card..  -->
+                <!-- tabs card..  -->
+                <div class="tab_card">
+                  <div class="tabimg">
+                    <img src="components/imag/chef.png" alt="" />
+                  </div>
+                  <p>The name</p>
+                </div>
+                <!-- tabs card..  -->
                 <!-- tabs card..  -->
                 <div class="tab_card">
                   <div class="tabimg">
