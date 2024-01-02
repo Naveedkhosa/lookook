@@ -182,3 +182,121 @@ a{
   margin: 7px 0px;
 }
 /* summary pop up style end. */
+
+
+/* select dishes popup 120 start style */
+
+.tab_body {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #f0efef;
+  overflow: hidden;
+  z-index: 201;
+  
+}
+.tab_contnet_main {
+  background: #f0efef;
+}
+/* Style the tab */
+.tab {
+  float: left;
+  background-color: #fff;
+  width: 60px;
+  overflow-y: auto;
+  height: calc(100vh - 105px);
+}
+.tab::-webkit-scrollbar {
+  display: none;
+}
+/* Style the buttons inside the tab */
+.tab button {
+  display: block;
+  background-color: inherit;
+  color: black;
+  padding: 10px 5px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 13px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #fff;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+  background: #02645d;
+  color: #ffff;
+}
+
+/* Style the tab content */
+.tabcontent {
+  float: left;
+  /* padding: 0px 5px; */
+  width: calc(100% - 60px);
+  border-left: none;
+  overflow-y: auto;
+  height: calc(100vh - 105px);
+
+}
+.tabcontent::-webkit-scrollbar {
+  display: none;
+}
+.popup_w_100 {
+  width: 100%;
+}
+.tabs_topspace {
+  margin-top: 55px;
+}
+.tabs_cards{
+  display: flex;
+  flex-wrap: wrap;
+
+ 
+}
+.tab_card {
+  width: calc(50% - 20px);
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 15px;
+  border: 1px solid #f0efef;
+  background: #fff;
+  margin: 10px 0px 0px 10px;
+}
+.tabimg {
+  width: 45px;
+  height: 45px;
+}
+.tabimg img {
+  width: 100%;
+  height: 100%;
+}
+.tablink_img{
+  width: 30px;
+  height: 30px;
+  margin-bottom: 5px;
+}
+.tablink_img img{
+  width: 100%;
+  height: 100%;
+}
+.tablinks{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+/* select dishes popup 120 end style */
