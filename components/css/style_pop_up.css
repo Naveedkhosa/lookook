@@ -325,12 +325,12 @@ a{
   margin: auto;
 }
 #searchbar {
-background-image: url('../../components/imag/magnifying-glass.png'); /* Add a search icon to input */
-background-position: 15px 12px; /* Position the search icon */
+background-image: url('https://api.iconify.design/lets-icons/search-duotone-line.svg?color=%2302645e&width=28&height=28');/* Add a search icon to input */
+background-position: 11px 7px; /* Position the search icon */
 background-repeat: no-repeat; /* Do not repeat the icon image */
 width: 100%; /* Full-width */
 font-size: 16px; /* Increase font-size */
-padding: 12px 30px 12px 40px; /* Add some padding */
+padding: 12px 20px 12px 45px; /* Add some padding */
 border: 1px solid #ddd; /* Add a grey border */
 margin: 10px 0px; /* Add some space below the input */
 border-radius: 30px;

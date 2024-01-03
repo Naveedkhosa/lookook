@@ -120,6 +120,68 @@ hr{
     height: 100%;
     object-fit: cover;
 }
+#nav_popped_up {
+  width: 100%;
+  height: calc(100% - 110px);
+  position: fixed;
+  display: none;
+  top: 50px;
+  left: 0;
+  background: #fff;
+  z-index: 10000;
+}
+
+#nav_popped_up ul {
+  display: flex;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  padding: 20px 0;
+}
+
+#nav_popped_up ul li {
+  width: 90%;
+  margin: 0;
+  list-style-type: none;
+  position: relative;
+  padding: 20px 0;
+  margin-bottom: 10px;
+}
+
+#nav_popped_up ul li::before {
+  content: "";
+  width: calc(100% - 40px);
+  position: absolute;
+  left: 40px;
+  bottom: 0;
+  height: 0.5px;
+  background: #bbb;
+}
+
+#nav_popped_up ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 16px;
+}
+#nav_popped_up ul li a .a_left{
+  display: flex;
+  align-items: center;
+}
+#nav_popped_up ul li a .a_left i {
+  width: 40px;
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+}
+#nav_popped_up ul li a .a_left iconify-icon {
+  width: 40px;
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+}
 .continuebtn{
   width: 100%;
   border-radius: 5px;

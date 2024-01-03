@@ -13,20 +13,20 @@
    <!-- top menu start ... -->
    <div class="bottm_menu_container">
     <div class="top_menu_box">
-        <div class="_logo" href="#">
-            <img src="components/imag/logo.svg" alt="">
+      <div class="_logo" href="#">
+        <img src="components/imag/logo.svg" alt="" />
+      </div>
+      <div class="top_side_nav" id="nav_toggle_btn">
+        <div class="profile_top_nav">
+          <img src="components/imag/a (3).jpg" alt="" />
         </div>
-        <div class="top_side_nav">
-            <div class="profile_top_nav">
-                <img src="components/imag/a (3).jpg" alt="">
-            </div>
-            <div class="top_nav_ico">
-                <iconify-icon icon="ei:navicon"></iconify-icon>
-            </div>
+        <div class="top_nav_ico">
+          <iconify-icon icon="ei:navicon"></iconify-icon>
         </div>
+      </div>
     </div>
- </div>
-<!-- top menu start ... -->
+  </div>
+  <!-- top menu end ... -->
         <!-- bookings section start -->
         <div class="booking_kart_section">
              <p class="heading_p margin_after_head">My Bookings</p>
@@ -131,7 +131,51 @@
         </div>
       </div>
        <!-- pop up popup of dishes -->
-    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
-    <script src="components/js/js.js"></script>
+
+       <!-- nav_popped_up -->
+ 
+    <div id="nav_popped_up">
+        <ul>
+          <li>
+            <a href="#">
+              <div class="a_left"><i class="fa fa-user"></i> My Account</div>
+              <i class="fa fa-chevron-right"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div class="a_left">
+                <iconify-icon icon="tabler:brand-booking"></iconify-icon> My Bookings
+              </div>
+              <i class="fa fa-chevron-right"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div class="a_left">
+                <i class="fa fa-file-text"></i> Terms & Conditions
+              </div>
+              <i class="fa fa-chevron-right"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div class="a_left">
+                <i class="fa fa-headphones"></i> Help & Support
+              </div>
+              <i class="fa fa-chevron-right"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- nav_popped_up -->
+      <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+      <script src="components/js/js.js"></script>
+      <script src="components/js/jquery-3.7.1.slim.min.js"></script>
+      <script>
+        $("#nav_toggle_btn").on("click", function () {
+          $("#nav_popped_up").toggle();
+        });
+      </script>
 </body>
 </html>
