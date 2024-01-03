@@ -250,7 +250,7 @@ a{
   background: #02645d;
   color: #ffff;
   width: calc(100% - 10px);
-  margin: 5px 5px;
+  margin: 5px 5px 0px 5px;
   border-radius: 5px;
 }
 
