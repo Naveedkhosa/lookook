@@ -69,3 +69,21 @@ function openCity(evt, cityName) {
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
 // pop up 120 js end 
+
+
+// searchbar JavaScript code
+
+function search_animal() {
+  let input = document.getElementById('searchbar').value
+  input = input.toLowerCase();
+  let x = document.getElementsByClassName('tab_card');
+  
+  for (i = 0; i < x.length; i++) {
+    if (!x[i].innerHTML.toLowerCase().includes(input)) {
+    x[i].style.display = "none";
+    }
+    else {
+    x[i].style.display = "list-item";
+    }
+  }
+  }

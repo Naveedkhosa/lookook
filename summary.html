@@ -14,6 +14,11 @@
       @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
     </style>
     <style>
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
       .tab_body {
         margin: 0;
         font-family: "Arial", sans-serif;
@@ -32,7 +37,7 @@
       .tab {
         float: left;
         background-color: #fff;
-        width: 60px;
+        width: 80px;
         overflow-y: auto;
         height: calc(100vh - 105px);
       }
@@ -67,7 +72,7 @@
       .tabcontent {
         float: left;
         /* padding: 0px 5px; */
-        width: calc(100% - 60px);
+        width: calc(100% - 80px);
         border-left: none;
         overflow-y: auto;
         height: calc(100vh - 105px);
@@ -95,7 +100,14 @@
         padding: 15px;
         border: 1px solid #f0efef;
         background: #fff;
-        margin: 10px 0px 0px 10px;
+        margin: 0px 0px 10px 10px;
+      }
+      .tabcard_center{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
       }
       .tabimg {
         width: 45px;
@@ -121,6 +133,44 @@
         justify-content: center;
         
       }
+      .dieshes_search_container{
+        width: 90%;
+        margin: auto;
+      }
+      #searchbar {
+  background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+  background-position: 10px 12px; /* Position the search icon */
+  background-repeat: no-repeat; /* Do not repeat the icon image */
+  width: 100%; /* Full-width */
+  font-size: 16px; /* Increase font-size */
+  padding: 12px 20px 12px 40px; /* Add some padding */
+  border: 1px solid #ddd; /* Add a grey border */
+  margin: 10px 0px; /* Add some space below the input */
+  border-radius: 30px;
+  
+}
+
+#myUL {
+  /* Remove default list styling */
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd; /* Add a border to all links */
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6; /* Grey background color */
+  padding: 12px; /* Add some padding */
+  text-decoration: none; /* Remove default text underline */
+  font-size: 18px; /* Increase the font-size */
+  color: black; /* Add a black text color */
+  display: block; /* Make it into a block element to fill the whole list */
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee; /* Add a hover effect to all links, except for headers */
+}
     </style>
   </head>
   <body>
@@ -158,6 +208,9 @@
           <!-- Your scrollable content goes here -->
 
           <div class="tabs_topspace"></div>
+          <div class="dieshes_search_container">
+            <input type="text" name="search" id="searchbar" onkeyup="search_animal()" placeholder="Search for names..">
+          </div>
 
           <div id="tabs-container">
             <div class="tab">
@@ -274,151 +327,37 @@
 
             <div id="London" class="tabcontent">
               <!-- categoris card.. start -->
-              <div class="tabs_cards">
-                <!-- tabs card..  -->
-                <div class="tab_card">
-                  <div class="tabimg">
-                    <img src="components/imag/chef.png" alt="" />
+              <div id="myUL" class="tabs_cards">
+                   <!-- tabs card..  -->
+                   <div class="tab_card">
+                    <div class="tabcard_center">
+                      <div class="tabimg">
+                        <img src="components/imag/bartendar_11zon.png" alt="" />
+                      </div>
+                      <p>Khosa</p>
+                    </div>
                   </div>
-                  <p>The name</p>
+                  <!-- tabs card..  -->
+                     <!-- tabs card..  -->
+                <div class="tab_card">
+                  <div class="tabcard_center">
+                    <div class="tabimg">
+                      <img src="components/imag/bartendar_11zon.png" alt="" />
+                    </div>
+                    <p>Khosa</p>
+                  </div>
                 </div>
                 <!-- tabs card..  -->
-                <!-- tabs card..  -->
-                <div class="tab_card">
-                  <div class="tabimg">
-                    <img src="components/imag/bartendar_11zon.png" alt="" />
+                   <!-- tabs card..  -->
+                   <div class="tab_card">
+                    <div class="tabcard_center">
+                      <div class="tabimg">
+                        <img src="components/imag/bartendar_11zon.png" alt="" />
+                      </div>
+                      <p>Khosa</p>
+                    </div>
                   </div>
-                  <p>the name</p>
-                </div>
-                <!-- tabs card..  -->
-                <!-- tabs card..  -->
-                <div class="tab_card">
-                  <div class="tabimg">
-                    <img src="components/imag/bartendar_11zon.png" alt="" />
-                  </div>
-                  <p>the name</p>
-                </div>
-                <!-- tabs card..  -->
-                <!-- tabs card..  -->
-                <div class="tab_card">
-                  <div class="tabimg">
-                    <img src="components/imag/bartendar_11zon.png" alt="" />
-                  </div>
-                  <p>the name</p>
-                </div>
-                <!-- tabs card..  -->
-                <!-- tabs card..  -->
-                <div class="tab_card">
-                  <div class="tabimg">
-                    <img src="components/imag/chef.png" alt="" />
-                  </div>
-                  <p>The name</p>
-                </div>
-                <!-- tabs card..  -->
-                <!-- tabs card..  -->
-                <div class="tab_card">
-                  <div class="tabimg">
-                    <img src="components/imag/bartendar_11zon.png" alt="" />
-                  </div>
-                  <p>the name</p>
-                </div>
-                <!-- tabs card..  -->
-                <!-- tabs card..  -->
-                <div class="tab_card">
-                  <div class="tabimg">
-                    <img src="components/imag/bartendar_11zon.png" alt="" />
-                  </div>
-                  <p>the name</p>
-                </div>
-                <!-- tabs card..  -->
-                <!-- tabs card..  -->
-                <div class="tab_card">
-                  <div class="tabimg">
-                    <img src="components/imag/bartendar_11zon.png" alt="" />
-                  </div>
-                  <p>the name</p>
-                </div>
-                <!-- tabs card..  -->
-                <!-- tabs card..  -->
-                <div class="tab_card">
-                  <div class="tabimg">
-                    <img src="components/imag/chef.png" alt="" />
-                  </div>
-                  <p>The name</p>
-                </div>
-                <!-- tabs card..  -->
-                <!-- tabs card..  -->
-                <div class="tab_card">
-                  <div class="tabimg">
-                    <img src="components/imag/chef.png" alt="" />
-                  </div>
-                  <p>The name</p>
-                </div>
-                <!-- tabs card..  -->
-                <!-- tabs card..  -->
-                <div class="tab_card">
-                  <div class="tabimg">
-                    <img src="components/imag/chef.png" alt="" />
-                  </div>
-                  <p>The name</p>
-                </div>
-                <!-- tabs card..  -->
-                <!-- tabs card..  -->
-                <div class="tab_card">
-                  <div class="tabimg">
-                    <img src="components/imag/chef.png" alt="" />
-                  </div>
-                  <p>The name</p>
-                </div>
-                <!-- tabs card..  -->
-                <!-- tabs card..  -->
-                <div class="tab_card">
-                  <div class="tabimg">
-                    <img src="components/imag/chef.png" alt="" />
-                  </div>
-                  <p>The name</p>
-                </div>
-                <!-- tabs card..  -->
-                <!-- tabs card..  -->
-                <div class="tab_card">
-                  <div class="tabimg">
-                    <img src="components/imag/chef.png" alt="" />
-                  </div>
-                  <p>The name</p>
-                </div>
-                <!-- tabs card..  -->
-                <!-- tabs card..  -->
-                <div class="tab_card">
-                  <div class="tabimg">
-                    <img src="components/imag/chef.png" alt="" />
-                  </div>
-                  <p>The name</p>
-                </div>
-                <!-- tabs card..  -->
-                <!-- tabs card..  -->
-                <div class="tab_card">
-                  <div class="tabimg">
-                    <img src="components/imag/bartendar_11zon.png" alt="" />
-                  </div>
-                  <p>the name</p>
-                </div>
-                <!-- tabs card..  -->
-                <!-- tabs card..  -->
-                <div class="tab_card">
-                  <div class="tabimg">
-                    <img src="components/imag/bartendar_11zon.png" alt="" />
-                  </div>
-                  <p>the name</p>
-                </div>
-                <!-- tabs card..  -->
-                <!-- tabs card..  -->
-                <div class="tab_card">
-                  <div class="tabimg">
-                    <img src="components/imag/bartendar_11zon.png" alt="" />
-                  </div>
-                  <p>the name</p>
-                </div>
-                <!-- tabs card..  -->
+                  <!-- tabs card..  -->
               </div>
               <!-- categoris card.. end -->
             </div>
@@ -426,20 +365,24 @@
             <div id="Paris" class="tabcontent">
               <!-- categoris card.. start -->
               <div class="tabs_cards">
-                <!-- tabs card..  -->
-                <div class="tab_card">
-                  <div class="tabimg">
-                    <img src="" alt="" />
+                   <!-- tabs card..  -->
+                   <div class="tab_card">
+                    <div class="tabcard_center">
+                      <div class="tabimg">
+                        <img src="components/imag/bartendar_11zon.png" alt="" />
+                      </div>
+                      <p>Khosa</p>
+                    </div>
                   </div>
-                  <p></p>
-                </div>
-                <!-- tabs card..  -->
-                <!-- tabs card..  -->
+                  <!-- tabs card..  -->
+                     <!-- tabs card..  -->
                 <div class="tab_card">
-                  <div class="tabimg">
-                    <img src="" alt="" />
+                  <div class="tabcard_center">
+                    <div class="tabimg">
+                      <img src="components/imag/bartendar_11zon.png" alt="" />
+                    </div>
+                    <p>Khosa</p>
                   </div>
-                  <p></p>
                 </div>
                 <!-- tabs card..  -->
               </div>
@@ -449,20 +392,14 @@
             <div id="Tokyo" class="tabcontent">
               <!-- categoris card.. start -->
               <div class="tabs_cards">
-                <!-- tabs card..  -->
-                <div class="tab_card">
-                  <div class="tabimg">
-                    <img src="" alt="" />
+                 <!-- tabs card..  -->
+                 <div class="tab_card">
+                  <div class="tabcard_center">
+                    <div class="tabimg">
+                      <img src="components/imag/bartendar_11zon.png" alt="" />
+                    </div>
+                    <p>Khosa</p>
                   </div>
-                  <p></p>
-                </div>
-                <!-- tabs card..  -->
-                <!-- tabs card..  -->
-                <div class="tab_card">
-                  <div class="tabimg">
-                    <img src="" alt="" />
-                  </div>
-                  <p></p>
                 </div>
                 <!-- tabs card..  -->
               </div>
@@ -510,6 +447,26 @@
 
       // Get the element with id="defaultOpen" and click on it
       document.getElementById("defaultOpen").click();
+    </script>
+
+    <script>
+// JavaScript code
+
+function search_animal() {
+let input = document.getElementById('searchbar').value
+input = input.toLowerCase();
+let x = document.getElementsByClassName('tab_card');
+
+for (i = 0; i < x.length; i++) {
+	if (!x[i].innerHTML.toLowerCase().includes(input)) {
+	x[i].style.display = "none";
+	}
+	else {
+	x[i].style.display = "list-item";
+	}
+}
+}
+
     </script>
   </body>
 </html>
