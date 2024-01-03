@@ -321,7 +321,7 @@ a{
   margin: auto;
 }
 #searchbar {
-background-image: url('/components/imag/magnifying-glass.png'); /* Add a search icon to input */
+background-image: url('components/imag/magnifying-glass.png'); /* Add a search icon to input */
 background-position: 15px 12px; /* Position the search icon */
 background-repeat: no-repeat; /* Do not repeat the icon image */
 width: 100%; /* Full-width */
