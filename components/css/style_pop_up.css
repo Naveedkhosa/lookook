@@ -54,7 +54,7 @@ a{
   line-height: calc(14 * 1.3px);
 }
 .continuebtn{
-  width: 100%;
+  width: 85%;
   border-radius: 5px;
   margin: 15px 0px;
   background: #f29a03;
@@ -278,6 +278,7 @@ a{
 }
 .tab_card {
   width: calc(50% - 20px);
+  max-width: 200px;
   height: fit-content;
   display: flex;
   align-items: center;

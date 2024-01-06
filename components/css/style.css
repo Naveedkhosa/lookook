@@ -261,6 +261,7 @@ hr{
   bottom: -15px;
   border-radius: 2px;
   color: #ccc;
+  z-index: 100;
 }
 .scroll_gallry iconify-icon{
   font-size: 10px;
