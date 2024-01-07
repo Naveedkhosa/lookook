@@ -35,14 +35,14 @@
     flex-direction: column;
 }
 .footer_left a{
-    font-size: 12px;
-    font-weight: 500;
+    font-size: 13px;
+    font-weight: 509;
     margin: 5px 0px;
 
 }
 .footer_right a{
-    font-size: 12px;
-    font-weight: 500;
+    font-size: 13px;
+    font-weight: 509;
     margin: 5px 0px;
 
 }
@@ -51,7 +51,7 @@
 
 }
 .foot_copy_p{
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 300;
     color: #000000ad;
     text-align: center;
