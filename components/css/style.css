@@ -311,7 +311,7 @@ hr{
   align-items: center;
   justify-content: center;
   margin-top: 30px;
-  height: 150px;
+  height: 160px;
 }
 .choose_box_main{
   width: 94%;
@@ -1686,6 +1686,7 @@ ul li{
     align-items: flex-start;
     justify-content: center;
     padding: 0px;
+    margin: 10px 0px;
     flex-direction: column;
   }
   .choose_r_box iconify-icon{
