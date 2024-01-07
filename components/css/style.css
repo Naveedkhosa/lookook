@@ -516,8 +516,8 @@ ul li{
 .para_gray{
   color: #585757;
   font-size: 12px;
-  line-height: 22px;
   display: flex;
+  line-height: calc(12 * 1.3px);
   align-items: center;
 }
 .para_gray iconify-icon{
