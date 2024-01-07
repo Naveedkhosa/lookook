@@ -50,3 +50,10 @@
    margin-right: 10px;
 
 }
+.foot_copy_p{
+    font-size: 10px;
+    font-weight: 300;
+    color: #000000ad;
+    text-align: center;
+    padding: 10px 0px;
+}
