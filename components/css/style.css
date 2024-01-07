@@ -361,6 +361,7 @@ hr{
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  margin: 5px 0px;
 }
 .choose_r_box iconify-icon{
   margin-right: 10px;
@@ -519,6 +520,7 @@ ul li{
   display: flex;
   line-height: calc(12 * 1.3px);
   align-items: center;
+  
 }
 .para_gray iconify-icon{
   margin-right: 5px;
