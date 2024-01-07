@@ -366,6 +366,8 @@ hr{
 }
 .choose_r_box iconify-icon{
   margin-right: 10px;
+  font-size: 30px;
+  color: #02645e;
 }
 /* why choose us style end */
 /* testimonial style  start */
@@ -1685,6 +1687,10 @@ ul li{
     justify-content: center;
     padding: 0px;
     flex-direction: column;
+  }
+  .choose_r_box iconify-icon{
+    margin-right: 10px;
+    font-size: 25px;
   }
 }
 /* gallery style end */
