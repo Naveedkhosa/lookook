@@ -321,6 +321,7 @@ hr{
   justify-content: space-between;
   overflow: hidden;
   height: 100%;
+  border-radius: 10px;
 
 }
 .choose_lift{
