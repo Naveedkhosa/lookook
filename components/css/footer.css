@@ -57,4 +57,6 @@
     text-align: center;
     padding-top: 15px;
     padding-bottom: 10px;
+    border-top: 1px solid #cccc;
+    margin-top: 15px;
 }
