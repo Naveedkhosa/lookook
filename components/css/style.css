@@ -248,8 +248,8 @@ hr{
 }
 .scroll_gallry{
   position: absolute;
-  background: #dddddd5a;
-  border: 1px solid #ccc;
+  background: #f29a0331;
+  border: 1px solid #f29a03;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -260,7 +260,7 @@ hr{
   right: 0px;
   bottom: -15px;
   border-radius: 2px;
-  color: #ccc;
+  color: #f29a03;
   z-index: 100;
 }
 .scroll_gallry iconify-icon{
