@@ -41,12 +41,15 @@ svg{
   margin-bottom: 10px;
 }
 
-mrg_btn
+
 .btn{
   background: #f29a03;
   color: #fff;
   padding: 10px 10px;
   border-radius: 5px;
+}
+.margin_right{
+  margin-right: 15px !important;
 }
 .btnt{
   background: transparent;
@@ -625,6 +628,9 @@ ul li{
   font-weight: 550;
   
 }
+.curser{
+  cursor: pointer;
+}
 .summary_top_box{
   display: flex;
   align-items: center;
@@ -1131,6 +1137,7 @@ ul li{
   }
   
 
+
   .popup1 h2 {
     font-size: 22px;
     margin-top: 0;
@@ -1163,6 +1170,39 @@ ul li{
   height: 100%;
   border-radius: 0;
 }
+
+/* popup of coupon start style */
+
+.apply_popup {
+  width: 95%;
+  transition: all 5s ease-in-out;
+  margin: 0px auto;
+  padding: 25px 15px;
+  padding-bottom: 0;
+  background: #fff;
+  border-radius: 12px;
+  /* width: 100%; */
+  position: fixed;
+  transition: all 5s ease-in-out;
+  height: 250px;
+  left: 10px;
+  bottom: 25%;
+  
+}
+.apply_coupon_content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.apply_coupon_img{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* popup of coupon end style */
 .pop_up_top_sec{
   width: 100%;
   height: 50px;

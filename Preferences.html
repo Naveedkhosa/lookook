@@ -86,7 +86,7 @@
 
          <!-- booking card  -->
          <div class="kart_booking_card">
-             <div class="cardkart_booking_img">
+             <div class="cardkart_booking_img margin_right">
                  <div class="cardkart_imgimg cardkart_imgimg_pink">
                      <img src="components/imag/waiter.png" alt="" loading="lazy">
                  </div>
@@ -113,7 +113,7 @@
 
          <!-- booking card  -->
          <div class="kart_booking_card">
-             <div class="cardkart_booking_img">
+             <div class="cardkart_booking_img margin_right">
                  <div class="cardkart_imgimg">  
                      <img src="components/imag/bartendar.png" alt="" loading="lazy">
                  </div>
@@ -140,7 +140,7 @@
 
          <!-- booking card  -->
          <div class="kart_booking_card">
-             <div class="cardkart_booking_img">
+             <div class="cardkart_booking_img margin_right">
                  <div class="cardkart_imgimg cardkart_imgimg_blue">
                      <img src="components/imag/5385868.webp" alt="" loading="lazy">
                  </div>
@@ -236,19 +236,33 @@
             <div class="space_ten summary_top_box">
               <p class="solid_smal">Offer & Benefits</p>
             </div>
-            
+            <!-- before coupon -->
             <div class="summary_section space_ten">
                 <div class="space_ten summary_top_box">
                   <p class="solid_smal">PARTY 15<p class="green_para_back">BEST OFFER</p></p>
-                  <p class="solid_smal malta">TAP TO APPLY</p>
+                  <p onclick="openCoupon('coupon1000', 'party2')" class="solid_smal malta curser">TAP TO APPLY</p>
                 </div>
                 <div class="space_ten summary_top_box">
-                    <p class="para_gray">You will save <span style="margin-left: 10px;" class="solid_smal"> 15% </span></p>
+                    <p class="para_gray">You will save change<span style="margin-left: 10px;" class="solid_smal"> 15% </span></p>
                   </div>  
               <div class="white_btn">
                 <button class="solid_smal">EXPLORE OFFER</button>
               </div>
               </div>
+            <!-- design after applied cuopon  -->
+              <div class="summary_section space_ten">
+                <div class="space_ten summary_top_box">
+                  <p class="solid_smal">PARTY 15 <iconify-icon icon="icons8:checked" style="color: #02645e;" ></iconify-icon></p>
+                  <p onclick="openCoupon('coupon1000', 'party1')" class="solid_smal malta curser">Remove</p>
+                </div>
+                <div class="space_ten summary_top_box">
+                    <p class="para_gray"><span style="margin-right: 10px;" class="solid_smal"> 15% </span>discount applied </p>
+                  </div>  
+              </div>
+
+          </div>
+
+          
           </div>
 
           <div class="para_h ceneter_heading space_ten stepceneter_heading" style="margin: 15px 0px;">
@@ -549,7 +563,20 @@
       </div>
        <!-- pop up popup of dishes -->
 
-       
+        <!-- pop up of coupon -->
+      <div id="coupon1000" class="modal">
+        <div class="popup1 apply_popup">
+          <div class="content1 apply_coupon_content ">
+            <div class="apply_coupon_img">
+              <img src="components/imag/animation_gif.gif" alt="" loading="lazy">
+            </div>
+            <p class="para_h">Horay! You just saved 15%</p>
+            <p class="para_gray">Coupon code applied!</p>
+         
+          </div>
+        </div>
+      </div>
+      <!-- pop up popup of coupon -->
 
  
  <!-- bottom menu start ... -->
