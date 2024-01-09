@@ -900,7 +900,7 @@ ul li{
   left: 0px;
   padding: 0px 15px;
   background: #fff;
-  z-index: 20;
+  z-index: 120;
 }
 .pre_bk_box{
   display: flex;
@@ -947,6 +947,7 @@ ul li{
   width: 100%;
   position: relative;
   height: 50px;
+  z-index: 120;
 }
 .bottom_btn{
   padding: 5px 0px;
