@@ -114,8 +114,8 @@ hr{
   line-height: calc(14 * 1.3px);
 }
 ._logo{
-    width:105px;
-    height: 40px;
+    width:140px;
+    height: 53px;
 }
 
 ._logo img{
@@ -999,7 +999,7 @@ ul li{
   align-items: center;
   justify-content: space-between;
   position: fixed;
-  height: 60px;
+  height: 70px;
   top: 0;
   background: #fff;
   z-index: 100;
