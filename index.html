@@ -94,7 +94,7 @@
 
         @media (max-width: 610px) {
           .swiper {
-            height: 230px;
+            height: 180px;
           }
         }
         .swiper-slide img {
@@ -103,13 +103,16 @@
           height: 100%;
           object-fit: cover;
         }
-
-        .swiper-button-next,
+        .swiper-button-next::after,
+        .swiper-button-prev::after {
+          content: "";
+        }
+        /* .swiper-button-next,
         .swiper-button-prev{
 display: flex;
 align-items: center;
-        }
-        .swiper-button-next::after,
+        } */
+        /* .swiper-button-next::after,
         .swiper-button-prev::after {
           content: "";
           position: absolute;
@@ -142,7 +145,7 @@ align-items: center;
           font-size: 35px;
           top: -2px;
           right: 27px;
-        }
+        } */
       </style>
       <!-- slider - swiper js -->
       <div class="swiper">
