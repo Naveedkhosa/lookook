@@ -125,10 +125,10 @@ hr{
 }
 #nav_popped_up {
   width: 100%;
-  height: calc(100% - 99.21px);
+  height: calc(100% - 115px);
   position: fixed;
   display: none;
-  top: 50px;
+  top: 65px;
   left: 0;
   background: #fff;
   z-index: 10000;
@@ -1015,6 +1015,13 @@ ul li{
 }
 .top_side_nav{
   position: relative;
+  border: 1px solid red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.top_side_nav iconify-icon{
+  font-size: 35px;
 }
 .top_nav_ico{
   position: absolute;
