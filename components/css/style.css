@@ -1003,7 +1003,7 @@ ul li{
   top: 0;
   background: #fff;
   z-index: 100;
-  border: 1px solid #ccc;
+  /* border: 1px solid #ccc; */
   padding: 0px 50px;
 }
 .top_menu_box iconify-icon{
@@ -1412,17 +1412,17 @@ ul li{
 }
 .container_kart {
   margin: 0 auto;
-  margin-top: 5px;
+  margin-top: 10px;
   position: relative;
   width: 95%;
   height: 0;
   padding-bottom: 40%;
   user-select: none;
-  border-radius: 20px;
+  border-radius: 7px;
   -moz-border-radius: 20px;
   -webkit-border-radius: 20px;
   background-color: #1c1c1c;
-  box-shadow: 0 11px 22px rgba(0, 0, 0, 0.2), 0 7px 7px rgba(0, 0, 0, 0.24);
+  /* box-shadow: 0 11px 22px rgba(0, 0, 0, 0.2), 0 7px 7px rgba(0, 0, 0, 0.24); */
 }
 
 .container_kart input {
