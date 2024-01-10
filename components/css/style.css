@@ -999,7 +999,7 @@ ul li{
   align-items: center;
   justify-content: space-between;
   position: fixed;
-  height: 50px;
+  height: 60px;
   top: 0;
   background: #fff;
   z-index: 100;
@@ -1309,8 +1309,8 @@ ul li{
 /* Booking preference style ending*/
 .kart_services_main{
   /* border: 1px solid red; */
-  margin: 0 auto;
-  margin-top: 100px;
+  margin: 10px auto;
+  margin-top: 17px;
   width: 95%;
 }
 .kart_services_sec{
@@ -1788,7 +1788,7 @@ ul li{
     flex-wrap: wrap;
   }
   .kart_services_main{
-    margin-top: 50px;
+    margin-top: 17px;
     display: flex;
     align-items: flex-start;
     flex-direction: column;
