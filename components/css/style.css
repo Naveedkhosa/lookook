@@ -40,6 +40,9 @@ svg{
 .space_botom{
   margin-bottom: 10px;
 }
+.space_botm{
+  margin-bottom: 5px;
+}
 
 
 .btn{
@@ -1331,7 +1334,7 @@ ul li{
 }
 .service_kart_card{
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   flex-direction: column;
   padding-top: 10px;
@@ -1341,6 +1344,9 @@ ul li{
   background-color: #fff;
   border: 1px solid #ddd;
   position: relative;
+}
+.service_kart_card .colr{
+  color: #1c1c1c;
 }
 .deal_kart{
   position: absolute;
@@ -1406,14 +1412,32 @@ ul li{
   border-radius: 100% 100% 0px 0px;
   z-index: 0;
 }
+.kart_card_img_btnblock{
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 100%;
+  
+}
 .kart_card_block{
   width: 70px;
   height: 70px;
-  padding: 10px;
+  padding: 5px;
   margin-bottom: 0px;
   border-radius: 5px;
   /* border: 1px solid #cfcfcf; */
   /* border: 1px solid #ccc; */
+  z-index: 1;
+}
+.kart_card_block_content{
+  width: calc(100% - 70px);
+  height: 70px;
+  padding: 5px;
+  margin-bottom: -10px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
   z-index: 1;
 }
 .container_kart {
@@ -1829,6 +1853,9 @@ ul li{
 .solid_smal{
   font-size: 12px ;
   font-weight: 550 ;
+}
+.pad_l{
+  padding-left: 10px;
 }
 .solid_hsmal{
   font-size: 10px ;
