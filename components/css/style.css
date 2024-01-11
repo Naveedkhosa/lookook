@@ -1355,6 +1355,7 @@ ul li{
   background-color: #fff;
   border: 1px solid #ddd;
   position: relative;
+  height: 90px;
 }
 .service_kart_card .colr{
   color: #1c1c1c;
@@ -1445,7 +1446,7 @@ ul li{
   width: 70px;
   height: 100%;
   padding: 0px;
-  margin-bottom: -5px;
+  margin-bottom: -18px;
   border-radius: 5px;
   /* border: 1px solid #cfcfcf; */
   /* border: 1px solid #ccc; */
