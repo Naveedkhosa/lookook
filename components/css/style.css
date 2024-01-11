@@ -1452,11 +1452,11 @@ ul li{
   z-index: 1;
 }
 .kart_card_block_content{
-  width: calc(100% - 100px);
+  width: calc(100% - 90px);
   height: 100%;
   display: flex;
   margin-bottom: 5px;
-  margin-left: 5px;
+  margin-left: 0px;
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
