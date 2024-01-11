@@ -1443,7 +1443,7 @@ ul li{
   
 }
 .kart_card_block{
-  width: 90px;
+  width: 80px;
   padding: 0px;
   margin-left: -15px;
   border-radius: 5px;
@@ -1452,7 +1452,7 @@ ul li{
   z-index: 1;
 }
 .kart_card_block_content{
-  width: calc(100% - 90px);
+  width: calc(100% - 70px);
   height: 100%;
   display: flex;
   margin-bottom: 5px;
