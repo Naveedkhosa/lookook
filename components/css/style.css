@@ -1443,10 +1443,9 @@ ul li{
   
 }
 .kart_card_block{
-  width: 70px;
-  height: 100%;
+  width: 125px;
   padding: 0px;
-  margin-bottom: -18px;
+  margin-left: -10px;
   border-radius: 5px;
   /* border: 1px solid #cfcfcf; */
   /* border: 1px solid #ccc; */
