@@ -51,6 +51,7 @@ svg{
   padding: 10px 10px;
   border-radius: 5px;
 }
+
 .margin_right{
   margin-right: 15px !important;
 }
@@ -1883,6 +1884,9 @@ ul li{
 }
 .malta{
   color: #F44336;
+}
+.orang{
+  color:#f29a03 ;
 }
 .space_five{
   margin: 5px 0px;
