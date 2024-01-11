@@ -1404,7 +1404,7 @@ ul li{
   height: 90px;
 }
 .kart_card_block_bg{
-  background: #2195f336;
+  background: #f29a0333;
   width: 100%;
   height: 50px;
   position: absolute;
@@ -1414,14 +1414,14 @@ ul li{
 }
 .kart_card_img_btnblock{
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: space-between;
   width: 100%;
   
 }
 .kart_card_block{
   width: 70px;
-  height: 70px;
+  height: 100%;
   padding: 5px;
   margin-bottom: 0px;
   border-radius: 5px;
@@ -1431,14 +1431,18 @@ ul li{
 }
 .kart_card_block_content{
   width: calc(100% - 70px);
-  height: 70px;
-  padding: 5px;
-  margin-bottom: -10px;
+  height: 100%;
   display: flex;
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
   z-index: 1;
+}
+.kart_card_block_cntent{
+  width: fit-content;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
 }
 .container_kart {
   margin: 0 auto;
