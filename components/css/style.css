@@ -1456,7 +1456,8 @@ ul li{
   height: 100%;
   display: flex;
   margin-bottom: 5px;
-  align-items: center;
+  margin-left: 10px;
+  align-items: flex-start;
   justify-content: center;
   flex-direction: column;
   z-index: 1;
