@@ -1415,8 +1415,8 @@ ul li{
 }
 .kart_card_block_bgg{
   background: #f29a0333;
-  width: 130%;
-  height: 100%;
+  width: 150%;
+  height: 50px;
   position: absolute;
   bottom: 0;
   right: 0;
