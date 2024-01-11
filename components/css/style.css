@@ -1443,20 +1443,20 @@ ul li{
   
 }
 .kart_card_block{
-  width: 125px;
+  width: 105px;
   padding: 0px;
-  margin-left: -10px;
+  margin-left: -15px;
   border-radius: 5px;
   /* border: 1px solid #cfcfcf; */
   /* border: 1px solid #ccc; */
   z-index: 1;
 }
 .kart_card_block_content{
-  width: calc(100% - 70px);
+  width: calc(100% - 100px);
   height: 100%;
   display: flex;
   margin-bottom: 5px;
-  margin-left: 10px;
+  margin-left: 5px;
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
