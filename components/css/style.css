@@ -1435,8 +1435,8 @@ ul li{
 .kart_card_block{
   width: 70px;
   height: 100%;
-  padding: 5px;
-  margin-bottom: 0px;
+  padding: 0px;
+  margin-bottom: -5px;
   border-radius: 5px;
   /* border: 1px solid #cfcfcf; */
   /* border: 1px solid #ccc; */
