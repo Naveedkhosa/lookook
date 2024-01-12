@@ -1447,14 +1447,15 @@ ul li{
   
 }
 .kart_card_block{
-  width: 96px;
+  width: 100px;
+  height: 100px;
   padding: 0px;
   margin-left: -10px;
   border-radius: 5px;
   /* border: 1px solid #cfcfcf; */
   /* border: 1px solid #ccc; */
   z-index: 1;
-  margin-bottom: 3px;
+  margin-bottom: 10px;
 }
 .kart_card_block_content{
   width: calc(100% - 70px);
