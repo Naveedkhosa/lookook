@@ -43,7 +43,10 @@ svg{
 .space_botm{
   margin-bottom: 5px;
 }
-
+._head_solid_smal{
+  font-size: 14px;
+  font-weight: 510;
+}
 
 .btn{
   background: #f29a03;
@@ -1457,7 +1460,7 @@ ul li{
   display: flex;
   margin-bottom: 5px;
   margin-left: 1px;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   flex-direction: column;
   z-index: 1;
@@ -1465,7 +1468,8 @@ ul li{
 .kart_card_block_cntent{
   width: fit-content;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
 }
 .container_kart {
@@ -1892,6 +1896,11 @@ ul li{
 .thin_smal{
   font-size: 10px ;
   color: #999999;
+}
+.thin_smal_l{
+  font-size: 10px;
+  font-weight: 500;
+  color: #1c1c1c;
 }
 .malta{
   color: #F44336;
