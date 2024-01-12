@@ -1812,30 +1812,50 @@ ul li{
 /* start know page chef_party  */
 
 /* our cuisines start style  */
+
 .suisine_section_main{
-  margin: 10px auto;
-  margin-top: 17px;
+  margin: 17px auto;
   width: 95%;
+  height: 100%;
+}
+.suisine_section_cards{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 10px 0px;
+
+  flex-wrap: wrap;
 }
 .suisine_card{
-  width: 27%;
+  width: 30%;
+  height: 90px;
+  border-radius: 5px;
 }
 .suisine_top{
   width: 100%;
-  height: 100%;
+  height: calc(100% - 25px);
+  border-radius: 5px 5px 0px 0px;
 }
 .suisine_top img{
   width: 100%;
   height: 100%;
+  border-radius: 5px 5px 0px 0px;
+
 }
 .suisine_botom{
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #f29a03;
-  height: 20px;
+  background: #f29a0354;
+  height: 25px;
+  color: #02645e;
+  border-radius: 0px 0px 3px 3px;
+
 }
+
 /* our cuisines end style  */
 
 @media screen and (max-width: 1105px) {
