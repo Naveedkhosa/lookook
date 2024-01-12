@@ -1354,8 +1354,9 @@ ul li{
   margin: 1px;
   border-radius: 5px;
   background-color: #fff;
+  border: 1px solid #ddd;
   position: relative;
-  height: 80px;
+  height: 75px;
 }
 .service_kart_card .colr{
   color: #1c1c1c;
@@ -1450,6 +1451,7 @@ ul li{
   /* border: 1px solid #cfcfcf; */
   /* border: 1px solid #ccc; */
   z-index: 1;
+  margin-bottom: 5px;
 }
 .kart_card_block_content{
   width: calc(100% - 70px);
