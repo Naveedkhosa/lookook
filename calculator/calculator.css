@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #343333;
+}
+.calculator{
+    border: 1px solid #454444;
+    padding: 20px;
+    border-radius: 18px;
+    box-shadow: 0px 3px 16px rgba(113, 115, 119, 0.5);
+    background: transparent;
+}
+input{
+    width: 320px;
+    border: none;
+    outline: none;
+    padding: 24px;
+    margin: 10px;
+    background: transparent;
+    box-shadow:inset 15px 20px 15px rgba(0, 0, 0, 0.08),
+     10px 15px 20px rgba(0, 0, 0, 0.08),
+     10px 15px 20px rgba(0, 0, 0, 0.08),
+     inset -20px -20px 15px rgba(50, 50, 50, 0.9);
+    font-size: 40px;
+    text-align: right;
+    cursor: pointer;
+    color: #ccc;
+}
+input::placeholder{
+    color: #dbd8d8;
+}
+button{
+    border: none;
+    width: 60px;
+    height: 55px;
+    margin: 10px;
+    border-radius: 50%;
+    background: transparent;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+
+    box-shadow:inset 6px 6px 6px rgba(0, 0, 0, 0.08),
+     7px 8px 6px rgba(0, 0, 0, 0.08),
+     6px 7px 7px rgba(0, 0, 0, 0.08),
+     inset -6px -6px 7px rgba(52, 51, 51, 0.9);
+}
+.active{
+    color: #50adff;
+    z-index: 10;
+}
+.activ{
+    color: #fff;
+    background-color: #f73838;
+    box-shadow:inset 6px 6px 6px rgba(0, 0, 0, 0.08),
+    7px 8px 6px rgba(0, 0, 0, 0.08),
+    6px 7px 7px rgba(0, 0, 0, 0.08),
+    inset -6px -6px 7px rgba(247, 152, 152, 0.9);
+}
+.equal{
+    background-color: #50adff;
+    color: #fff;
+    box-shadow:inset 6px 6px 6px rgba(0, 0, 0, 0.08),
+    7px 8px 6px rgba(0, 0, 0, 0.08),
+    6px 7px 7px rgba(0, 0, 0, 0.08),
+    inset -6px -6px 7px rgba(132, 181, 244, 0.9);
+}
