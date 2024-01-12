@@ -1961,6 +1961,12 @@ ul li{
   font-size: 12px ;
   font-weight: 550 ;
 }
+.Neg_m_l{
+  margin-left: -15px;
+}
+.Neg_m_l2{
+  margin-left: -20px;
+}
 .pad_l{
   padding-left: 10px;
 }
