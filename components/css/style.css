@@ -1946,6 +1946,9 @@ ul li{
     color: #02645e;
     margin: 10px 0px;
   }
+  .serving_city_main_cards{
+    justify-content: space-between;
+  }
 }
 /* <!-- serving city end  --> */
 
