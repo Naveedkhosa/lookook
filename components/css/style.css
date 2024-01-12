@@ -447,6 +447,39 @@ hr{
   align-items: center;
   justify-content: space-between;
 }
+.reviews_cards_main{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-shrink: 0;
+  overflow-x: auto;
+}
+.rating_card{
+  width: 30%;
+  border: 1px solid #ddd;
+  padding: 0px 10px;
+  border-radius: 10px;
+  flex-shrink: 0;
+
+}
+.reviews_cards_main::-webkit-scrollbar{
+  height: 4px;
+}
+.reviews_cards_main::-webkit-scrollbar-thumb{
+  background: linear-gradient(to right ,#2196F3, #ff003c);
+  border-radius: 50px;
+}
+
+@media (max-width: 767px) {
+  .rating_card{
+    width: 90%;
+    border: 1px solid #ddd;
+    padding: 0px 10px;
+    border-radius: 10px;
+  }
+}
 /* testimonial style end */
 .service_booking_container{
   margin: 0 auto;
