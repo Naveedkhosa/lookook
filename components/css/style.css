@@ -889,6 +889,9 @@ ul li{
   line-height: calc(14 * 1.3px);
   
 }
+.main_clr{
+  color: #02645e;
+}
 
 .Ord_active{
   margin: auto;
