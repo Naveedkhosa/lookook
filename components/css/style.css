@@ -1351,14 +1351,13 @@ ul li{
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
-  padding-top: 10px;
-  width: 24%;
-  margin: 5px 5px 0px 1px;
+  width: 25%;
+  margin: 1px;
   border-radius: 5px;
   background-color: #fff;
   border: 1px solid #ddd;
   position: relative;
-  height: 90px;
+  height: 80px;
 }
 .service_kart_card .colr{
   color: #1c1c1c;
@@ -1857,7 +1856,7 @@ ul li{
     justify-content: center;
   }
   .service_kart_card{
-    width: 46%;
+    width: 48%;
   }
   .container_kart {
     border: none;
