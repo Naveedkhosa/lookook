@@ -1451,7 +1451,7 @@ ul li{
   /* border: 1px solid #cfcfcf; */
   /* border: 1px solid #ccc; */
   z-index: 1;
-  margin-bottom: 5px;
+  margin-bottom: 3px;
 }
 .kart_card_block_content{
   width: calc(100% - 70px);
