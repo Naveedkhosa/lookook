@@ -1346,7 +1346,6 @@ ul li{
 
 }
 .service_kart_card{
-  overflow: hidden;
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -1355,7 +1354,6 @@ ul li{
   margin: 1px;
   border-radius: 5px;
   background-color: #fff;
-  border: 1px solid #ddd;
   position: relative;
   height: 80px;
 }
@@ -1447,7 +1445,7 @@ ul li{
 .kart_card_block{
   width: 96px;
   padding: 0px;
-  margin-left: -15px;
+  margin-left: -10px;
   border-radius: 5px;
   /* border: 1px solid #cfcfcf; */
   /* border: 1px solid #ccc; */
