@@ -27,3 +27,7 @@ arr.forEach(button => {
     })
 
 })
+
+window.addEventListener("contextmenu",function(e){
+  e.preventDefault();
+})
