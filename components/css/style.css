@@ -1826,7 +1826,7 @@ ul li{
 /* our cuisines start style  */
 
 .suisine_section_main{
-  margin: 17px auto;
+  margin: 37px auto;
   width: 95%;
   height: 100%;
 }
@@ -1892,8 +1892,62 @@ ul li{
     width: 100%;
     height: 25px;
   }
+  .suisine_section_main{
+    margin: 17px auto;
+    width: 95%;
+    height: 100%;
+  }
 }
 /* our cuisines end style  */
+/* <!-- serving city start  --> */
+.serving_city_main_cards{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 17px 0px;
+}
+.city_card{
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.city_img{
+  width: 80px;
+  height: 80px;
+  border: 1px solid #aaaaaa;
+  padding: 12px;
+  border-radius: 50%;
+}
+.city_img img{
+  width: 100%;
+  height: 100%;
+}
+.city_card p{
+  font-size: 14px;
+  font-weight: bold;
+  color: #02645e;
+  margin: 10px 0px;
+}
+@media (max-width: 767px) {
+  .city_card{
+    width: 25%;
+  }
+  .city_img{
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+  }
+  .city_card p{
+    font-size: 10px;
+    font-weight: 500;
+    color: #02645e;
+    margin: 10px 0px;
+  }
+}
+/* <!-- serving city end  --> */
 
 @media screen and (max-width: 1105px) {
   .now_hero_img{
