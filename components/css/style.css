@@ -1822,16 +1822,19 @@ ul li{
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 10px;
-  margin: 10px 0px;
-
+  justify-content: flex-start;
+  gap: 30px;
+  margin: 15px 0px;
   flex-wrap: wrap;
 }
 .suisine_card{
-  width: 30%;
-  height: 90px;
+  /* width: 30%;
+  max-width: 150px;
+  height: 95px; */
   border-radius: 5px;
+  width: 320px;
+  max-width: 320px;
+  height: 230px;
 }
 .suisine_top{
   width: 100%;
@@ -1850,12 +1853,33 @@ ul li{
   align-items: center;
   justify-content: center;
   background: #f29a0354;
-  height: 25px;
+  height: 35px;
   color: #02645e;
   border-radius: 0px 0px 3px 3px;
 
 }
-
+@media screen and (max-width: 685px) {
+  .suisine_section_cards{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    margin: 10px 0px;
+    flex-wrap: wrap;
+  }
+  .suisine_card{
+    width: 30%;
+    max-width: 150px;
+    height: 95px;
+    border-radius: 5px;
+    margin: 1px 0px;
+  }
+  .suisine_botom{
+    width: 100%;
+    height: 25px;
+  }
+}
 /* our cuisines end style  */
 
 @media screen and (max-width: 1105px) {
