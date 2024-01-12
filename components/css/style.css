@@ -328,7 +328,7 @@ hr{
   box-shadow: rgba(0, 0, 0, 0.20) 0px 1px 8px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   overflow: hidden;
   height: 100%;
   border-radius: 10px;
@@ -347,7 +347,7 @@ hr{
   padding: 10px;
 }
 .choose_l_content{
-  background-color: #f29a0358;
+  background-color: transparent;
   width: 100%;
   display: flex;
   align-items: center;
@@ -356,6 +356,16 @@ hr{
   height: calc(100% - 25px);
   color: #fff;
   z-index: 10;
+  position: relative;
+}
+.background_topi{
+  position: absolute;
+  z-index: -1;
+}
+.background_topi iconify-icon{
+  font-size: 130px;
+  color: #f29a03;
+
 }
 .choose_l_btm_line{
   width: 115%;
@@ -891,6 +901,8 @@ ul li{
 }
 .main_clr{
   color: #02645e;
+  text-align: center;
+  line-height: 22px;
 }
 
 .Ord_active{
