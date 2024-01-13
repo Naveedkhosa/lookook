@@ -517,26 +517,30 @@ hr{
   justify-content: flex-start;
   width: 100%;
   overflow-x: auto;
-  height: 150px;
+  height: 260px;
 }
 .top_rated_card{
-  height: 120px;
+  height: 200px;
   padding: 10px;
-  width: 250px;
-  background: #f29a032c;
+  width: 130px;
+  background: #fff;
   border-radius: 10px;
   display: flex;
+  border: 1px solid #dddd;
 }
 .top_rated_card_left{
-  width: 50%;
-  height: 100%;
+  width: 100%;
+  height:fit-content;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
   flex-direction: column;
 }
+.justify{
+  text-align: center;
+  margin: 5px 0px;
+}
 .top_rated_card_right{
-  width: 50%;
   height: 100%;
   display: flex;
   position: relative;
@@ -544,25 +548,28 @@ hr{
 }
 .top_rated_content{
   position: absolute;
-  background: #f29a0354;
-  border-radius: 50% 10px 10px 50%;
-  width: 100%;
-  height: 120px;
-  right: -11px;
-  top: -11px;
+  background: #f1f1ff1f;
+  border-radius: 50% 50% 10px 10px;
+  height: 50%;
+  width: 120px;
+  right: -10px;
+  bottom: -10px;
 }
-/* .top_rated_left_content p{
- color: #fff;
-} */
+.top_rated_left_content {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+}
 .margin-left5{
   margin-left: 5px;
 }
 .top_rated_img_card{
-  width: 145px;
+  width: 100px;
   height: auto;
   position: absolute;
-  bottom: -5px;
-  left: -10px;
+  bottom: -4px;
+  left: 7px;
 }
 .top_rated_img_card img{
   width: 100%;
