@@ -1554,7 +1554,7 @@ ul li{
   height: 90px;
 }
 .kart_card_block_bg{
-  background: #f29a0354;
+  background: #ffe5b8;
   width: 100%;
   height: 50px;
   position: absolute;
@@ -1563,7 +1563,7 @@ ul li{
   z-index: 0;
 }
 .kart_card_block_bgg{
-  background: #9f580cf9;
+  background: #ffe6c9;
   width: 150%;
   height: 50px;
   position: absolute;
