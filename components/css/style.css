@@ -559,11 +559,12 @@ hr{
 .top_rated_bg{
   background: #f1f1f1f1;
   border-radius: 50% 50% 10px 10px;
-  width: 100%;
+  width: 104px;
   height: 100%;
   position: absolute;
-  bottom: 0px;
-
+  bottom: -4px;
+  border: 1px solid red;
+  left: -10px;
   
 }
 .top_rated_left_content {
@@ -579,7 +580,8 @@ hr{
   width: 100px;
   height: auto;
   position: absolute;
-  bottom: 0px;
+  bottom: -7px;
+  left: -10px;
 
 }
 .top_rated_img_card img{
