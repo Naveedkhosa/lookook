@@ -528,7 +528,6 @@ hr{
 }
 .top_rated_card{
   height: 200px;
-  padding: 10px;
   width: 130px;
   background: #fff;
   border-radius: 10px;
@@ -541,6 +540,8 @@ hr{
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
+  padding: 10px;
+
 }
 .justify{
   text-align: center;
@@ -550,23 +551,13 @@ hr{
   height: 50%;
   width: 100%;
   align-items: center;
-}
-.top_rated_content{
-  position: relative;
-  height: 100%;
-  width: 100%;
-}
-.top_rated_bg{
-  background: #f1f1f1f1;
-  border-radius: 50% 50% 10px 10px;
-  width: 104px;
-  height: 100%;
-  position: absolute;
-  bottom: -4px;
+  display: flex;
+  justify-content: center;
   border: 1px solid red;
-  left: -10px;
-  
+  border-radius: 50% 50% 10px 10px;
+  background: #f1f1f1;
 }
+
 .top_rated_left_content {
    display: flex;
    align-items: center;
@@ -579,10 +570,6 @@ hr{
 .top_rated_img_card{
   width: 100px;
   height: auto;
-  position: absolute;
-  bottom: -7px;
-  left: -10px;
-
 }
 .top_rated_img_card img{
   width: 100%;
