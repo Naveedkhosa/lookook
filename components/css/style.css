@@ -517,24 +517,24 @@ hr{
   height: 100%;
 }
 .toprated_proile_main_cards{
+  width: 100%;
   margin: 10px 0px;
   gap: 10px;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  width: 100%;
   overflow-x: auto;
-  height: 220px;
+  height: 250px;
 }
 .top_rated_card{
   height: 200px;
   width: 130px;
+  min-height: 130px;
   background: #fff;
   border-radius: 10px;
   border: 1px solid #dddd;
 }
 .top_rated_card_left{
-  width: 100%;
+  width: 130px;
   height: fit-content;
   display: flex;
   align-items: center;
@@ -549,11 +549,10 @@ hr{
 }
 .top_rated_card_right{
   height: 50%;
-  width: 100%;
+  width: 130px;
   align-items: center;
   display: flex;
   justify-content: center;
-  border: 1px solid red;
   border-radius: 50% 50% 10px 10px;
   background: #f1f1f1;
 }
