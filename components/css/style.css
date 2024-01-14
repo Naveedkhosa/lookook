@@ -407,7 +407,7 @@ hr{
     padding: 6px;
   }
   .choose_r_w_contnet{
-    width: calc(100% - 60px);
+    width: calc(100% - 50px);
   }
 }
 /* why choose us style end */
