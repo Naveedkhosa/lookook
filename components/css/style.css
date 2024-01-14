@@ -1985,6 +1985,11 @@ ul li{
   color: #02645e;
   margin: 10px 0px;
 }
+.cardp{
+  font-size: 14px;
+  font-weight: bold;
+  color: #02645e;
+}
 @media (max-width: 767px) {
   .city_card{
     width: 25%;
@@ -1999,6 +2004,11 @@ ul li{
     font-weight: 500;
     color: #02645e;
     margin: 10px 0px;
+  }
+  .cardp{
+    font-size: 10px;
+    font-weight: 500;
+    color: #02645e;
   }
   .serving_city_main_cards{
     justify-content: space-between;
