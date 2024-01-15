@@ -22,27 +22,17 @@
             <a href="Chef_party.html">Book a Chef</a>
         </div>
     </div> -->
+    <button class="back-button" onclick="history.back()">
+      <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48"
+          d="M244 400L100 256l144-144M120 256h292" />
+      </svg>
+      Bookings
+    </button>
 
     <!-- pending, cancelled,confirmed bookings code... -->
     <div class="service_booking_container">
-       <!-- top menu start ... -->
-       <div class="bottm_menu_container">
-        <div class="top_menu_box">
-          <div class="_logo" href="#">
-            <img src="components/imag/look my cook logo.jpg" alt="" />
-          </div>
-          <div class="top_side_nav" id="nav_toggle_btn">
-            <!-- <div class="profile_top_nav">
-              <img src="components/imag/a (3).jpg" alt="" />
-            </div>
-            <div class="top_nav_ico">
-              <iconify-icon icon="ei:navicon"></iconify-icon>
-            </div> -->
-          <iconify-icon icon="ei:navicon"></iconify-icon>
-          </div>
-        </div>
-      </div>
-      <!-- top menu end ... -->
+      
       <div class="service_booking_kards">
         <!-- card of booking -->
         <div
@@ -735,51 +725,11 @@
     </div>
 
     <!-- choose dishes popup3 > popup of payment -->
-<!-- nav_popped_up -->
- 
-<div id="nav_popped_up">
-  <ul>
-    <li>
-      <a href="#">
-        <div class="a_left"><i class="fa fa-user"></i> My Account</div>
-        <i class="fa fa-chevron-right"></i>
-      </a>
-    </li>
-    <li>
-      <a href="#">
-        <div class="a_left">
-          <iconify-icon icon="tabler:brand-booking"></iconify-icon> My Bookings
-        </div>
-        <i class="fa fa-chevron-right"></i>
-      </a>
-    </li>
-    <li>
-      <a href="#">
-        <div class="a_left">
-          <i class="fa fa-file-text"></i> Terms & Conditions
-        </div>
-        <i class="fa fa-chevron-right"></i>
-      </a>
-    </li>
-    <li>
-      <a href="#">
-        <div class="a_left">
-          <i class="fa fa-headphones"></i> Help & Support
-        </div>
-        <i class="fa fa-chevron-right"></i>
-      </a>
-    </li>
-  </ul>
-</div>
-<!-- nav_popped_up -->
+
 
 <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 <script src="components/js/js.js"></script>
 <script src="components/js/jquery-3.7.1.slim.min.js"></script>
-<script>
-  $("#nav_toggle_btn").on("click", function () {
-    $("#nav_popped_up").toggle();
-  });
-</script>
+
   </body>
 </html>
