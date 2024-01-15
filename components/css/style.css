@@ -265,7 +265,7 @@ hr{
 }
 .scroll_gallry{
   position: absolute;
-  background: #f29a0331;
+  background: #f1f1f1;
   border: 1px solid #f29a03;
   display: flex;
   align-items: center;
@@ -282,7 +282,7 @@ hr{
 }
 .scroll_gallry iconify-icon{
   font-size: 10px;
-  margin-left: 5px;  
+  margin-right: 5px;  
   font-weight: bold;
 }
 .gallery_container {
@@ -497,6 +497,7 @@ hr{
   background: linear-gradient(to right ,#2196F3, #ff003c);
   border-radius: 50px;
 }
+
 .center_align{
   display: flex;
   align-items: center;
