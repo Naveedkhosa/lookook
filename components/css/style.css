@@ -37,6 +37,12 @@ svg{
   color: #333;
   margin: 0px 10px;
 }
+.book_btn{
+  border: 1px solid #f1f1f1;
+  padding: 5px;
+  font-size: 12px;
+  font-weight: 510;
+}
 .space_botom{
   margin-bottom: 10px;
 }
@@ -1610,11 +1616,12 @@ ul li{
   z-index: 1;
 }
 .kart_card_block_cntent{
-  width: fit-content;
+  width: 100%;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-end;
+  justify-content: flex-end;
   flex-direction: column;
+  padding: 5px;
 }
 .container_kart {
   margin: 0 auto;
