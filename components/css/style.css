@@ -917,19 +917,21 @@ ul li{
   align-items: center;
   width: 100%;
   max-width: 450px;
-  padding: 10px;
+  padding: 15px;
+  border-radius: 8px;
   box-shadow: rgba(0, 0, 0, 0.20) 0px 2px 8px;
 
 }
 .card_contact_icn{
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-right: 10px;
   border: 1px solid #f1f1f1;
   border-radius: 5px;
+  padding: 5px;
 }
 .card_contact_icn iconify-icon{
   font-size: 35px;
