@@ -922,6 +922,9 @@ ul li{
   box-shadow: rgba(0, 0, 0, 0.20) 0px 2px 8px;
 
 }
+.card-conatct_con p{
+  color: #1c1c1c;
+}
 .card_contact_icn{
   width: 50px;
   height: 50px;
