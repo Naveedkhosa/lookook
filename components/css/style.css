@@ -2035,7 +2035,92 @@ ul li{
 
 /* start know page chef_party  */
 
+/* ref and earn page start style .  */
+.ref_and_img_top{
+  width: 100%;
+  border-radius: 20px;
+  height: 74vh;
+  margin-top: 55px;
+}
+.ref_and_img_top img{
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+}
+.earn_note{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  background: #f1f1f1;
+  border: 1px solid #d1d1d1;
+  margin-top: 10px;
+  border-radius: 5px;
+  z-index: 10;
+}
+.earn_note iconify-icon{
+  font-size: 40px;
+  margin-right: 10px;
+}
+.copy_code{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin: 10px auto;
+  max-width: 480px;
+}
+.copy_code input{
+  width: calc(100% - 60px);
+  height: 40px;
+  border: 1px solid #d1d1d1;
+  outline:none;
+  padding: 0px 10px;
+  border-radius: 5px 0px 0px 5px;
 
+}
+.copy_code button{
+  width: 50px;
+  height: 40px;
+  border-bottom: 1px solid #d1d1d1;
+  border-right: 1px solid #d1d1d1;
+  border-top: 1px solid #d1d1d1;
+  border-radius: 0px 5px 5px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px ;
+  font-weight: 510;
+  color: #333;
+  background: #f1f1f1;
+}
+.share_social_code{
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  margin: 10px auto;
+  width: 100%;
+  max-width: 500px;
+  gap: 10px;
+}
+.card_contact_icnn{
+  padding: 10px;
+  width: 50px ;
+  height: 50px;
+  border-radius: 4px;
+  border: 1px solid #d1d1d1;
+  background: #f1f1f1;
+} 
+.card_contact_icnn iconify-icon{
+  font-size: 30px;
+}
+@media screen and (max-width: 1105px) {
+  .ref_and_img_top{
+    width: 100%;
+    height: 200px;
+  }
+}
+/* ref and earn page end style .  */
 /* <!-- serving city start  --> */
 .serving_city_main_cards{
   display: flex;
