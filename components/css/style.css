@@ -1148,7 +1148,7 @@ ul li{
   height: 50px;
   padding: 0px 15px;
   border-radius: 5px;
-  margin: 10px 0px 0px 0px;
+  margin: 6px 0px 0px 0px;
 }
 .pre_img_text{
   display: flex;
@@ -1178,7 +1178,7 @@ ul li{
   width: 94%;
   margin: 0 auto;
   padding-bottom: 90px;
-  padding-top: 40px;
+  padding-top: 30px;
 }
 /* bottom menu start here... */
 .bottm_menu_container{
