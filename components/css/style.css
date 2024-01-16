@@ -923,8 +923,8 @@ ul li{
 
 }
 .card_contact_icn{
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -937,11 +937,7 @@ ul li{
   font-size: 35px;
 
 }
-.card-conatct_con p{
-  font-size: 12px;
-  color: #333;
-  margin-top: 5px;
-}
+
 /* support help page style end */
 /* no booking page style .... */
 .no_book_page{
