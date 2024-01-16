@@ -932,7 +932,8 @@ ul li{
   align-items: center;
   justify-content: center;
   margin-right: 10px;
-  border: 1px solid #f1f1f1;
+  border: 1px solid #ddd;
+  background: #f1f1f1;
   border-radius: 5px;
   padding: 5px;
 }
