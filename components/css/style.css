@@ -890,6 +890,57 @@ ul li{
   bottom: -20px;
 }
 /* service booking end style... */
+
+/* support help page style start */
+.support_help_section{
+  height: calc(100% - 106px);
+  margin-top: 56px;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.support_help_in_section{
+  width: 94%;
+  padding: 15px 0px;
+
+}
+.support_help_contact_cards{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.card_contact{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 450px;
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.20) 0px 2px 8px;
+
+}
+.card_contact_icn{
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  border: 1px solid #f1f1f1;
+  border-radius: 5px;
+}
+.card_contact_icn iconify-icon{
+  font-size: 35px;
+
+}
+.card-conatct_con p{
+  font-size: 12px;
+  color: #333;
+  margin-top: 5px;
+}
+/* support help page style end */
 /* no booking page style .... */
 .no_book_page{
   display: flex;
