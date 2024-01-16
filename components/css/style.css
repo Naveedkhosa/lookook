@@ -2152,3 +2152,45 @@ ul li{
 .space_five{
   margin: 5px 0px;
 }
+
+/* aditional new design style start here..  */
+.aditional_cards_container{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 100%;
+}
+.adi_booking_card{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 47% !important;
+  max-width: 200px;
+}
+.adii_card_img{
+  overflow: hidden;
+  width: 80px;
+  height: 80px;
+  border-radius:50% ;
+  border: 1px solid #ccc;
+}
+.adii_card_img img{
+  width: 100%;
+  height: 100%;
+}
+.addi_card_content{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin-top: 10px;
+}
+.adi_card_booking_botom{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+/* aditional new design style end here..  */
