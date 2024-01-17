@@ -703,8 +703,7 @@ hr{
 .line{
   width: 40%;
   color: #000;
-  height: 1px;
-  border: 1px solid #cccc;
+  border-bottom: 1px solid #cccc;
 }
 .fixed_detail_content{
   width: 200px;
