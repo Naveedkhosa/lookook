@@ -163,19 +163,13 @@ hr{
   margin: 0;
   list-style-type: none;
   position: relative;
-  padding: 20px 0;
+  padding: 20px 10px;
   margin-bottom: 10px;
+  box-shadow: rgba(0, 0, 0, 0.20) 0px 2px 8px;
+  border-radius: 6px;
+  
 }
 
-#nav_popped_up ul li::before {
-  content: "";
-  width: calc(100% - 40px);
-  position: absolute;
-  left: 40px;
-  bottom: 0;
-  height: 0.5px;
-  background: #bbb;
-}
 
 #nav_popped_up ul li a {
   display: flex;
