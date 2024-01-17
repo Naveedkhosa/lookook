@@ -701,7 +701,7 @@ hr{
   background: linear-gradient(#02645d2d, #fff);
 }
 .line{
-  width: 40%;
+  width: 40px;
   color: #000;
   border-bottom: 1px solid #cccc;
 }
