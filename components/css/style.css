@@ -2179,6 +2179,7 @@ ul li{
 }
 .have_refral_section{
   overflow-x: scroll;
+  padding: 15px 0px;
 }
 .have_refral_section table {
   border-collapse: collapse;
