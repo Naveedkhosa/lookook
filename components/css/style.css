@@ -111,8 +111,11 @@ hr{
   letter-spacing: 0.5px;
   line-height: calc(14 * 1.3px);
 }
-.malta_bg{
-  background: #f29a03;
+.malta_bg_l{
+  background: #f29a0368;
+  color: #1c1c1c;
+  padding: 5px;
+  border-radius: 3px;
 }
 .batun{
   padding: 13px 10px;
@@ -2001,7 +2004,10 @@ ul li{
 .margin_after_head{
   margin-bottom: 10px;
 }
-
+.border_btm{
+  padding: 8px 0px !important;
+  border-bottom: 1px solid #d1d1d1;
+}
 
 /* start know page chef_party  */
 .Faqs_card{
