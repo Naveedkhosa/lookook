@@ -2068,6 +2068,7 @@ ul li{
 /* start know page chef_party  */
 
 /* ref and earn page start style .  */
+
 .ref_and_img_top{
   width: 100%;
   border-radius: 20px;
@@ -2162,6 +2163,38 @@ ul li{
   font-weight: bold;
   color: #02645e;
   margin: 10px 0px;
+}
+.zero_refer{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  margin: 15px 0px;
+  flex-direction: column;
+  color: #585757;
+}
+.zero_refer iconify-icon{
+  font-size: 60px;
+  color: #f1063d72;
+}
+.have_refral_section{
+  overflow-x: scroll;
+}
+.have_refral_section table {
+  border-collapse: collapse;
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+.have_refral_section th, td {
+  text-align: left;
+  padding: 8px;
+}
+.have_refral_section th{
+  font-size: 12px;
+  font-weight: 510;
+  background: #02645d60;
+  border: 1px solid #dddd;
 }
 @media screen and (max-width: 500px) {
 
