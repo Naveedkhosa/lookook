@@ -2224,13 +2224,15 @@ ul li{
   width: 94%;
   margin: 40px auto;
   margin-top: 70px ;
+  display: flex;
 
 }
 .accnt_detail_section{
   margin: 40px auto;
   margin-top: 60px;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   flex-wrap: wrap;
 }
