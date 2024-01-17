@@ -111,10 +111,13 @@ hr{
   letter-spacing: 0.5px;
   line-height: calc(14 * 1.3px);
 }
+.malta_bg{
+  background: #f29a03;
+}
 .malta_bg_l{
   background: #f29a0368;
   color: #1c1c1c;
-  padding: 5px;
+  padding: 7px;
   border-radius: 3px;
 }
 .batun{
