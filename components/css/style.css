@@ -731,6 +731,7 @@ ul li{
   font-size: 13px;
   line-height: calc(14 * 1.3px);
   margin: 5px 0px;
+  text-align: justify;
 }
 .para_li{
   color: #585757;
