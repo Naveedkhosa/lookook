@@ -7,7 +7,7 @@
 
 .footer_section{
     background-color: #f1f1f1f1;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 .footer_kart_container{
     display: flex;
@@ -74,7 +74,7 @@
     background: #f6f6f6;
     width: 100%;
     height: calc(100vh - 60px);
-    margin-top: 60px;
+    margin-top: 20px;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -103,6 +103,9 @@
     color: #f29203;
 
 }
+.orange {
+    color: #f29203;
+}
 
 ._form_ ._form_title{
     width: 100%;
@@ -121,7 +124,7 @@
 ._form_title .logo{
 width: 90%;
 height: auto;
-font-size:28px;
+font-size: 20px;
 padding:5px 0px;
 font-weight:bold;
 }
@@ -134,7 +137,7 @@ font-weight:bold;
 
 ._form_content{
     width: 100%;
-    padding: 25px 0px;
+    padding: 20px 0px;
     display: flex;
     flex-direction: column;
     -ms-flex-direction: column;
