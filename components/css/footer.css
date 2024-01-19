@@ -45,12 +45,16 @@
     font-size: 12px;
     font-weight: 510;
     margin: 5px 0px;
+   
 
 }
 .footer_right a{
     font-size: 12px;
     font-weight: 510;
     margin: 5px 0px;
+    border: 1px solid #f1f1f1;
+    padding: 10px;
+    border-radius: 5px;
 
 }
 .footer_right iconify-icon{
