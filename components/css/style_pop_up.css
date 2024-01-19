@@ -185,6 +185,9 @@ a{
 
 
 /* select dishes popup 120 start style */
+.tablinks_container{
+  width: 100%; display: flex; align-items: center; flex-direction: column; text-align: center;
+}
 .tab_body {
   margin: 0;
   font-family: "Arial", sans-serif;
