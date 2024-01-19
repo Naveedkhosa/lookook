@@ -273,6 +273,15 @@ a{
 .tabs_topspace {
   margin-top: 55px;
 }
+.increase_dec_selected_dish{
+  margin-right: 5px;
+}
+.dishes_page_top_{
+  display: flex;
+  width: 94%;
+  margin: 0 auto;
+  align-items: center;
+}
 .tabs_cards{
   display: flex;
   flex-wrap: wrap;
