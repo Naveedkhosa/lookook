@@ -99,6 +99,7 @@
     background-color: #fff;
     margin: 0px;
     border-radius: 5px;
+    padding: 20px 10px;
     border: 1px solid #f1f1f1;
 
 }
@@ -132,6 +133,7 @@
     font-weight: 700;
     color: #02645e;
     text-transform: capitalize;
+    border: none;
 }
 
 ._form_title .logo {
