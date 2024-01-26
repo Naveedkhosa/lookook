@@ -151,7 +151,7 @@ a{
     height: 75px;
     padding: 13px 0px;
     position: fixed;
-    bottom: 0;
+    bottom: 40px;
     left: 0;
     width: 100%;
     box-shadow: rgba(0, 0, 0, 0.20) 0px 1px 8px;
@@ -185,6 +185,9 @@ a{
 
 
 /* select dishes popup 120 start style */
+.tablinks_container{
+  width: 100%; display: flex; align-items: center; flex-direction: column; text-align: center;
+}
 .tab_body {
   margin: 0;
   font-family: "Arial", sans-serif;
@@ -269,6 +272,15 @@ a{
 }
 .tabs_topspace {
   margin-top: 55px;
+}
+.increase_dec_selected_dish{
+  margin-right: 5px;
+}
+.dishes_page_top_{
+  display: flex;
+  width: 94%;
+  margin: 0 auto;
+  align-items: center;
 }
 .tabs_cards{
   display: flex;

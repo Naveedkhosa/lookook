@@ -43,6 +43,7 @@ svg{
   font-size: 10px;
   font-weight: 510;
   border-radius: 2px;
+  margin-top: 10px;
 }
 .space_botom{
   margin-bottom: 10px;
@@ -113,6 +114,12 @@ hr{
 .malta_bg{
   background: #f29a03;
 }
+.malta_bg_l{
+  background: #f29a0368;
+  color: #1c1c1c;
+  padding: 7px;
+  border-radius: 3px;
+}
 .batun{
   padding: 13px 10px;
   width: 100%;
@@ -163,19 +170,13 @@ hr{
   margin: 0;
   list-style-type: none;
   position: relative;
-  padding: 20px 0;
+  padding: 20px 10px;
   margin-bottom: 10px;
+  box-shadow: rgba(0, 0, 0, 0.20) 0px 2px 8px;
+  border-radius: 6px;
+  
 }
 
-#nav_popped_up ul li::before {
-  content: "";
-  width: calc(100% - 40px);
-  position: absolute;
-  left: 40px;
-  bottom: 0;
-  height: 0.5px;
-  background: #bbb;
-}
 
 #nav_popped_up ul li a {
   display: flex;
@@ -213,7 +214,7 @@ hr{
   width: fit-content;
   border-radius: 5px;
   margin: 10px 0px;
-  background: #02645e;
+  background: #f29a03;
   display: flex;
   padding: 10px 13px;
   font-size: 13px;
@@ -259,6 +260,26 @@ hr{
 }
 /* service booking start style... */
 /* gallery style start */
+
+.swiper {
+  margin-top: 20px;
+  width: 94%;
+  height: 500px;
+  border-radius: 8px;
+}
+
+@media (max-width: 610px) {
+  .swiper {
+    height: 180px;
+  }
+}
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .size_se{
   font-size: 7px;
   font-weight: 500;
@@ -319,6 +340,34 @@ hr{
   border-radius: 10px;
   object-fit: cover;
 }
+.gallery-container{
+  width: 100%;
+  display: flex;
+  overflow-x: scroll;
+  flex-shrink: 0;
+  padding: 10px 0;
+}
+
+.gallery-container .gallery-image{
+  width: 130px;
+  margin-right: 10px;
+  flex-shrink: 0;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.gallery-image a{
+  width: 100%;
+  height: 130px;
+}
+
+.gallery-image a img{
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+
+}
+
 /* gallery style end */
 
 /* why choose us style start  */
@@ -473,7 +522,7 @@ hr{
   justify-content: space-between;
   gap: 10px;
   flex-shrink: 0;
-  overflow-x: auto;
+  overflow-x: scroll;
 }
 .rating_card{
   width: 30%;
@@ -530,7 +579,7 @@ hr{
   gap: 10px;
   display: flex;
   align-items: center;
-  overflow-x: auto;
+  overflow-x: scroll;
   height: 250px;
 }
 .top_rated_card{
@@ -587,7 +636,7 @@ hr{
 
 .service_booking_container{
   margin: 0 auto;
-  padding: 20px 0px;
+  padding: 50px 0px 20px 0px;
   width: 100%;
 }
 .service_booking_kards{
@@ -652,9 +701,9 @@ hr{
   background: linear-gradient(#02645d2d, #fff);
 }
 .line{
-  width: 40%;
+  width: 50%;
   color: #000;
-  border: 1px dotted #dddddd6d;
+  border-bottom: 1px solid #cccc;
 }
 .fixed_detail_content{
   width: 200px;
@@ -674,14 +723,14 @@ hr{
   padding: 10px 0px;
 }
 ul{
-  padding: 0px 15px;
+  padding: 0px 11px;
 }
 ul li{
   /* padding: 5px 0px; */
-  color: #585757;
+  color: #0000;
   font-size: 13px;
   line-height: calc(14 * 1.3px);
-  margin: 10px 0px;
+  margin: 6px 0px;
 }
 .para_li{
   color: #585757;
@@ -787,16 +836,16 @@ ul li{
   margin-right: 10px;
 }
 .summary_section{
-  padding: 15px;
+  padding: 5px 10px;
   box-shadow: rgba(0, 0, 0, 0.20) 0px 1px 8px;
   border-top: 1px solid #dddddd8d;
   border-radius: 10px;
-  margin-bottom: 25px;
 
 }
-.note_summary{
-  background: #f1063d1b;
+.summary_section1{
   padding: 10px;
+}
+.note_summary{
   border-radius: 10px;
 }
 .note_summary p{
@@ -811,7 +860,8 @@ ul li{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0px 15px;
+  padding: 10px 15px;
+  margin-bottom: 30px;
 }
 .trust_img{
   width: 50%;
@@ -869,6 +919,60 @@ ul li{
   bottom: -20px;
 }
 /* service booking end style... */
+
+/* support help page style start */
+.support_help_section{
+  height: calc(100% - 106px);
+  margin-top: 56px;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.support_help_in_section{
+  width: 94%;
+  padding: 15px 0px;
+
+}
+.support_help_contact_cards{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.card_contact{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 450px;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.20) 0px 2px 8px;
+  cursor: pointer;
+
+}
+.card-conatct_con p{
+  color: #1c1c1c;
+}
+.card_contact_icn{
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  border: 1px solid #ddd;
+  background: #f1f1f1;
+  border-radius: 5px;
+  padding: 5px;
+}
+.card_contact_icn iconify-icon{
+  font-size: 35px;
+
+}
+
+/* support help page style end */
 /* no booking page style .... */
 .no_book_page{
   display: flex;
@@ -1078,7 +1182,7 @@ ul li{
   height: 50px;
   padding: 0px 15px;
   border-radius: 5px;
-  margin: 10px 0px 0px 0px;
+  margin: 6px 0px 0px 0px;
 }
 .pre_img_text{
   display: flex;
@@ -1108,7 +1212,7 @@ ul li{
   width: 94%;
   margin: 0 auto;
   padding-bottom: 90px;
-  padding-top: 40px;
+  padding-top: 30px;
 }
 /* bottom menu start here... */
 .bottm_menu_container{
@@ -1898,13 +2002,16 @@ ul li{
 }
 .booking_kart_section{
   width: 94%;
-  margin: 0 auto;
+  margin: 5px auto;
   padding: 15px 0px;
 }
 .margin_after_head{
   margin-bottom: 10px;
 }
-
+.border_btm{
+  padding: 10px 0px !important;
+  border-bottom: 1px solid #f1f1f1
+}
 
 /* start know page chef_party  */
 .Faqs_card{
@@ -1961,7 +2068,292 @@ ul li{
 
 /* start know page chef_party  */
 
+/* ref and earn page start style .  */
 
+.ref_and_img_top{
+  width: 100%;
+  border-radius: 20px;
+  height: 74vh;
+  margin-top: 55px;
+}
+.ref_and_img_top img{
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+}
+.earn_note{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  background: #f1f1f1;
+  border: 1px solid #d1d1d1;
+  margin-top: 10px;
+  border-radius: 5px;
+  z-index: 10;
+}
+.earn_note iconify-icon{
+  font-size: 40px;
+  margin-right: 10px;
+}
+.copy_code{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin: 10px auto;
+  max-width: 480px;
+}
+.copy_code input{
+  width: calc(100% - 60px);
+  height: 45px;
+  border: 1px solid #d1d1d1;
+  outline:none;
+  padding: 0px 10px;
+  border-radius: 5px 0px 0px 5px;
+
+}
+.copy_code button{
+  width: 50px;
+  height: 45px;
+  border-bottom: 1px solid #d1d1d1;
+  border-right: 1px solid #d1d1d1;
+  border-top: 1px solid #d1d1d1;
+  border-radius: 0px 5px 5px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px ;
+  font-weight: 510;
+  color: #333;
+  background: #f1f1f1;
+}
+.share_social_code{
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  margin: 10px auto;
+  width: 100%;
+  max-width: 500px;
+  gap: 10px;
+}
+.card_contact_icnn{
+  padding: 10px;
+  width: 40px ;
+  height: 40px;
+  border-radius: 4px;
+  border: 1px solid #d1d1d1;
+  background: #f1f1f1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} 
+.card_contact_icnn iconify-icon{
+  font-size: 25px;
+}
+.refral_card_{
+  width: 33%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.refral_card_ p{
+  font-size: 14px;
+  font-weight: bold;
+  color: #02645e;
+  margin: 10px 0px;
+}
+.zero_refer{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  margin: 15px 0px;
+  flex-direction: column;
+  color: #585757;
+}
+.zero_refer iconify-icon{
+  font-size: 60px;
+  color: #f1063d72;
+}
+.have_refral_section{
+  overflow-x: scroll;
+  padding: 15px 0px;
+}
+.have_refral_section table {
+  border-collapse: collapse;
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+.have_refral_section th, td {
+  text-align: left;
+  padding: 8px;
+}
+.have_refral_section th{
+  font-size: 12px;
+  font-weight: 510;
+  background: #02645d60;
+  border: 1px solid #dddd;
+}
+.have_refral_section td{
+  font-size: 11px;
+  font-weight: 300;
+  border: 1px solid #f1f1f1;
+
+}
+@media screen and (max-width: 500px) {
+
+.refral_card_ p{
+  font-size: 10px;
+  font-weight: 500;
+  color: #02645e;
+  margin: 10px 0px;
+}
+}
+@media screen and (max-width: 1105px) {
+  .ref_and_img_top{
+    width: 100%;
+    height: 200px;
+  }
+}
+/* ref and earn page end style .  */
+.Myaccount_container{
+  width: 94%;
+  margin: 40px auto;
+  margin-top: 70px ;
+  display: flex;
+
+}
+.accnt_detail_section{
+  margin: 40px auto;
+  margin-top: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.btm_pop_edit{
+  margin: 0px auto;
+  margin-bottom: 60px;
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.btm_pop_edit button{
+  width: 100%;
+}
+.main_box_input{
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin: 4px 0px;
+}
+.input_box{
+  width: 100%;
+  max-width: 500px;
+  height: 40px;
+  border: 1px solid #d1d1d1;
+  padding: 0px 10px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.input_box input{
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+}
+/* account details style start */
+.wallet_section{
+  width: 100%;
+  padding: 10px 0px;
+
+}
+.wallet_container{
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.wallet_card{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 500px;
+  height: 130px;
+  background: #f29a038e;
+  margin: 10px 0px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+}
+.bg_wallet_icon1{
+  position: absolute;
+}
+.bg_wallet_icon2{
+  position: absolute;
+  top: 25%;
+  right: 40px;
+}
+.bg_wallet_icon3{
+  position: absolute;
+  left: 50%;
+  top: 25%;
+}
+.bg_wallet_icon4{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.bg_wallet_icon1 iconify-icon{
+  font-size: 100px;
+  color: #f29203;
+}
+.bg_wallet_icon2 iconify-icon{
+  font-size: 80px;
+  color: #f29203;
+}
+.bg_wallet_icon3 iconify-icon{
+  font-size: 30px;
+  color: #f29203;
+}
+.bg_wallet_icon4 iconify-icon{
+  font-size: 40px;
+  color: #f29203;
+}
+.wallet_card_balance{
+  width: 100%;
+  max-width: 500px;
+  height: 128px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.Balance_p{
+  font-size: 30px;
+  color: #ffff;
+  font-weight: 600;
+  margin: 7px 0px;
+}
+/* account details style End */
 /* <!-- serving city start  --> */
 .serving_city_main_cards{
   display: flex;
@@ -2134,3 +2526,45 @@ ul li{
 .space_five{
   margin: 5px 0px;
 }
+
+/* aditional new design style start here..  */
+.aditional_cards_container{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 100%;
+}
+.adi_booking_card{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 47% !important;
+  max-width: 200px;
+}
+.adii_card_img{
+  overflow: hidden;
+  width: 80px;
+  height: 80px;
+  border-radius:50% ;
+  border: 1px solid #ccc;
+}
+.adii_card_img img{
+  width: 100%;
+  height: 100%;
+}
+.addi_card_content{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin-top: 10px;
+}
+.adi_card_booking_botom{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+/* aditional new design style end here..  */
