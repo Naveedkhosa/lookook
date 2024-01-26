@@ -286,24 +286,24 @@ hr{
 }
 .scroll_gallry{
   position: absolute;
-  background: #f1f1f1;
-  border: 1px solid #f29a03;
+  background: #f29a03;
+  border: 1px solid #ccc;
   display: flex;
   align-items: center;
   justify-content: center;
   width: fit-content;
-  padding: 3px;
+  padding: 5px;
   backdrop-filter: 5px;
   -webkit-backdrop-filter: blur(5px);
   right: 0px;
   bottom: -15px;
-  border-radius: 2px;
-  color: #f29a03;
+  border-radius: 3px;
+  color: #fff;
   z-index: 200;
 }
 .scroll_gallry iconify-icon{
-  font-size: 10px;
-  margin-right: 5px;  
+  font-size: 12px;
+  margin-left: 5px;  
   font-weight: bold;
 }
 .gallery_container {
