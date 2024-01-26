@@ -16,7 +16,7 @@ if(isset($_SESSION['admin_id'])){
 <body>
     <div class="container">
         <h2>Admin Login</h2>
-        <form action="">
+        <form action="index" autocomplete="off">
             <label for="email"><b>Email</b></label>
             <input type="email" placeholder="Enter Email" id="email" required>
 

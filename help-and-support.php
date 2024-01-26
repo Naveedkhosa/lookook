@@ -51,7 +51,7 @@
                 <p class="para_p space_top">support@lookmycook.com</p>
             </div>
         </a>
-          <a href="FAQs.html" class="card_contact">
+          <a href="FAQs" class="card_contact">
             <div class="card_contact_icn">
                 <iconify-icon icon="ph:question"></iconify-icon>
             </div>

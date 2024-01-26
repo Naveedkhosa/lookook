@@ -27,101 +27,11 @@
             <img src="components/imag/look my cook logo.jpg" alt="" />
           </div>
           <div class="top_side_nav" id="nav_toggle_btn">
-            <!-- <div class="profile_top_nav">
-              <img src="components/imag/a (3).jpg" alt="" />
-            </div>
-            <div class="top_nav_ico">
-              <iconify-icon icon="ei:navicon"></iconify-icon>
-            </div> -->
             <iconify-icon icon="ei:navicon"></iconify-icon>
           </div>
         </div>
       </div>
-      <!-- top menu  ... -->
-      <!-- hero slider start -->
-      <!-- <div class="hero_sec_kart">
-        <div class="container_kart">
-          <input type="radio" id="i1" name="images" checked />
-          <input type="radio" id="i2" name="images" />
-          <input type="radio" id="i3" name="images" />
-          <input type="radio" id="i4" name="images" />
-          <div class="slide_img" id="one">
-            <img
-              src="components/imag/img1 (1).webp"
-              width="3243"
-              height="2162"
-            />
-            <label class="prev" for="i4"><span></span></label>
-            <label class="next" for="i2"><span></span></label>
-          </div>
-
-          <div class="slide_img" id="two">
-            <img src="components/imag/img1 (2).webp" loading="lazy" />
-            <label class="prev" for="i1"><span></span></label>
-            <label class="next" for="i3"><span></span></label>
-          </div>
-
-          <div class="slide_img" id="three">
-            <img src="components/imag/img1 (3).webp" loading="lazy" />
-            <label class="prev" for="i2"><span></span></label>
-            <label class="next" for="i4"><span></span></label>
-          </div>
-
-          <div class="slide_img" id="four">
-            <img src="components/imag/img1 (4).webp" loading="lazy" />
-
-            <label class="prev" for="i3"><span></span></label>
-            <label class="next" for="i1"><span></span></label>
-          </div>
-
-          <div id="nav_slide">
-            <label for="i1" class="dots" id="dot1"></label>
-            <label for="i2" class="dots" id="dot2"></label>
-            <label for="i3" class="dots" id="dot3"></label>
-            <label for="i4" class="dots" id="dot4"></label>
-          </div>
-        </div>
-      </div> -->
-      <!-- hero slider start -->
-
-      <style>
- 
-        
-        /* .swiper-button-next::after,
-        .swiper-button-prev::after {
-          content: "";
-          position: absolute;
-          width: 40px;
-          height: 40px;
-          border-radius: 50%;
-          border: 1px solid #fff;
-          right: 5px;
-        }
-        .swiper-button-prev::after{
-          right: unset;
-          left: 5px;
-        }
-
-        
-        .swiper-button-prev::before{
-          content: "\2190";
-          position: absolute;
-          color: #fff;
-         font-size: 35px;
-         top: -2px;
-         left: 27px;
-         display: flex;
-         align-items: center;
-        }
-        .swiper-button-next::before{
-          content: "\2192";
-          position: absolute;
-          color: #fff;
-          font-size: 35px;
-          top: -2px;
-          right: 27px;
-        } */
-      </style>
+      
       <!-- slider - swiper js -->
       <div class="swiper">
         <!-- Additional required wrapper -->
@@ -142,10 +52,6 @@
         </div>
         <!-- If we need pagination -->
         <div class="swiper-pagination"></div>
-
-        <!-- If we need navigation buttons -->
-        <!-- <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div> -->
       </div>
       <!-- slider - swiper js -->
 
@@ -594,41 +500,10 @@
 
 
   </div>
+<!-- footer include -->
+<?php include "inc/footer.php"; ?>
 
-    <!-- footer start here..  -->
-    <div class="footer_section">
-      <div class="footer_kart_container">
-        <div class="footer_left">
-          <p class="para_h">Company</p>
-          <a href="">Contact us</a>
-          <a href="">Refund & Cancellation Policy</a>
-          <a href="">Privacy Policy</a>
-          <a href="">Terms & Conditions</a>
-          <a href="">FAQs</a>
-          <a href="">Disclaimer</a>
-        </div>
-        <div class="footer_right">
-          <div class="footer_r_right">
-            <p class="para_h">Social Links</p>
-            <!-- <a href=""
-              ><iconify-icon icon="logos:facebook"></iconify-icon> Facebook</a
-            > -->
-            <a href="">
-              <iconify-icon icon="skill-icons:instagram"></iconify-icon>
-              instagram</a
-            >
-            <!-- <a href=""
-              ><iconify-icon icon="logos:youtube-icon"></iconify-icon>
-              Youtube</a
-            > -->
-          </div>
-        </div>
-      </div>
-      <p class="foot_copy_p">
-        &copy;2023 to 2024 Lookmycook.com all rights reserved.
-      </p>
-    </div>
-    <!-- footer end here..  -->
+
     <!-- bottom menu start ... -->
     <div class="bottm_menu_container">
       <div class="bottom_menu_box">

@@ -1,0 +1,9 @@
+RewriteEngine on
+RewriteCond %{THE_REQUEST} /([^.]+)\.php [NC]
+RewriteRule ^ /%1 [NC,L,R]
+ 
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^ %{REQUEST_URI}.php [NC,L]
+
+RewriteCond %{SERVER_PORT} 8000
+RewriteRule ^(.*)$ http://localhost/lookook/$1 [R,L]
