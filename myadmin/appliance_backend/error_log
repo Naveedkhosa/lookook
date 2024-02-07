@@ -1,3 +1,0 @@
-[03-Jun-2023 06:52:01 UTC] PHP Warning:  unlink(../../uploads/appliances_images/Satay Sticks (???? ???????)_01_04_2023_09_21_04.jpeg): No such file or directory in /home/ivyuoxnst3cr/public_html/admin/appliance_backend/delete_appliance.php on line 19
-[03-Jun-2023 06:52:05 UTC] PHP Warning:  unlink(../../uploads/appliances_images/Toothpicks (??????)_01_04_2023_09_20_38.jpeg): No such file or directory in /home/ivyuoxnst3cr/public_html/admin/appliance_backend/delete_appliance.php on line 19
-[03-Jun-2023 06:52:08 UTC] PHP Warning:  unlink(../../uploads/appliances_images/Pot (??????)_01_04_2023_09_06_13.jpg): No such file or directory in /home/ivyuoxnst3cr/public_html/admin/appliance_backend/delete_appliance.php on line 19
