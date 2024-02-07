@@ -253,7 +253,7 @@ if (isset($_GET['bookings']) && in_array($_GET['bookings'], $services)) {
           </a>
           <!-- choose dishes box -->
             <div class="main_box_input">
-               <p class="space_ten solid_smal">Address </p>
+               <p class="space_ten solid_smal theme_clr">Address </p>
               <div class="input_box" style="border:none;">
                  <p class="para_gray space_ten" style="padding:10px 0px ;justify-content:flex-start; align-items:flex-start; max-width:80%;">
                   <iconify-icon icon="ic:twotone-location-on"></iconify-icon>
@@ -267,7 +267,7 @@ if (isset($_GET['bookings']) && in_array($_GET['bookings'], $services)) {
 
       
         <div class="kard_additional_sec">
-            <p class="solid_smal" style="margin: 10px 0px;">Additional Services</p>
+            <p class="solid_smal theme_clr" style="margin: 10px 0px;">Additional Services</p>
             <div class="count_service">
               <p class="para_gray">Bartender</p>
               <p class="para_gray">1</p>
