@@ -1,15 +1,6 @@
 setupCounter('minusButton5', 'plusButton5', 'displayedNumber5');
 setupCounter('minusButton6', 'plusButton6', 'displayedNumber6');
 
-// setupCounter('minusButton12', 'plusButton12', 'displayedNumber12','event_addon_cleaner');
-// setupCounter('minusButton13', 'plusButton13', 'displayedNumber13','event_addon_bartender');
-
-// updateOpacityValues(val,"plusButton12","minusButton12",displayElement);
-// function updateOpacityValues(val,plusBtn,minusBtn,display){
-
-// }
-// proceed waiter booking
-
 
 // waiter proceed
 $(document).on("click", "#booking_proceed_step1", function () {
@@ -78,11 +69,7 @@ $("#confirm_worker_others").on("click", function () {
     workers = parseInt($("#displayedNumber6").attr("data-val"));
     if (workers > 0) {
         $("#event_workers").val(workers);
-
-        getPerWorkerCharge(workers, $("#service_id").val());
-        updateAddonCharges($("#event_addon_cleaner").val(), 3);
-        updateAddonCharges($("#event_addon_bartender").val(), 2);
-
+        calculateAll();
         if (workers > 1) {
             $("#number_of_workers").text(workers + " Waiters");
         } else {
@@ -101,36 +88,8 @@ function updateSummary(data) {
     $("#s_event_workers").html($("#number_of_workers").text());
     $("#f_addon_cleaner_count").text(data.event_addon_cleaner);
     $("#f_addon_bartender_count").text(data.event_addon_bartender);
-    console.log(data);
 }
 
-function getPerWorkerCharge(workers, service_id) {
-    // ajax
-    $.ajax({
-        url: "ajax_calls/bookings/worker_charge",
-        type: "post",
-        data: {
-            workers: workers,
-            service_id: service_id,
-        },
-        dataType: "json",
-        beforeSend: function () {
-            $("#loading_modal").show();
-        },
-        success: function (resp) {
-            $("#loading_modal").hide();
-            if (resp.success) {
-                $("#b_per_worker_charges").val(resp.charge);
-                $(".f_worker_count").text(workers);
-                $(".f_worker_charges").text(resp.charge);
-                calculateAll();
-            } else {
-                console.log(resp.msg);
-            }
-        }
-    });
-    // ajax
-}
 
 
 // on event_addon_cleaner - update charge
@@ -144,7 +103,7 @@ $("#plusButton12").on("click", function () {
     }
     displayElement.text(val);
     inputElement.val(val);
-    updateAddonCharges(val, 3);
+    calculateAll();
 });
 
 $("#minusButton12").on("click", function () {
@@ -157,7 +116,7 @@ $("#minusButton12").on("click", function () {
     }
     displayElement.text(val);
     inputElement.val(val);
-    updateAddonCharges(val, 3);
+    calculateAll();
 });
 
 // on event_addon_bartender - update charge
@@ -171,7 +130,7 @@ $("#plusButton13").on("click", function () {
     }
     displayElement.text(val);
     inputElement.val(val);
-    updateAddonCharges(val, 2);
+    calculateAll();
 });
 
 $("#minusButton13").on("click", function () {
@@ -184,49 +143,31 @@ $("#minusButton13").on("click", function () {
     }
     displayElement.text(val);
     inputElement.val(val);
-    updateAddonCharges(val, 2);
+    calculateAll();
 });
 
 
+/**
+ * 
+ * Coupan handling
+ * 
+ */
+// select coupan
+$("#open_coupan_popups").on("click",function(){
 
-function updateAddonCharges(addon_numbers, service_id) {
-    var guests = $("#event_adults").val();
-    // ajax
-    $.ajax({
-        url: "ajax_calls/bookings/addon_service_charge",
-        type: "post",
-        data: {
-            guests: guests,
-            service_id: service_id,
-            workers: addon_numbers
-        },
-        dataType: "json",
-        success: function (resp) {
-            if (resp.success) {
-                if (service_id == 2) {
-                    $("#b_addon_bartender_guest_charges").val(resp.charge);
-                    $("#b_addon_bartender_per_worker_charges").val(resp.addon_per_worker_fee);
-                } else if (service_id == 3) {
-                    $("#b_addon_cleaner_guest_charges").val(resp.charge);
-                    $("#b_addon_cleaner_per_worker_charges").val(resp.addon_per_worker_fee);
-                }
-                calculateAllAddon();
-                calculateAll();
-            } else {
-                console.log(resp.msg);
-            }
-        }
-    });
-    // ajax
-
-}
-
-function calculateAllAddon() {
-    var b_addon_cleaner_guest_charges = parseInt($("#b_addon_cleaner_guest_charges").val());
-    var b_addon_bartender_guest_charges = parseInt($("#b_addon_bartender_guest_charges").val());
-    var b_addon_cleaner_per_worker_charges = parseInt($("#b_addon_cleaner_per_worker_charges").val());
-    var b_addon_bartender_per_worker_charges = parseInt($("#b_addon_bartender_per_worker_charges").val());
-    var b_addon_all_charges = b_addon_cleaner_guest_charges + b_addon_bartender_guest_charges + b_addon_cleaner_per_worker_charges + b_addon_bartender_per_worker_charges;
-    $("#b_addon_all_charges").val(b_addon_all_charges);
-    $(".f_addon_charges").text(b_addon_all_charges);
-}
+});
+// apply coupan
+$("#apply_coupan").on("click",function() {
+    coupon_code = $(this).attr("data-coupan");
+    $("#coupon1000").show();
+    setTimeout(function(){
+        $("#party1").hide();
+        $("#party2").show();
+        $("#coupon1000").hide();
+    },2000);
+});
+// remove coupan
+$("#removeCoupan").on("click",function(){
+    $("#party2").hide();
+    $("#party1").show();
+});

@@ -188,7 +188,7 @@ if ($result = mysqli_query($conn, $sql)) {
 
     <!-- summary popup 4> popup of payment -->
     <!-- Add more popup containers with different IDs -->
-    <div id="popupContainer4" class="popup-container" style="display: none;">
+    <div id="popupContainer4" class="popup-container" style="display: block;">
       <button  class="back-button" style=" justify-content:space-between; align-items:center;" >
         <div class="s_left_top" onclick="closePopup('popupContainer4')">
         <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
@@ -283,6 +283,13 @@ if ($result = mysqli_query($conn, $sql)) {
             <p class="para_gray"> &#x20B9; <span class="f_addon_charges">0</span></p>
           </div>
           <!-- additional services -->
+          <!-- tax -->
+          <div class="space_ten summary_top_box">
+            <p class="para_gray">Tax (GST)</p>
+            <span class="line"></span>
+            <p class="para_gray"> &#x20B9; <span class="f_tax_amount">0</span></p>
+          </div>
+          <!-- tax -->
 
           <div class="border_btm summary_top_box">
             <p class="para_gray malta">Discount</p>
@@ -327,25 +334,30 @@ if ($result = mysqli_query($conn, $sql)) {
               <p class="solid_smal">PARTY 15
               <p class="green_para_back">BEST OFFER</p>
               </p>
-              <p onclick="openCoupon('coupon1000', 'party1')" class="solid_smal malta curser">TAP TO APPLY</p>
+              <p id="apply_coupan" data-coupan="LIFEHAI" class="solid_smal malta curser">TAP TO APPLY</p>
             </div>
             <div class="space_ten summary_top_box">
-              <p class="para_gray">You will save change<span style="margin-left: 10px;" class="solid_smal"> 15% </span></p>
+              <p class="para_gray">You will save change<span style="margin-left: 10px;" class="solid_smal coupan_save_amount">350</span></p>
             </div>
+<<<<<<< HEAD
             <div class="white_btn" onclick="openModal('modal6')">
               <button class="solid_smal">EXPLORE OFFER</button>
+=======
+            <div class="white_btn">
+              <button class="solid_smal" id="open_coupan_popups">EXPLORE OFFER</button>
+>>>>>>> de78f473b692d16e45c08a265f491b7d1d49f0e2
             </div>
           </div>
           <!-- design after applied cuopon  -->
-          <!-- <div class="summary_section space_ten " id="party2">
+          <div class="summary_section space_ten " id="party2" style="display:none;">
             <div class="space_ten summary_top_box">
               <p class="solid_smal">PARTY 15 <iconify-icon icon="icons8:checked" style="color: #02645e;"></iconify-icon></p>
-              <p onclick="openCoupon('party2');" class="solid_smal malta curser">Remove</p>
+              <p id="removeCoupan" class="solid_smal malta curser">Remove</p>
             </div>
             <div class="space_ten summary_top_box">
               <p class="para_gray"><span style="margin-right: 10px;" class="solid_smal"> 15% </span>discount applied </p>
             </div>
-          </div> -->
+          </div>
 
         </div>
 
@@ -536,6 +548,12 @@ if ($result = mysqli_query($conn, $sql)) {
           <span class="line"></span>
           <p class="para_gray"><span class="f_addon_charges"></span></p>
         </div>
+
+        <div class="space_ten summary_top_box">
+          <p class="para_gray">Tax (gst)</p>
+          <span class="line"></span>
+          <p class="para_gray"><span class="f_tax_amount"></span></p>
+        </div>
         <hr>
         <div class="space_ten summary_top_box">
           <p class="solid_smal">Net Payable</p>
@@ -557,7 +575,7 @@ if ($result = mysqli_query($conn, $sql)) {
         <div class="apply_coupon_img">
           <img src="components/imag/animation_gif.gif" alt="" loading="lazy">
         </div>
-        <p class="para_h">Hurray! You just saved 15%</p>
+        <p class="para_h">Hurray! You just saved <span class="coupan_discount">15%</span></p>
         <p class="para_gray">Coupon code applied!</p>
 
       </div>
