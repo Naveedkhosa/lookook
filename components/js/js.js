@@ -66,9 +66,7 @@ function openCity(evt, cityName) {
   evt.currentTarget.className += " active";
 }
 
-// Get the element with id="defaultOpen" and click on it
-// document.getElementById("defaultOpen").click();
-// pop up 120 js end 
+
 
 
 // searchbar JavaScript code
@@ -87,61 +85,4 @@ function search_animal() {
     }
   }
   }
-
-
-// coupon popup js start
-
-function openCoupon(coupon, sectionToShow) {
-  // Get the coupon element by its ID
-  var couponElement = document.getElementById(coupon);
-
-  // Display the coupon
-  couponElement.style.display = "block";
-
-  // Get the close button inside the coupon
-  // var span = document.querySelector("#" + couponElement.id + " .close");
-
-  // Define a function to close the coupon after 5 seconds
-  setTimeout(function() {
-    couponElement.style.display = "none";
-  }, 2000);
-
-  // Show or hide the relevant section based on the parameter
-  var sections = document.getElementById("party1");
-  for (var i = 0; i < sections.length; i++) {
-    sections[i].style.display = "block";
-  }
-
-  var sectionToShowElement = document.getElementsByTagName("." + sectionToShow);
-  sectionToShowElement.style.display = "none";
-}
-
-// Function to handle "TAP TO APPLY" click
-function handleTapToApply() {
-  openCoupon('coupon1000', 'party2');  // Open the second party section and associated coupon
-}
-
-// Function to handle "Remove" click
-function handleRemove() {
-  // Show only the first party section
-  var sections = document.getElementById(party1);
-  for (var i = 0; i < sections.length; i++) {
-    sections[i].style.display = "block";
-  }
-
-  var firstPartySection = document.getElementById(party2);
-  firstPartySection.style.display = "none";
-}
-
-// Attach the click events
-var tapToApplyButton = document.querySelector(".solid_smal");
-var removeButton = document.querySelector(".solid_smal");
-
-tapToApplyButton.addEventListener("click", handleTapToApply);
-removeButton.addEventListener("click", handleRemove);
-
-// coupon popup js end
-
-
-
 

@@ -245,9 +245,7 @@ $("#confirm_guests_others").on("click", function () {
     if (adults > 0) {
         $("#event_adults").val(adults);
         var service_id = $("#service_id").val();
-        getServiceCharge(adults,service_id);
-        updateAddonCharges($("#event_addon_cleaner").val(),3);
-        updateAddonCharges($("#event_addon_bartender").val(),2);
+        calculateAll();
 
         if (adults > 1) {
             $("#number_of_people").text(adults + " Adults");
@@ -259,62 +257,63 @@ $("#confirm_guests_others").on("click", function () {
 });
 
 
-// f_waiter_count - worker count frontend
-// f_worker_charges - worker charges frontend
 
+// calculate all prices
+function calculateAll() {
+    var service_id = $("#service_id").val();
+    var event_adults = $("#event_adults").val();
+    var event_addon_cleaner = $("#event_addon_cleaner").val();
+    var event_addon_bartender = $("#event_addon_bartender").val();
+    var event_workers = $("#event_workers").val();
 
+    var form_data = {
+        service_id:service_id,
+        event_adults: event_adults,
+        event_addon_cleaner: event_addon_cleaner,
+        event_addon_bartender: event_addon_bartender,
+        event_workers: event_workers
+    };
 
-// charges
-// get service charge for (waiter, cleaner, bartender)
-function getServiceCharge(guests, service_id) {
-    // ajax
+    
+
     $.ajax({
-        url: "ajax_calls/bookings/service_charge",
+        url: "ajax_calls/bookings/calculateCharges",
         type: "post",
-        data: {
-            guests: guests,
-            service_id: service_id,
-        },
+        data: form_data,
         dataType: "json",
-        beforeSend:function() {
-            $("#loading_modal").show();
-        },
         success: function (resp) {
-            $("#loading_modal").hide();
+            console.log(resp);
             if (resp.success) {
-                $("#b_guest_charges").val(resp.charge);
-                $(".f_guest_count").text(guests);
-                $(".f_guest_charges").text(resp.charge);
-                calculateAll();
-            } else {
-                console.log(resp.msg);
+                $("#b_guest_charges").val(resp.b_guest_charges);
+                $("#b_per_worker_charges").val(resp.b_per_worker_charges);
+                $("#b_gst_tax").val(resp.b_gst_tax);
+                $("#b_addon_cleaner_guest_charges").val(resp.b_addon_cleaner_guest_charges);
+                $("#b_addon_cleaner_per_worker_charges").val(resp.b_addon_cleaner_per_worker_charges);
+                $("#b_addon_bartender_guest_charges").val(resp.b_addon_bartender_guest_charges);
+                $("#b_addon_bartender_per_worker_charges").val(resp.b_addon_bartender_per_worker_charges);
+                $("#b_addon_all_charges").val(resp.b_addon_all_charges);
+                $("#b_adv_pay").val(resp.adv_pay);
+                $("#b_balance_pay").val(resp.balance_pay);
+                $("#b_total").val(resp.total_charges);
+
+                // front looks
+                $(".f_adv_pay").text(resp.adv_pay);
+                $(".f_balance_pay").text(resp.balance_pay);
+                $(".f_total").text(resp.total_charges);
+
+                $(".f_worker_count").text(event_workers);
+                $(".f_worker_charges").text(resp.b_per_worker_charges);
+
+                $(".f_guest_count").text(event_adults);
+                $(".f_guest_charges").text(resp.b_guest_charges);
+                
+                $(".f_addon_charges").text(resp.b_addon_all_charges);
+                $(".f_tax_amount").text(resp.b_gst_tax);
             }
         }
     });
-    // ajax
 }
 
-// calculate all prices
-function calculateAll(){
-    var b_guest_charges = parseInt($("#b_guest_charges").val());
-    var b_per_worker_charges = parseInt($("#b_per_worker_charges").val());
-    var b_gst_tax = parseInt($("#b_gst_tax").val());
-    var b_discount = parseInt($("#b_discount").val());
-    var b_addon_all_charges = parseInt($("#b_addon_all_charges").val());
-    var total_charges = b_guest_charges+b_per_worker_charges+b_gst_tax+b_discount+b_addon_all_charges;
-    adv_pay = Math.floor((total_charges/100)*40);
-    balance_pay = Math.floor(total_charges - adv_pay);
-
-    $("#b_adv_pay").val(adv_pay);
-    $("#b_balance_pay").val(balance_pay);
-    $("#b_total").val(total_charges);
-
-    // update fronts
-    $(".f_adv_pay").text(adv_pay);
-    $(".f_balance_pay").text(balance_pay);
-    $(".f_total").text(total_charges);
-
-}
 
 
 
