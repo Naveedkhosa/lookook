@@ -24,6 +24,7 @@
           <i class="fa fa-chevron-right"></i>
         </a>
       </li>
+      
     <?php
       /**
        * if user is not logged in

@@ -339,13 +339,8 @@ if ($result = mysqli_query($conn, $sql)) {
             <div class="space_ten summary_top_box">
               <p class="para_gray">You will save change<span style="margin-left: 10px;" class="solid_smal coupan_save_amount">350</span></p>
             </div>
-<<<<<<< HEAD
             <div class="white_btn" onclick="openModal('modal6')">
-              <button class="solid_smal">EXPLORE OFFER</button>
-=======
-            <div class="white_btn">
               <button class="solid_smal" id="open_coupan_popups">EXPLORE OFFER</button>
->>>>>>> de78f473b692d16e45c08a265f491b7d1d49f0e2
             </div>
           </div>
           <!-- design after applied cuopon  -->
@@ -590,11 +585,11 @@ if ($result = mysqli_query($conn, $sql)) {
         </svg></div>
       <div class="content1 copon_input">
         <div class="space_ten summary_top_box"></div>
-        <p class=" space_ten solid_smal">Enter Coupon Code</p>
+        <!-- <p class=" space_ten solid_smal">Enter Coupon Code</p>
         <div class="buttonIn"> 
           <input type="text" name="" id="" placeholder="Enter coupon code">
-          <p id="clear" onclick="openCoupon('coupon1000', 'party1')" class="solid_smal malta curser">TAP TO APPLY</p>
-        </div> 
+          <p id="clear" onclick="openCoupon('coupon1000', 'party1')" class="solid_smal malta curser">APPLY</p>
+        </div>  -->
         <p class=" space_ten  margin-top solid_smal">Available Coupons</p>
         <div class="avail_copon">
           <div class="space_ten summary_top_box">
