@@ -60,6 +60,25 @@
                 <p class="para_p space_top">For quick questions & answers</p>
             </div>
         </a>
+          <a href="FAQs" class="card_contact">
+            <div class="card_contact_icn">
+            <iconify-icon icon="eos-icons:hourglass"></iconify-icon>
+            </div>
+            <div class="card-conatct_con">
+                <p class="_head_solid_smal">Working Time</p>
+                <div class="working_time">
+                  <p class="para_p space_top" style="  font-style:italic ;">Monday - Friday</p>
+                   <p class="para_p">
+                     <span class="_head_solid_smal">From:</span>
+                     <span><span>06:00 AM</span>
+                  
+                   -
+                     <span class="_head_solid_smal">To:</span>
+                     <span><span>06:00 AM</span>
+                   </p>
+                </div>
+            </div>
+        </a>
         </div>
 
       </div>

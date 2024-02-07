@@ -225,7 +225,7 @@ if (isset($_GET['bookings']) && in_array($_GET['bookings'], $services)) {
         <!-- card service  -->
         <div class="party_detail_kard">
           <div class="party_deatil_top">
-            <div class="kard_timing">
+            <div class="kard_timing kard_timing_bg">
               <p class="para_p_active solid_hsmal">
               <iconify-icon icon="mynaui:hash-square"></iconify-icon>
                 Booking Id: 01928637484
@@ -238,8 +238,10 @@ if (isset($_GET['bookings']) && in_array($_GET['bookings'], $services)) {
                 <iconify-icon icon="ic:twotone-access-time"></iconify-icon>12:00 AM
               </p>
             </div>
+
+            <div class="hold"></div>
               <!-- choose dishes -->
-              <a onclick="openPopup('popupContainer2')" class="pre_bk_slect_sec">
+              <a href="Dishes_menu" class="pre_bk_slect_sec">
             <p class="solid_smal space_ten">Choose Dishes</p>
             <div class="pre_bk_box">
               <div class="pre_img_text">
@@ -255,9 +257,10 @@ if (isset($_GET['bookings']) && in_array($_GET['bookings'], $services)) {
               <div class="input_box" style="border:none;">
                  <p class="para_gray space_ten" style="padding:10px 0px ;justify-content:flex-start; align-items:flex-start; max-width:80%;">
                   <iconify-icon icon="ic:twotone-location-on"></iconify-icon>
-                  A1, chattarpur Enclave, Delhi chattarpur Enclave, Delhi
+                  <!-- A1, chattarpur Enclave, Delhi chattarpur Enclave, Delhi -->
+                  <span>Please add a address</span>
                  </p>
-                 <p onclick="openModal('modal19')" class="para_gray"><span class="malta">Add New</span> </p>
+                 <p onclick="openModal('modal22')" class="para_gray"><span class="malta">Add New</span> </p>
               </div>
             </div>
         </div>
@@ -736,7 +739,31 @@ if (isset($_GET['bookings']) && in_array($_GET['bookings'], $services)) {
   </div>
 
   <!-- choose dishes popup3 > popup of payment -->
+  <!-- pop up of Edit phone no -->
+  <div id="modal22" class="modal">
+    <div class="popup1">
+      <p class="heading_p">Address update</p>
+      <a class="close" href="#"><svg width="20" height="20" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+          <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+        </svg></a>
+      <div class="content1">
 
+
+        <div class="btm_pop_edit">
+          <div class="main_box_input">
+            <p class="space_ten solid_smal">Update Your Address</p>
+            <div class="input_box">
+              <input type="text" id="user_address" placeholder="A1 , Chattarpur Enclave, Chattarpur, Delhi">
+            </div>
+          </div>
+
+          <button class="malta_bg twobatun" id="update_user_address">Update</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- pop up of Edit Address -->
 
   <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
   <script src="components/js/js.js"></script>
