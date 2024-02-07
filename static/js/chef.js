@@ -1,0 +1,11 @@
+setupCounter('minusButton1', 'plusButton1', 'displayedNumber1');
+setupCounter('minusButton2', 'plusButton2', 'displayedNumber2');
+setupCounter('minusButton3', 'plusButton3', 'displayedNumber3');
+setupCounter('minusButton4', 'plusButton4', 'displayedNumber4');
+setupCounter('minusButton5', 'plusButton5', 'displayedNumber5');
+setupCounter('minusButton6', 'plusButton6', 'displayedNumber6');
+setupCounter('minusButton7', 'plusButton7', 'displayedNumber7');
+setupCounter('minusButton11', 'plusButton11', 'displayedNumber11','event_addon_waiter');
+setupCounter('minusButton12', 'plusButton12', 'displayedNumber12','event_addon_cleaner');
+setupCounter('minusButton13', 'plusButton13', 'displayedNumber13','event_addon_bartender');
+setupCounter('minusButton14', 'plusButton14', 'displayedNumber14');

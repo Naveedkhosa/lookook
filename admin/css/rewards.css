@@ -1,0 +1,39 @@
+._table_container_{
+    width: 100%;
+    height: fit-content;
+    overflow-x: auto;
+    flex-shrink: 0;
+    display: flex;
+    align-content: center;
+    justify-content: flex-start;
+
+}
+
+._table_container_ table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table tr th{
+    padding: 10px;
+    background-color: #0085ff;
+    color: #fff;
+    font-weight: 400;
+    white-space: nowrap;
+}
+
+table tr td{
+    padding: 10px;
+    text-align: center;
+    color: #777;
+}
+
+table tr td button{
+    border: none;
+    outline: none;
+    color: #fff;
+    padding: 5px 10px;
+    background: green;
+    border-radius: 3px;
+    cursor: pointer;
+}

@@ -72,11 +72,7 @@ if(mysqli_num_rows($users_query_result) > 0){
                 <tr>
                     <th>ID</th>
                     <th>User Name</th>
-                    <th>Email</th>
-                    <th>DOB</th>
-                    <th>Gender</th>
                     <th>Mobile Number</th>
-                    <th>Alternative Numbers</th>
                     <th>Joining Date</th>
                     <th>Actions</th>
                 </tr>

@@ -67,7 +67,7 @@ function openCity(evt, cityName) {
 }
 
 // Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
+// document.getElementById("defaultOpen").click();
 // pop up 120 js end 
 
 
@@ -141,3 +141,7 @@ tapToApplyButton.addEventListener("click", handleTapToApply);
 removeButton.addEventListener("click", handleRemove);
 
 // coupon popup js end
+
+
+
+

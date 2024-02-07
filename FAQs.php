@@ -73,16 +73,14 @@
           </div>
         
         </div>
-          <!-- bottom menu start ... -->
-          <div class="bottm_menu_container">
-            <div class="bottom_menu_box">
-                <a href="index.html"><iconify-icon icon="carbon:home"></iconify-icon></a>
-                <a href="Bookings.html"><iconify-icon icon="tabler:brand-booking"></iconify-icon></a>
-                <a href="Chef_party.html"><iconify-icon icon="carbon:star-review"></iconify-icon></a>
-                <a href="Help.html"><iconify-icon icon="fluent:person-support-16-filled"></iconify-icon></a>
-            </div>
-         </div>
-        <!-- bottom menu start ... -->
+          
+
+        
+  <!-- bottom nav include -->
+  <?php include "inc/bottom_nav.php"; ?>
+  
+
+
       </div>
   
       <!-- support popup 5> popup of payment end-->

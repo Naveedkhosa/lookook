@@ -66,22 +66,11 @@
     </div>
     <!-- support help with contact end.  -->
 
-         <!-- bottom menu start ... -->
-    <div class="bottm_menu_container">
-        <div class="bottom_menu_box">
-          <a href="index.html"
-            ><iconify-icon icon="carbon:home"></iconify-icon
-          ></a>
-          <a href="Bookings.html"
-            ><iconify-icon icon="tabler:brand-booking"></iconify-icon
-          ></a>
-          <a href=""><iconify-icon icon="carbon:star-review"></iconify-icon></a>
-          <a href="Help.html"
-            ><iconify-icon icon="fluent:person-support-16-filled"></iconify-icon
-          ></a>
-        </div>
-      </div>
-      <!-- bottom menu start ... -->
+    
+  <!-- bottom nav include -->
+  <?php include "inc/bottom_nav.php"; ?>
+  
+
 
       
 <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>

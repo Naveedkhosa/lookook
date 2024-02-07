@@ -282,6 +282,25 @@ if(!isset($_SESSION['admin_id'])){
                 <!-- menu item 9 -->
 
 
+                  <!-- menu item 10 -->
+                  <?php if(explode(".", $curPageName)[0]=="rewards"){ ?>
+                <li class="__active">
+                    <a href="rewards">
+                        <i class="fa-solid fa-gear"></i>
+                        <span class="text">Settings</span>
+                    </a>
+                </li>
+                <?php }else{ ?>
+                <li>
+                    <a href="rewards">
+                        <i class="fa-solid fa-gear"></i>
+                        <span class="text">Settings</span>
+                    </a>
+                </li>
+                <?php } ?>
+                <!-- menu item 10 -->
+
+
 
 
 
