@@ -1,0 +1,46 @@
+
+._websites_stats_container{
+    padding-top: 0px !important;
+    margin-top: 0px !important;
+}
+._profile_heading_{
+    width: 100%;
+    font-size: 20px;
+    font-weight: bold;
+    color: #6FBAFF;
+    padding: 7px 0px;
+    margin-top: 10px;
+    text-transform: capitalize;
+}
+
+
+._websites_stats_container ._stat_box ._stat_box_top{
+    background-color: #2CDB72;
+}
+
+._next_post_table thead tr{
+    background-color: #B50645 !important;
+}
+
+
+._container_posts_{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 5px;
+}
+
+._container_posts_ ._profile_heading_{
+    padding: 0px;
+    margin: 0px;
+}
+
+._container_posts_ ._suspend_btn{
+    padding: 5px 15px;
+    border-radius: 2px;
+    background: #E80000;
+    color: #fff;
+    margin: 0px 0px 0px 20px;
+    cursor: pointer;
+}

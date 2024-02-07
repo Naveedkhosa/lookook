@@ -1,0 +1,50 @@
+/* The Modal (background) */
+.modal {
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 200px;
+    top: 0px;
+    width: calc(100% - 200px); /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.7); 
+    display: none;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    position: relative;
+    background-color: #fefefe;
+    border: 2px solid #fff;
+    width: 90%;
+    height: 90%; /* Could be more or less, depending on screen size */
+    overflow: hidden;
+  }
+  
+  .modal-content ._btn_close_pop_up{
+    width: 40px;
+    height: 40px;
+    background: #E80000;
+    color: #fff;
+    border-radius: 50%;
+    border: 1px solid #c5c5c5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: -6px;
+    top: -6px;
+    cursor: pointer;
+  }
+
+  @media (max-width:600px) {
+    .modal{
+        width: 100%;
+        left: 0px;
+    }
+  }
+
+
+  

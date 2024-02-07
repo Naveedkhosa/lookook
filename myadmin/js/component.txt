@@ -1,0 +1,60 @@
+<!-- alert box -->
+<div class="alert">
+    <div class="_message_">Some error has occured. Please try later</div>
+    <span class="closebtn">&times;</span>
+</div>
+<!-- alert box -->
+
+
+
+
+
+
+// close | hide alert
+        $(".closebtn").on("click", function() {
+            $(this).parent().css("opacity", "0");
+            setTimeout(function() {
+                    $(".alert").css("display", "none");
+                },
+                600);
+        });
+
+
+        var myTimeout;
+        var hide_alert_timeout;
+
+        function hide_alert() {
+            $(".alert").css("display", "none");
+        }
+        function hide_alert_auto() {
+            $(".alert").css("opacity", "0");
+            hide_alert_timeout = setTimeout(hide_alert(), 600);
+        }
+
+        
+
+        // close | hide alert
+
+
+<!-- pop up for add new menu -->
+<div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+
+        <div class="_btn_close_pop_up" id="_btn_close_pop_up"><i class="fa-solid fa-xmark"></i></div>
+
+    </div>
+
+</div>
+<!-- pop up for add new menu -->
+
+
+$("#myModal").css("display", "flex");
+$("#myModal").hide();
+$("#add_new_menu").click(function() {
+$("#myModal").show();
+});
+$("#_btn_close_pop_up").click(function() {
+$("#myModal").hide();
+});

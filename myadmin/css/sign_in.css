@@ -1,0 +1,73 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+        margin:0px;
+        padding:0px;
+        box-sizing:border-box;
+}
+
+.container {
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  max-width: 400px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+input[type=email],
+input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+        outline-color:green;
+}
+
+    input[type=email]{
+        margin-bottom:15px;
+    }
+
+button[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+
+button[type=submit]:hover {
+  background-color: #45a049;
+}
+
+
+
+
+.container .psw {
+  float: right;
+  font-size: 12px;
+        margin:5px 0px;
+}
+
+/* Responsive layout - makes the form stack on top of each other */
+@media screen and (max-width: 600px) {
+  .container {
+    max-width: 100%;
+  }
+  input[type=email],
+  input[type=password] {
+    width: 100%;
+  }
+  
+}
