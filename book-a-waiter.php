@@ -339,7 +339,7 @@ if ($result = mysqli_query($conn, $sql)) {
             <div class="space_ten summary_top_box">
               <p class="para_gray">You will save change<span style="margin-left: 10px;" class="solid_smal coupan_save_amount">350</span></p>
             </div>
-            <div class="white_btn">
+            <div class="white_btn" onclick="openModal('modal6')">
               <button class="solid_smal" id="open_coupan_popups">EXPLORE OFFER</button>
             </div>
           </div>
@@ -562,6 +562,7 @@ if ($result = mysqli_query($conn, $sql)) {
     </div>
   </div>
   <!-- pop up of filter -->
+
   <!-- pop up of coupon -->
   <div id="coupon1000" class="modal">
     <div class="popup1 apply_popup">
@@ -575,6 +576,34 @@ if ($result = mysqli_query($conn, $sql)) {
       </div>
     </div>
   </div>
+   <!-- pop up of filter -->
+   <div id="modal6" class="modal">
+    <div class="popup1">
+      <p class="heading_p">Apply Coupon</p>
+      <div class="close"><svg width="20" height="20" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+          <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+        </svg></div>
+      <div class="content1 copon_input">
+        <div class="space_ten summary_top_box"></div>
+        <!-- <p class=" space_ten solid_smal">Enter Coupon Code</p>
+        <div class="buttonIn"> 
+          <input type="text" name="" id="" placeholder="Enter coupon code">
+          <p id="clear" onclick="openCoupon('coupon1000', 'party1')" class="solid_smal malta curser">APPLY</p>
+        </div>  -->
+        <p class=" space_ten  margin-top solid_smal">Available Coupons</p>
+        <div class="avail_copon">
+          <div class="space_ten summary_top_box">
+            <p class="solid_smal">PARTY 15</p>
+            <p onclick="openCoupon('coupon1000', 'party1')" class="solid_smal malta curser">TAP TO APPLY</p>
+          </div>
+          <div class="space_ten summary_top_box">
+            <p class="para_gray">You will save change<span style="margin-left: 10px;" class="solid_smal"> 15% </span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- pop up of filter -->
 
   <!-- loading modal -->
   <div class="modal" id="loading_modal" style="z-index:1000000000;background:rgba(0, 0, 0, 0.2);">
