@@ -60,9 +60,15 @@
     font-weight: 510;
     margin: 5px 0px;
     border-radius: 5px;
+    width: 100%;
 
 }
-
+.footer_right svg {
+    width: 100%;
+    text-align: left;
+    /* height: auto; */
+    margin: 0;
+}
 .footer_right iconify-icon {
     margin-right: 10px;
 

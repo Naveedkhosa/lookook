@@ -189,11 +189,16 @@ if ($result = mysqli_query($conn, $sql)) {
     <!-- summary popup 4> popup of payment -->
     <!-- Add more popup containers with different IDs -->
     <div id="popupContainer4" class="popup-container" style="display: none;">
-      <button class="back-button" onclick="closePopup('popupContainer4')">
+      <button  class="back-button" style=" justify-content:space-between; align-items:center;" >
+        <div class="s_left_top" onclick="closePopup('popupContainer4')">
         <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
           <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M244 400L100 256l144-144M120 256h292" />
         </svg>
         Summary
+        </div>
+        <div class="s_right_top" onclick="closePopup('popupContainer4')">
+          Edit
+        </div>
       </button>
       <div class="popup">
         <div class="popup-content">
@@ -242,9 +247,8 @@ if ($result = mysqli_query($conn, $sql)) {
             
             <div class="space_ten summary_top_box note_summary">
               <ul>
-                <li class="para_li">1 Head chef and assistant (if required) will arrive around <span class="malta">3-4 hours</span> before serving time depending upon menu and <span class="malta"> no. of guests</span></li>
-                <li class="para_li">Chef will assigned <span class="malta">48 hours</span> before booking date</li>
-                <li class="para_li">Ingredients List will be shared <span class="malta">48 hours</span> before booking</li>
+                <li class="para_li">Waiter will arrive <span class="malta">30 Minutes</span> before Serving Time</li>
+                <li class="para_li">Waiter will assigned <span class="">48 hours</span> before booking date</li>
               </ul>
             </div>
 

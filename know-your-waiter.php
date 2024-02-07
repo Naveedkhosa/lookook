@@ -17,7 +17,7 @@ if (isset($_SESSION['logged_user_id'])) {
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Know chef for party | Look My Cook</title>
+  <title>Know waiter for event | Look My Cook</title>
   <link rel="stylesheet" href="components/css/style.css">
   <link rel="stylesheet" href="components/css/style_pop_up.css">
   <link rel="stylesheet" href="components/css/test.css">
@@ -34,7 +34,7 @@ if (isset($_SESSION['logged_user_id'])) {
     <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
       <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M244 400L100 256l144-144M120 256h292" />
     </svg>
-    Know chef for party
+    Know waiter for event
   </button>
   <div class="now_main_page">
 
@@ -64,7 +64,7 @@ if (isset($_SESSION['logged_user_id'])) {
             <div class="card_con_heading">
               <!-- <p class="para_h">Bartender</p> -->
             </div>
-            <p class="para_p w_s">Select Event Details and Book Chef</p>
+            <p class="para_p w_s">Select Events Details and Book Waiter</p>
           </div>
         </a>
         <!-- step card  -->
@@ -78,9 +78,8 @@ if (isset($_SESSION['logged_user_id'])) {
           <div class="carrd_kart_content">
             <div class="numbrr">02</div>
             <div class="card_con_heading">
-              <!-- <p class="para_h">Bartender</p> -->
             </div>
-            <p class="para_p w_s">⁠Chef is Assigned and Ingredients List is Shared </p>
+            <p class="para_p w_s">Waiter will arrive 30 Minutes before Serving Time</p>
           </div>
         </a>
         <!-- step card  -->
@@ -94,28 +93,10 @@ if (isset($_SESSION['logged_user_id'])) {
           <div class="carrd_kart_content">
             <div class="numbrr">03</div>
             <div class="card_con_heading">
-              <!-- <p class="para_h">Bartender</p> -->
             </div>
-            <p class="para_p w_s">⁠Chef arrives and Cook Delicious Dishes </p>
+            <p class="para_p w_s">Waiter will take care of serving Food </p>
           </div>
         </a>
-        <!-- step card  -->
-        <!-- step card  -->
-        <a class="kart_booking_card step_kart">
-          <div class="cardkart_booking_img step_kart_img_box">
-            <div class="cardkart_imgimg step_kart_img">
-              <img src="components/imag/clean_step.png" alt="" loading="lazy" />
-            </div>
-          </div>
-          <div class="carrd_kart_content">
-            <div class="numbrr">04</div>
-            <div class="card_con_heading">
-              <!-- <p class="para_h">Bartender</p> -->
-            </div>
-            <p class="para_p w_s">Chef cleans the Kitchen Area and Leaves</p>
-          </div>
-        </a>
-
         <!-- step card  -->
       </div>
       <a href="#scroll_g" class="scroll_gallry">
@@ -128,26 +109,7 @@ if (isset($_SESSION['logged_user_id'])) {
 
   </div>
   <div class="now_hero_al_contnt">
-    <p class="space_botom heading_p danger space_top">
-      <iconify-icon icon="mdi:multiply-box"></iconify-icon> What's not included
-    </p>
-    <!-- booking card  -->
-    <a class="kart_booking_card included_kart n_include_kart">
-      <div class="cardkart_booking_img included_kart_img ">
-        <div class="cardkart_imgimg included_imgkart_img">
-          <img src="components/imag/ingredient1.png" alt="" loading="lazy" />
-        </div>
-      </div>
-      <div class="carrd_kart_content">
-        <div class="card_con_heading">
-          <p class="para_h"> No Ingredients and Utensils </p>
-        </div>
-        <p class="para_p">
-          We don't offer any post-service utensil cleaning.
-        </p>
-      </div>
-    </a>
-    <!-- booking card  -->
+
     <!-- booking card  -->
     <a class="kart_booking_card included_kart n_include_kart">
       <div class="cardkart_booking_img included_kart_img">

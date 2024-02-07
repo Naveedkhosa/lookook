@@ -17,7 +17,7 @@ if (isset($_SESSION['logged_user_id'])) {
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Know chef for party | Look My Cook</title>
+  <title>Know bartender for event | Look My Cook</title>
   <link rel="stylesheet" href="components/css/style.css">
   <link rel="stylesheet" href="components/css/style_pop_up.css">
   <link rel="stylesheet" href="components/css/test.css">
@@ -34,7 +34,7 @@ if (isset($_SESSION['logged_user_id'])) {
     <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
       <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M244 400L100 256l144-144M120 256h292" />
     </svg>
-    Know chef for party
+    Know bartender for event
   </button>
   <div class="now_main_page">
 

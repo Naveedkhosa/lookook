@@ -130,7 +130,16 @@ a{
     z-index: 12;
      /* Ensure it's above the popup */
   }
-
+  .s_left_top{
+    display: flex;
+    align-items: center;
+  }
+  .s_right_top{
+    padding: 5px 15px;
+    margin-right: 15px;
+    border-radius: 3px;
+    border: 1px solid #ddd;
+  }
   .popup-content {
     /* flex: 1; */
     width: 100%;
