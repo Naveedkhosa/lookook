@@ -8,4 +8,3 @@ setupCounter('minusButton7', 'plusButton7', 'displayedNumber7');
 setupCounter('minusButton11', 'plusButton11', 'displayedNumber11','event_addon_waiter');
 setupCounter('minusButton12', 'plusButton12', 'displayedNumber12','event_addon_cleaner');
 setupCounter('minusButton13', 'plusButton13', 'displayedNumber13','event_addon_bartender');
-setupCounter('minusButton14', 'plusButton14', 'displayedNumber14');

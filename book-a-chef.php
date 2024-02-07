@@ -121,7 +121,7 @@ if (isset($_SESSION['logged_user_id'])) {
                   <i class="fa-solid fa-minus"></i>
                 </div>
                 <div class="decree_w incre_no_dcree number">
-                  <p class="number" id="displayedNumber13">0</p>
+                  <p class="number" id="displayedNumber13" data-min="0" data-max="100">0</p>
                 </div>
                 <div class="decree_w decree plus_minus incree" id="plusButton13">
                   <i class="fa-solid fa-plus"></i>
@@ -150,7 +150,7 @@ if (isset($_SESSION['logged_user_id'])) {
                   <i class="fa-solid fa-minus"></i>
                 </div>
                 <div class="decree_w incre_no_dcree number">
-                  <p class="number" id="displayedNumber12">0</p>
+                  <p class="number" id="displayedNumber12" data-min="0" data-max="100">0</p>
                 </div>
                 <div class="decree_w decree plus_minus incree" id="plusButton12">
                   <i class="fa-solid fa-plus"></i>
@@ -179,7 +179,7 @@ if (isset($_SESSION['logged_user_id'])) {
                   <i class="fa-solid fa-minus"></i>
                 </div>
                 <div class="decree_w incre_no_dcree number">
-                  <p class="number" id="displayedNumber11">0</p>
+                  <p class="number" id="displayedNumber11" data-min="0" data-max="100">0</p>
                 </div>
                 <div class="decree_w decree plus_minus incree" id="plusButton11">
                   <i class="fa-solid fa-plus"></i>
@@ -398,7 +398,7 @@ if (isset($_SESSION['logged_user_id'])) {
                 <i class="fa-solid fa-minus"></i>
               </div>
               <div class="decree_w incre_no_dcree number">
-                <p class="number" id="displayedNumber1">0</p>
+                <p class="number" id="displayedNumber1" data-min="0" data-max="100">0</p>
               </div>
               <div class="decree_w decree plus_minus incree" id="plusButton1">
                 <i class="fa-solid fa-plus"></i>
@@ -418,7 +418,7 @@ if (isset($_SESSION['logged_user_id'])) {
                 <i class="fa-solid fa-minus"></i>
               </div>
               <div class="decree_w incre_no_dcree number">
-                <p class="number" id="displayedNumber2">0</p>
+                <p class="number" id="displayedNumber2" data-min="0" data-max="100">0</p>
               </div>
               <div class="decree_w decree plus_minus incree" id="plusButton2">
                 <i class="fa-solid fa-plus"></i>
@@ -437,7 +437,7 @@ if (isset($_SESSION['logged_user_id'])) {
                 <i class="fa-solid fa-minus"></i>
               </div>
               <div class="decree_w incre_no_dcree number">
-                <p class="number" id="displayedNumber3">0</p>
+                <p class="number" id="displayedNumber3" data-min="0" data-max="100">0</p>
               </div>
               <div class="decree_w decree plus_minus incree" id="plusButton3">
                 <i class="fa-solid fa-plus"></i>
@@ -457,7 +457,7 @@ if (isset($_SESSION['logged_user_id'])) {
                 <i class="fa-solid fa-minus"></i>
               </div>
               <div class="decree_w incre_no_dcree number">
-                <p class="number" id="displayedNumber7">0</p>
+                <p class="number" id="displayedNumber7" data-min="0" data-max="100">0</p>
               </div>
               <div class="decree_w decree plus_minus incree" id="plusButton7">
                 <i class="fa-solid fa-plus"></i>
@@ -478,7 +478,7 @@ if (isset($_SESSION['logged_user_id'])) {
                 <i class="fa-solid fa-minus"></i>
               </div>
               <div class="decree_w incre_no_dcree number">
-                <p class="number" id="displayedNumber4">0</p>
+                <p class="number" id="displayedNumber4" data-min="0" data-max="100">0</p>
               </div>
               <div class="decree_w decree plus_minus incree" id="plusButton4">
                 <i class="fa-solid fa-plus"></i>
@@ -518,7 +518,7 @@ if (isset($_SESSION['logged_user_id'])) {
                 <i class="fa-solid fa-minus"></i>
               </div>
               <div class="decree_w incre_no_dcree number">
-                <p class="number" id="displayedNumber5" data-min="1" data-val="1">1</p>
+                <p class="number" id="displayedNumber5" data-min="1" data-max="100" data-val="1">1</p>
               </div>
               <div class="decree_w decree plus_minus incree" id="plusButton5">
                 <i class="fa-solid fa-plus"></i>
@@ -538,7 +538,7 @@ if (isset($_SESSION['logged_user_id'])) {
                 <i class="fa-solid fa-minus"></i>
               </div>
               <div class="decree_w incre_no_dcree number">
-                <p class="number" id="displayedNumber6">0</p>
+                <p class="number" id="displayedNumber6" data-min="0" data-max="100">0</p>
               </div>
               <div class="decree_w decree plus_minus incree" id="plusButton6">
                 <i class="fa-solid fa-plus"></i>

@@ -188,7 +188,7 @@ if ($result = mysqli_query($conn, $sql)) {
 
     <!-- summary popup 4> popup of payment -->
     <!-- Add more popup containers with different IDs -->
-    <div id="popupContainer4" class="popup-container" style="display: block;">
+    <div id="popupContainer4" class="popup-container" style="display: none;">
       <button  class="back-button" style=" justify-content:space-between; align-items:center;" >
         <div class="s_left_top" onclick="closePopup('popupContainer4')">
         <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
