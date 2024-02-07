@@ -913,10 +913,9 @@ ul li {
 .kard_timing {
   width: 100%;
   border-bottom: 1px solid #dddddd8d;
-  padding-bottom: 25px;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
 
 }
 

@@ -227,22 +227,20 @@ if (isset($_GET['bookings']) && in_array($_GET['bookings'], $services)) {
           <div class="party_deatil_top">
             <div class="kard_timing">
               <p class="para_p_active solid_hsmal">
+              <iconify-icon icon="mynaui:hash-square"></iconify-icon>
+                Booking Id: 01928637484
+              </p>
+              <p class="para_p_active solid_hsmal">
                 <iconify-icon icon="lets-icons:date-today-duotone"></iconify-icon>
                 01 Dec 2023
               </p>
-              <p class="para_p_active solid_hsmal margten">
+              <p class="para_p_active solid_hsmal">
                 <iconify-icon icon="ic:twotone-access-time"></iconify-icon>12:00 AM
               </p>
             </div>
-            <p class="para_gray space_ten">
-              <iconify-icon icon="ic:twotone-location-on"></iconify-icon>A1,
-              chattarpur Enclave, Delhi
-            </p>
-          </div>
-
-          <!-- choose dishes -->
-          <a onclick="openPopup('popupContainer2')" class="pre_bk_slect_sec">
-            <p class="para_p">Choose Dishes</p>
+              <!-- choose dishes -->
+              <a onclick="openPopup('popupContainer2')" class="pre_bk_slect_sec">
+            <p class="solid_smal space_ten">Choose Dishes</p>
             <div class="pre_bk_box">
               <div class="pre_img_text">
                 <div class="preimg"><iconify-icon icon="emojione:pot-of-food"></iconify-icon></div>
@@ -252,19 +250,21 @@ if (isset($_GET['bookings']) && in_array($_GET['bookings'], $services)) {
             </div>
           </a>
           <!-- choose dishes box -->
-
-          <div class="kard_bottom">
-            <div class="confirm_btn">
-              <a class="btnt solid_smal">Cancel</a>
+            <div class="main_box_input">
+               <p class="space_ten solid_smal">Address </p>
+              <div class="input_box" style="border:none;">
+                 <p class="para_gray space_ten" style="padding:10px 0px ;justify-content:flex-start; align-items:flex-start; max-width:80%;">
+                  <iconify-icon icon="ic:twotone-location-on"></iconify-icon>
+                  A1, chattarpur Enclave, Delhi chattarpur Enclave, Delhi
+                 </p>
+                 <p onclick="openModal('modal19')" class="para_gray"><span class="malta">Add New</span> </p>
+              </div>
             </div>
-            <div class="need_help">
-              <a href=""><iconify-icon icon="fluent:person-support-24-regular"></iconify-icon></a>
-              <a class="solid_smal" href="">Need Help?</a>
-            </div>
-          </div>
+        </div>
 
-          <div class="kard_additional_sec">
-            <p class="para_p" style="margin: 10px 0px;">Additional Services</p>
+      
+        <div class="kard_additional_sec">
+            <p class="solid_smal" style="margin: 10px 0px;">Additional Services</p>
             <div class="count_service">
               <p class="para_gray">Bartender</p>
               <p class="para_gray">1</p>
@@ -278,9 +278,20 @@ if (isset($_GET['bookings']) && in_array($_GET['bookings'], $services)) {
               <p class="para_gray">10</p>
             </div>
           </div>
-          <div class="sticky_complete">
-            50% <br> Complete
+
+          <div class="kard_bottom" style="justify-content:flex-start;">
+            <div class="confirm_btn" style="margin-right:10px;">
+              <a class="btnt solid_smal">Cancel</a>
+            </div>
+            <div class="need_help btnt">
+              <a class="solid_smal" href="">Need Help ?</a>
+            </div>
           </div>
+
+  
+          <!-- <div class="sticky_complete">
+            50% <br> Complete
+          </div> -->
         </div>
         <!-- card service  -->
         <div class="para_h ceneter_heading space_ten stepceneter_heading" style="margin: 15px 0px;">
