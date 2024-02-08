@@ -124,7 +124,7 @@
     background-color: #f1f1f1;
     width: 100%;
     /* height: calc(70vh - 100px); */
-    margin-top: 40px;
+    margin-top: 25px;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -385,7 +385,7 @@
     outline: none;
     width: 90%;
     text-align: center;
-    padding: 15px;
+    padding: 12px;
     border-radius: 10px;
     background-color: #f29203;
     color: #fff;
