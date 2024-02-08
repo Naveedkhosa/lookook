@@ -52,19 +52,19 @@ if(isset($_GET['refer'])){
         Signup | Login
     </button>
      <div class="logi_content">
-                <div class="apply_coupon_img signup_img">
+                <!-- <div class="apply_coupon_img signup_img">
                     <img src="components/imag/animation_gif.gif" alt="" loading="lazy">
                 </div>
        <h4>Welcome Back</h4>
        <div class="form_1st">
         <p class="space_botom" style="text-align: center;">Signup and Get <span id="responseMsg">Rs. <?= $signup_reward ?? 250 ?></span> in your wallet </p>
-        </div>
+        </div> -->
     <!-- sign section start here..  -->
     <div class="_from_container_">
         <div class="_form_">
             <div class="_form_title">
                 <div class="logo">
-                    Signup | Login
+                  Signup and get Rs 250 in your wallet
                 </div>
             </div>
         
@@ -99,12 +99,12 @@ if(isset($_GET['refer'])){
                 }
                 echo '" />';
                ?>
-                <div class="_agree_box">
+                <!-- <div class="_agree_box">
                     <input type="checkbox" name="agree" id="agree">
                     <p>
                         I agree to all the <a target="_blank" href="terms-and-conditions">Terms &amp; Conditions</a>
                     </p>
-                </div>
+                </div> -->
 
                 <button type="submit" id="_proceed_btn" class="_proceed_btn">
                     Sign In | Sign Up
