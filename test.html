@@ -1,50 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Account | Look My Cook</title>
-  <link rel="stylesheet" href="components/css/style.css">
-  <link rel="stylesheet" href="components/css/style_pop_up.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
- 
-</head>
-<body>
-
-
- <!-- pop up of filter -->
- <div id="modal6" class="">
-  <div class="popup1 ">
-    <p class="heading_p">Apply Coupon</p>
-    <div class="close"><svg width="20" height="20" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
-        <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
-      </svg></div>
-    <div class="content1 copon_input">
-      <div class="space_ten summary_top_box"></div>
-      <p class=" space_ten solid_smal">Enter Coupon Code</p>
-      <div class="buttonIn"> 
-        <input type="text" name="" id="" placeholder="Enter coupon code">
-        <p id="clear" onclick="openCoupon('coupon1000', 'party1')" class="solid_smal malta curser">APPLY</p>
-      </div> 
-      <p class=" space_ten  margin-top solid_smal">Available Coupons</p>
-      <div class="avail_copon">
-        <div class="space_ten summary_top_box">
-          <p class="solid_smal">PARTY 15</p>
-          <p onclick="openCoupon('coupon1000', 'party1')" class="solid_smal malta curser">TAP TO APPLY</p>
-        </div>
-        <div class="space_ten summary_top_box">
-          <p class="para_gray">You will save change<span style="margin-left: 10px;" class="solid_smal"> 15% </span></p>
-        </div>
+  <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title> Signup / Login | Look My Cook</title>
+      <link rel="stylesheet" href="components/css/style.css" />
+      <link rel="stylesheet" href="components/css/style_pop_up.css" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+      <link rel="stylesheet" href="components/css/footer.css">
+  
+      <!-- alertify js -->
+      <link rel="stylesheet" href="libs/alertifyjs/css/alertify.min.css">
+      <link rel="stylesheet" href="libs/alertifyjs/css/themes/default.css">
+  </head>
+  
+  <body>
+  
+  <div class="login_body">
+      
+      <button class="back-button bg" onclick="history.back()">
+          <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" fill="#fff">
+              <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M244 400L100 256l144-144M120 256h292" />
+          </svg>
+          Signup | Login
+      </button>
+       <div class="logi_content">
+                  <div class="apply_coupon_img signup_img">
+                      <img src="components/imag/animation_gif.gif" alt="" loading="lazy">
+                  </div>
+         <h4>Welcome Back</h4>
+         <div class="form_1st">
+          <p class="space_botom" style="text-align: center;">Signup and Get <span id="responseMsg">Rs. <?= $signup_reward ?? 250 ?></span> in your wallet </p>
+          </div>
+      <!-- sign section start here..  -->
+      <div class="_from_container_">
+          <div class="_form_">
+              <div class="_form_title">
+                  <div class="logo">
+                      Signup | Login
+                  </div>
+              </div>
+          
+              <div class="_form_content">
+  
+                  <div class="_form_field">
+                      <div class="label_field">
+                          <label>Mobile Number</label>
+                      </div>
+                      <input type="test" maxlength="10" name="contacts" required="" id="contacts" placeholder="10 digit number">
+                      <div class="_change_number"><span id="change_num">change Number ?</span></div>
+  
+                  </div>
+  
+                  <div class="_form_field">
+                      <label>OTP</label>
+                      <div class="_input_container">
+                          <input type="text" name="number" id="otp" placeholder="xxxxxx" maxlength="6">
+                          <div class="_timer" id="_timer">0</div>
+                      </div>
+                      <div class="_send_otp_btn">
+                          <div id="responseMsg"></div>
+                          <button class="_otp_btn" id="_otp_btn_again" style="visibility: hidden;">
+                              Send Again
+                          </button>
+                      </div>
+                  </div>
+                 <?php
+                  echo '<input type="hidden" id="location" value="';
+                  if(isset($_GET['location'])) {
+                      echo htmlspecialchars($_GET['location']);
+                  }
+                  echo '" />';
+                 ?>
+                  <div class="_agree_box">
+                      <input type="checkbox" name="agree" id="agree">
+                      <p>
+                          I agree to all the <a target="_blank" href="terms-and-conditions">Terms &amp; Conditions</a>
+                      </p>
+                  </div>
+  
+                  <button type="submit" id="_proceed_btn" class="_proceed_btn">
+                      Sign In | Sign Up
+                  </button>
+              </div>
+  
+          </div>
       </div>
-    </div>
-  </div>
-</div>
-<!-- pop up of filter -->
-
-    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
-    <script src="components/js/js.js"></script>
-    <script src="components/js/jquery-3.7.1.slim.min.js"></script>
-</body>
-
-</html>
+      <!-- sign section end here  -->
+      </div>
+  
+      <!-- bottom nav include -->
+      <?php include "inc/bottom_nav.php"; ?>
+  
+      <!-- include scripts -->
+      <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+      <script src="static/js/jquery.js"></script>
+      <script src="libs/alertifyjs/alertify.min.js"></script>
+      <script src="static/js/login.js"></script>
+  </body>
+  
+  </html>

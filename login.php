@@ -42,36 +42,40 @@ if(isset($_GET['refer'])){
 </head>
 
 <body>
-    <button class="back-button" onclick="history.back()">
-        <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+
+<div class="login_body">
+    
+    <button class="back-button bg" onclick="history.back()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" fill="#fff">
             <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M244 400L100 256l144-144M120 256h292" />
         </svg>
-        Signup / Login
+        Signup | Login
     </button>
-
+     <div class="logi_content">
+                <div class="apply_coupon_img signup_img">
+                    <img src="components/imag/animation_gif.gif" alt="" loading="lazy">
+                </div>
+       <h4>Welcome Back</h4>
+       <div class="form_1st">
+        <p class="space_botom" style="text-align: center;">Signup and Get <span id="responseMsg">Rs. <?= $signup_reward ?? 250 ?></span> in your wallet </p>
+        </div>
     <!-- sign section start here..  -->
     <div class="_from_container_">
         <div class="_form_">
             <div class="_form_title">
                 <div class="logo">
-                    Signup / Login
+                    Signup | Login
                 </div>
             </div>
-            <div class="form_1st">
-                <p class="solid_smal space_botom" style="text-align: center;">Signup and Get <span class="orange"><?= $signup_reward ?? 250 ?></span> Rs in your wallet </p>
-                <div class="apply_coupon_img signup_img">
-                    <img src="components/imag/animation_gif.gif" alt="" loading="lazy">
-                </div>
-            </div>
+        
             <div class="_form_content">
 
                 <div class="_form_field">
                     <div class="label_field">
-                        <label>mobile</label>
-
+                        <label>Mobile Number</label>
                     </div>
                     <input type="test" maxlength="10" name="contacts" required="" id="contacts" placeholder="10 digit number">
-                    <div class="_change_number">Wrong Number? <span id="change_num">change</span></div>
+                    <div class="_change_number"><span id="change_num">change Number ?</span></div>
 
                 </div>
 
@@ -103,14 +107,14 @@ if(isset($_GET['refer'])){
                 </div>
 
                 <button type="submit" id="_proceed_btn" class="_proceed_btn">
-                    Proceed
+                    Sign In | Sign Up
                 </button>
             </div>
 
         </div>
     </div>
     <!-- sign section end here  -->
-
+    </div>
 
     <!-- bottom nav include -->
     <?php include "inc/bottom_nav.php"; ?>
