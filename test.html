@@ -31,7 +31,7 @@
                   </div>
          <h4>Welcome Back</h4>
          <div class="form_1st">
-          <p style="text-align: center;">Signup and Get <span id="responseMsg">Rs. <?= $signup_reward ?? 250 ?></span> in your wallet </p>
+          <p style="text-align: center;">Signup and Get <span id="responseMsg">Rs.250</span> in your wallet </p>
           </div>
       <!-- sign section start here..  -->
       <div class="_from_container_">
@@ -66,13 +66,7 @@
                           </button>
                       </div>
                   </div>
-                 <?php
-                  echo '<input type="hidden" id="location" value="';
-                  if(isset($_GET['location'])) {
-                      echo htmlspecialchars($_GET['location']);
-                  }
-                  echo '" />';
-                 ?>
+            
                   <div class="_agree_box">
                       <input type="checkbox" name="agree" id="agree">
                       <p>
