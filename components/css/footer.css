@@ -131,7 +131,7 @@
     align-items: center;
     flex-direction: column-reverse;
     border: 1px solid #ddd;
-    border-radius: 30px 30px 0px 0px;
+    border-radius: 30px;
 }
 
 ._from_container_ ._form_ {
@@ -139,8 +139,7 @@
     max-width: 520px;
     margin: 0px;
     border-radius: 30px 30px 0px 0px;
-    padding: 30px 10px 20px 10px;
-    height: calc(100vh - 310px);
+    padding: 30px 10px 30px 10px;
 }
 
 .form_1st {
