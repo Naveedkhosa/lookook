@@ -40,6 +40,10 @@ function openPopup(modId) {
 }
 
 function closePopup(modId) {
+  if(modId=="popupContainer4"){
+    $("#razor_pay_btn_container").hide();
+    $("#proceed_btn_container").show();
+  }
   var modal = document.getElementById(modId);
   modal.style.display = "none";
 }

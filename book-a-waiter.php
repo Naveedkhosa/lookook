@@ -1,10 +1,6 @@
 <?php
 include "config.php";
-if (isset($_SESSION['logged_user_id'])) {
-  $user_id = $_SESSION['logged_user_id'];
-} else {
-  header("Location:login?location=" . urlencode($_SERVER['REQUEST_URI']));
-}
+
 // get Service ID
 $service_name = "waiter";
 $sql = "SELECT services_id FROM services WHERE services_name='{$service_name}'";
@@ -59,6 +55,7 @@ if ($result = mysqli_query($conn, $sql)) {
   <input type="hidden" id="b_adv_pay" value="0">
   <input type="hidden" id="b_balance_pay" value="0">
   <input type="hidden" id="b_total" value="0">
+  <input type="hidden" id="b_coupon_code" value="0">
 
   <div class="pre_bk_kart_mainpage">
 
@@ -174,15 +171,21 @@ if ($result = mysqli_query($conn, $sql)) {
 
       <!-- Add Extra section end -->
 
-      <div class="amnt_detail_btn">
+
+
+      <!-- proceed to summary popup box -->
+      <div class="amnt_detail_btn" id="proceed_btn_container">
         <div class="amnt_det">
-          <p class="para_h_"><iconify-icon icon="ph:currency-inr-duotone"></iconify-icon>2350.00</p>
+          <p class="para_h_"><iconify-icon icon="ph:currency-inr-duotone"></iconify-icon>
+            <span class="f_total">0</span>
+          </p>
           <p onclick="openModal('modal16')" class="para_gray">Amount Payable <span class="malta"> (DETAILS)</span> </p>
         </div>
-        <div onclick="openPopup('popupContainer4')" class="continuebtnn">
-          Continue
+        <div id="booking_proceed_step1" class="continuebtnn">
+          Proceed
         </div>
       </div>
+      <!-- proceed to summary popup box -->
 
     </div>
 
@@ -348,7 +351,7 @@ if ($result = mysqli_query($conn, $sql)) {
               <button class="solid_smal" id="open_coupan_popups">EXPLORE OFFER</button>
             </div>
           </div>
-          
+
           <!-- design after applied cuopon  -->
           <div class="summary_section space_ten " id="party2" style="display:none;">
             <div class="space_ten summary_top_box">
@@ -374,20 +377,24 @@ if ($result = mysqli_query($conn, $sql)) {
 
       </div>
 
+      <!-- pay now button -->
+      <div class="amnt_detail_btn" id="razor_pay_btn_container">
+        <div class="amnt_det">
+          <p class="para_h_"><iconify-icon icon="ph:currency-inr-duotone"></iconify-icon>
+            <span class="f_total">0</span>
+          </p>
+          <p onclick="openModal('modal16')" class="para_gray">Amount Payable <span class="malta"> (DETAILS)</span> </p>
+        </div>
+        <div id="razorpay-btn" class="continuebtnn">
+          Pay Now
+        </div>
+      </div>
+      <!-- pay now button -->
+
     </div>
   </div>
 
-  <div class="amnt_detail_btn">
-    <div class="amnt_det">
-      <p class="para_h_"><iconify-icon icon="ph:currency-inr-duotone"></iconify-icon>
-        <span class="f_total">0</span>
-      </p>
-      <p onclick="openModal('modal16')" class="para_gray">Amount Payable <span class="malta"> (DETAILS)</span> </p>
-    </div>
-    <div id="booking_proceed_step1" class="continuebtnn">
-      Proceed
-    </div>
-  </div>
+  <!-- old here -->
 
   <!-- bottom menu start ... -->
   <!-- bottom nav include -->
@@ -618,6 +625,7 @@ if ($result = mysqli_query($conn, $sql)) {
   <script src="static/js/jquery.js"></script>
   <script src="static/js/preferences.js"></script>
   <script src="static/js/waiter.js"></script>
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 
 </body>
 

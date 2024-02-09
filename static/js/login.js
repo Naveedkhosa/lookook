@@ -118,9 +118,9 @@ function sendOtp(contact) {
 // proceed login/signup
 $("#_proceed_btn").on("click", function () {
     var contact_number = $("#contacts").val();
-    var agree = $("#agree");
+   
     var otp = $("#otp").val();
-    if (contact_number == "" || otp == "" || !agree.prop("checked")) {
+    if (contact_number == "" || otp == "") {
         alertify.error("Please fill all fields");
     } else {
         $.ajax({

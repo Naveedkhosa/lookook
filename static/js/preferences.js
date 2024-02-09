@@ -331,6 +331,7 @@ function calculateAll(coupon_code=null) {
                 
                 $(".f_addon_charges").text(resp.b_addon_all_charges);
                 $(".f_tax_amount").text(resp.b_gst_tax);
+                
             }
         }
     });

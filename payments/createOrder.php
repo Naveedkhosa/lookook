@@ -1,22 +1,16 @@
 <?php
-require('../config.php');
+require('config.php'); // payment config
+require('../config.php'); // database config
 require('../vendors/razorpay-php/Razorpay.php');
-define('API_KEY', "rzp_live_4n0Eihnsd3CgNy");
-define('SECRET_KEY', "l9nmcwM1UKW06H5lvWKPC3my");
 
 session_start();
-
 use Razorpay\Api\Api;
-
-$api = new Api(API_KEY, SECRET_KEY);
+$api = new Api(TEST_API_KEY, TEST_SECRET_KEY);
+$amount = 10;
 $api->order->create(
     array(
-        'receipt' => '1234567',
-        'amount' => 100,
+        'amount' => $amount*100,
         'currency' => 'INR',
-        'notes' => array(
-            'description' => 'Payment status',
-        )
     )
 );
 $razorpayOrder = $api->order->create($orderData);
@@ -25,24 +19,22 @@ $_SESSION['razorpay_order_id'] = $razorpayOrderId;
 $displayAmount = $amount = $orderData['amount'];
 
 $data = array(
-    "key"               => API_KEY,
+    "key"               => TEST_API_KEY,
     "amount"            => $amount,
     "currency"            => "INR",
     "name"              => "LookMyCook",
+    "image" => "https://lookmycook.com/favicon-32x32.png",
     "prefill"           => [
-        "contact"           => "7428939324",
+        "contact"           => $logged_in_user_number,
     ],
     "notes"             => [
         "address"           => "",
     ],
-    "theme"             => [
-        "color"             => "#f29a03"
-    ],
+    "theme"             => [],
     "order_id"          => $razorpayOrderId,
 );
 
-
-echo json_encode($data);
+$data = json_encode($data);
 
 ?>
 

@@ -19,17 +19,22 @@ $(document).on("click", "#booking_proceed_step1", function () {
                     var workers = $("#event_workers").val();
 
                     if (workers > 0) {
-
                         // all are valid till now
                         var data = {
                             service_id: service_id,
                             event_date: event_date,
                             event_time: event_time,
+                            event_adults:adults,
                             event_addon_cleaner: $("#event_addon_cleaner").val(),
                             event_addon_bartender: $("#event_addon_bartender").val(),
-                            workers: workers,
+                            event_workers: workers,
                         };
 
+                        
+                        $("#proceed_btn_container").hide();
+                        $("#razor_pay_btn_container").show();
+                        var adv_pay = $("#b_adv_pay").val();
+                        $("#razorpay-btn").html(`Pay Now&nbsp;&#x20B9;<span class="f_adv_pay">${adv_pay}</span>`);
                         openPopup('popupContainer4');
                         updateSummary(data);
 
@@ -62,6 +67,13 @@ $(document).on("click", "#booking_proceed_step1", function () {
     }
 });
 
+// create booking and pay now
+$(document).on("click","#razorpay-btn",function(){
+// check for login
+alert("ok sir");
+});
+
+
 
 // confirm no of waiters
 $("#confirm_worker_others").on("click", function () {
@@ -88,6 +100,7 @@ function updateSummary(data) {
     $("#s_event_workers").html($("#number_of_workers").text());
     $("#f_addon_cleaner_count").text(data.event_addon_cleaner);
     $("#f_addon_bartender_count").text(data.event_addon_bartender);
+  
 }
 
 
