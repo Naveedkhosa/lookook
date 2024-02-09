@@ -62,12 +62,14 @@ if(isset($_GET['refer'])){
     <!-- sign section start here..  -->
     <div class="_from_container_">
         <div class="_form_">
-            <div class="_form_title">
-                <div class="logo">
-                  Signup and get Rs 250 in your wallet
-                </div>
-            </div>
-        
+        <div class="_form_title" style="display: flex; flex-direction: column;">
+                   <div class="logo">
+                    Signup | Login
+                  </div>
+                  <div class="logo" style="font-size: 16px; font-weight: bold; margin-top: 7px;">
+                    GET &nbsp; <b class="malta"> &#8377; 250 </b> &nbsp; FREE CASH ON SIGNUP
+                  </div>
+              </div>
             <div class="_form_content">
 
                 <div class="_form_field">
