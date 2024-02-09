@@ -6,8 +6,8 @@
     <title>Document</title>
     <style>
         :root {
-  --sz: 10vmin;  /* size */
-  --on: #269fe5; /* color on */
+  --sz: 2vmin;  /* size */
+  --on: #26e57c; /* color on */
   --of: #616774; /* color off */
   --tr: all 0.25s ease 0s;
 }	
@@ -211,17 +211,48 @@ span.eye:before {
   0%, 20%, 80%, 100% { top: 50%; }
   30%, 70% { top: 100%; }
 }
+.wallet_balanc_bx{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+.wallet_blnc{
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 400;
+}
+.wallet_blnc iconify-icon {
+    font-size: 20px;
+    margin-right: 8px;
+}
     </style>
 </head>
 <body>
-    <div class="toggle">
-        <input type="checkbox" id="btn">
-        <label for="btn">
-          <span class="track"></span>
-          <span class="thumb">
-            <span class="eye"></span>
-          </span>
-        </label>
-      </div>
+
+    <div class="wallet_balanc_bx">
+        <div class="wallet_blnc">
+          <iconify-icon icon="fluent:wallet-credit-card-16-regular"></iconify-icon>
+           <p>Licious Wallet Balance : &#8377;250 </p>
+        </div>
+        <div class="toggle">
+            <input type="checkbox" id="btn">
+            <label for="btn">
+              <span class="track"></span>
+              <span class="thumb">
+                <span class="eye"></span>
+              </span>
+            </label>
+          </div>
+    </div>
+
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+  <script src="components/js/js.js"></script>
+  <script src="components/js/jquery-3.7.1.slim.min.js"></script>
+  <script src="static/js/jquery.js"></script>
+  <script src="libs/alertifyjs/alertify.min.js"></script>
+  <script src="static/js/my_account.js"></script>
+
 </body>
 </html>

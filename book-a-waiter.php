@@ -351,6 +351,23 @@ if ($result = mysqli_query($conn, $sql)) {
             <div class="white_btn" id="explore_coupons" data-loaded="false">
               <button class="solid_smal" id="open_coupan_popups">EXPLORE OFFER</button>
             </div>
+            
+    <div class="wallet_balanc_bx">
+        <div class="wallet_blnc">
+          <iconify-icon icon="fluent:wallet-credit-card-16-regular"></iconify-icon>
+           <p>Licious Wallet Balance : &#8377;250 </p>
+        </div>
+        <div class="toggle">
+            <input type="checkbox" id="btn">
+            <label for="btn">
+              <span class="track"></span>
+              <span class="thumb">
+                <span class="eye"></span>
+              </span>
+            </label>
+          </div>
+    </div>
+
           </div>
 
           <!-- design after applied cuopon  -->
