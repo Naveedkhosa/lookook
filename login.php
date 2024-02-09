@@ -99,6 +99,22 @@ if (isset($_GET['refer'])) {
                     </div>
 
                 </div>
+               <?php
+                echo '<input type="hidden" id="location" value="';
+                if(isset($_GET['location'])) {
+                    echo htmlspecialchars($_GET['location']);
+                }
+                echo '" />';
+               ?>
+               <div class="_agree_box">
+                <p>
+                  By continuing, you agree to  <a target="_blank" href="terms-and-conditions">Terms of Service & Privacy Policy</a>
+                </p>
+            </div>
+
+                <button type="submit" id="_proceed_btn" class="_proceed_btn">
+                    Sign In | Sign Up
+                </button>
             </div>
             <!-- sign section end here  -->
         </div>
