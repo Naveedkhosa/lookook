@@ -665,16 +665,18 @@ if ($result = mysqli_query($conn, $sql)) {
                     </button>
                   </div>
                 </div>
+            
+
+                <button type="submit" id="_proceed_services_login_btn" class="_proceed_btn">
+                  Sign In | Sign Up
+                </button>
+                <br>
                 <div class="_agree_box">
                   <p>
                     By continuing, you agree to <a target="_blank" href="terms-and-conditions">Terms of Service &
                       Privacy Policy</a>
                   </p>
                 </div>
-
-                <button type="submit" id="_proceed_services_login_btn" class="_proceed_btn">
-                  Sign In | Sign Up
-                </button>
 
               </div>
 
