@@ -86,6 +86,7 @@ if (isset($_GET['refer'])) {
                                 </button>
                             </div>
                         </div>
+
                         <?php
                         echo '<input type="hidden" id="location" value="';
                         if (isset($_GET['location'])) {
@@ -93,40 +94,27 @@ if (isset($_GET['refer'])) {
                         }
                         echo '" />';
                         ?>
+
+                        <div class="_agree_box">
+                            <p>
+                                By continuing, you agree to <a target="_blank" href="terms-and-conditions">Terms of Service & Privacy Policy</a>
+                            </p>
+                        </div>
+
                         <button type="submit" id="_proceed_btn" class="_proceed_btn">
                             Sign In | Sign Up
                         </button>
                     </div>
-
+                    <!-- sign section end here  -->
                 </div>
-               <?php
-                echo '<input type="hidden" id="location" value="';
-                if(isset($_GET['location'])) {
-                    echo htmlspecialchars($_GET['location']);
-                }
-                echo '" />';
-               ?>
-               <div class="_agree_box">
-                <p>
-                  By continuing, you agree to  <a target="_blank" href="terms-and-conditions">Terms of Service & Privacy Policy</a>
-                </p>
-            </div>
 
-                <button type="submit" id="_proceed_btn" class="_proceed_btn">
-                    Sign In | Sign Up
-                </button>
-            </div>
-            <!-- sign section end here  -->
-        </div>
+                <!-- bottom nav include -->
+                <?php include "inc/bottom_nav.php"; ?>
 
-        <!-- bottom nav include -->
-        <?php include "inc/bottom_nav.php"; ?>
-
-        <!-- include scripts -->
-        <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
-        <script src="static/js/jquery.js"></script>
-        <script src="libs/alertifyjs/alertify.min.js"></script>
-        <script src="static/js/login.js"></script>
+                <!-- include scripts -->
+                <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+                <script src="static/js/jquery.js"></script>
+                <script src="libs/alertifyjs/alertify.min.js"></script>
+                <script src="static/js/login.js"></script>
 </body>
-
 </html>

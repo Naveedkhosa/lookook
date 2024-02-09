@@ -31,6 +31,7 @@ if ($result = mysqli_query($conn, $sql)) {
   <title>Book a Waiter | Look My Cook</title>
   <link rel="stylesheet" href="components/css/style.css">
   <link rel="stylesheet" href="components/css/style_pop_up.css">
+  <link rel="stylesheet" href="components/css/footer.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
 
 </head>
@@ -617,6 +618,76 @@ if ($result = mysqli_query($conn, $sql)) {
 
   </div>
 
+  <!-- login popup -->
+  <div id="popupContainerLogin" class="popup-container tab_body" style="display: none;background:#fff;">
+    <button class="back-button" onclick="closePopup('popupContainerLogin')">
+      <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M244 400L100 256l144-144M120 256h292" />
+      </svg>
+      Signup | Login
+    </button>
+    <div class="popup login_popup">
+      <div class="popup-content">
+        <!-- Your scrollable content goes here -->
+        <div class="logi_content">
+          <!-- sign section start here..  -->
+          <div class="_from_container_">
+            <div class="_form_">
+              <div class="_form_title" style="display: flex; flex-direction: column;">
+                <div class="logo">
+                  Signup | Login
+                </div>
+                <div class="logo" style="font-size: 16px; font-weight: bold; margin-top: 7px;">
+                  GET &nbsp; <b class="malta"> &#8377; 250 </b> &nbsp; FREE CASH ON SIGNUP
+                </div>
+              </div>
+              <div class="_form_content">
+
+                <div class="_form_field">
+                  <div class="label_field">
+                    <label>Mobile Number</label>
+                  </div>
+                  <input type="test" maxlength="10" name="contacts" required="" id="contacts" placeholder="10 digit number">
+                  <div class="_change_number"><span id="change_num">change Number ?</span></div>
+
+                </div>
+
+                <div class="_form_field">
+                  <label>OTP</label>
+                  <div class="_input_container">
+                    <input type="text" name="number" id="otp" placeholder="xxxxxx" maxlength="6">
+                    <div class="_timer" id="_timer">0</div>
+                  </div>
+                  <div class="_send_otp_btn">
+                    <div id="responseMsg"></div>
+                    <button class="_otp_btn" id="_otp_btn_again" style="visibility: hidden;">
+                      Send Again
+                    </button>
+                  </div>
+                </div>
+                <div class="_agree_box">
+                  <p>
+                    By continuing, you agree to <a target="_blank" href="terms-and-conditions">Terms of Service &
+                      Privacy Policy</a>
+                  </p>
+                </div>
+
+                <button type="submit" id="_proceed_services_login_btn" class="_proceed_btn">
+                  Sign In | Sign Up
+                </button>
+
+              </div>
+
+            </div>
+          </div>
+          <?php include "inc/bottom_nav.php"; ?>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
 
   <?php include "inc/bottom_nav.php"; ?>
 
@@ -625,6 +696,8 @@ if ($result = mysqli_query($conn, $sql)) {
   <script src="static/js/jquery.js"></script>
   <script src="static/js/preferences.js"></script>
   <script src="static/js/waiter.js"></script>
+  <script src="libs/alertifyjs/alertify.min.js"></script>
+  <script src="static/js/login.js"></script>
   <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 
 </body>

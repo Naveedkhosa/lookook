@@ -24,19 +24,39 @@ $(document).on("click", "#booking_proceed_step1", function () {
                             service_id: service_id,
                             event_date: event_date,
                             event_time: event_time,
-                            event_adults:adults,
+                            event_adults: adults,
                             event_addon_cleaner: $("#event_addon_cleaner").val(),
                             event_addon_bartender: $("#event_addon_bartender").val(),
                             event_workers: workers,
                         };
 
-                        
-                        $("#proceed_btn_container").hide();
-                        $("#razor_pay_btn_container").show();
-                        var adv_pay = $("#b_adv_pay").val();
-                        $("#razorpay-btn").html(`Pay Now&nbsp;&#x20B9;<span class="f_adv_pay">${adv_pay}</span>`);
-                        openPopup('popupContainer4');
-                        updateSummary(data);
+                        // check for login
+                        $.ajax({
+                            url: "ajax_calls/login_status",
+                            type: "post",
+                            data: {
+                                start: start
+                            },
+                            dataType: "json",
+                            success: function (resp) {
+                                if (resp.logged_in) {
+                                    // logged in - yes proceed
+
+                                    $("#proceed_btn_container").hide();
+                                    $("#razor_pay_btn_container").show();
+                                    var adv_pay = $("#b_adv_pay").val();
+                                    $("#razorpay-btn").html(`Pay Now&nbsp;&#x20B9;<span class="f_adv_pay">${adv_pay}</span>`);
+                                    openPopup('popupContainer4');
+                                    updateSummary(data);
+
+                                } else {
+                                    openPopup("popupContainerLogin");
+                                }
+
+                            }
+                        });
+
+
 
                     } else {
                         alert("Please select valid number of waiters");
@@ -68,9 +88,10 @@ $(document).on("click", "#booking_proceed_step1", function () {
 });
 
 // create booking and pay now
-$(document).on("click","#razorpay-btn",function(){
-// check for login
-alert("ok sir");
+$(document).on("click", "#razorpay-btn", function () {
+
+
+
 });
 
 
@@ -100,7 +121,7 @@ function updateSummary(data) {
     $("#s_event_workers").html($("#number_of_workers").text());
     $("#f_addon_cleaner_count").text(data.event_addon_cleaner);
     $("#f_addon_bartender_count").text(data.event_addon_bartender);
-  
+
 }
 
 
@@ -166,17 +187,17 @@ $("#minusButton13").on("click", function () {
  * 
  */
 // select coupan
-$("#open_coupan_popups").on("click",function(){
+$("#open_coupan_popups").on("click", function () {
 
 });
 // apply coupan
-$(document).on("click",".apply_coupan",function() {
+$(document).on("click", ".apply_coupan", function () {
     $("#modal6 .close").click();
     coupon_code = $(this).attr("data-coupon_code");
     calculateAll(coupon_code);
 });
 // remove coupan
-$(document).on("click","#removeCoupan",function(){
+$(document).on("click", "#removeCoupan", function () {
     $("#party2").hide();
     $("#party1").show();
     calculateAll();
@@ -187,52 +208,52 @@ var limit = 3;
 var total = 3;
 var started = false;
 // load coupans
-$(document).ready(function(){
-    function loadCoupons(){
-        if(total > start){
-            start = start+limit;
-        
-        $.ajax({
-            url: "ajax_calls/bookings/loadCoupans",
-            type: "post",
-            data: {
-                start:start
-            },
-            dataType: "json",
-            success: function (resp) {
-                console.log(resp);
-                if(resp.success){
-                    if("total" in resp){
-                        total = resp.total;
-                    }
-                    start = resp.start;
-                    limit = resp.limit;
+$(document).ready(function () {
+    function loadCoupons() {
+        if (total > start) {
+            start = start + limit;
 
-                    resp.coupans.forEach(coupan => {
-                        $("#coupans_container").append(`<div class="avail_copon">
+            $.ajax({
+                url: "ajax_calls/bookings/loadCoupans",
+                type: "post",
+                data: {
+                    start: start
+                },
+                dataType: "json",
+                success: function (resp) {
+                    console.log(resp);
+                    if (resp.success) {
+                        if ("total" in resp) {
+                            total = resp.total;
+                        }
+                        start = resp.start;
+                        limit = resp.limit;
+
+                        resp.coupans.forEach(coupan => {
+                            $("#coupans_container").append(`<div class="avail_copon">
                         <div class="space_ten summary_top_box">
                           <p class="solid_smal">${coupan.coupon_code}</p>
                           <p class="solid_smal malta curser apply_coupan" data-coupon_code="${coupan.coupon_code}">TAP TO APPLY</p>
                         </div>
                         <div class="space_ten summary_top_box">
-                          <p class="para_gray">You will save&nbsp;<span class="solid_smal"> ${coupan.coupon_discount} ${coupan.coupon_type=='flat'?'':'%'} </span></p>
+                          <p class="para_gray">You will save&nbsp;<span class="solid_smal"> ${coupan.coupon_discount} ${coupan.coupon_type == 'flat' ? '' : '%'} </span></p>
                         </div>
                       </div>`);
-                    });
-                }else{
-                    if("zero" in resp){
-                        $("#coupans_container").html(`<p class="para_gray">${resp.msg}</p>`);
+                        });
+                    } else {
+                        if ("zero" in resp) {
+                            $("#coupans_container").html(`<p class="para_gray">${resp.msg}</p>`);
+                        }
                     }
                 }
-            }
-        });
-      }
+            });
+        }
     }
 
 
 
     // load more coupans - lazy loading
-    document.addEventListener('scroll', function(event) {
+    document.addEventListener('scroll', function (event) {
         if (event.target.id === 'coupans_container') {
             if (Math.ceil(document.getElementById("coupans_container").scrollTop + document.getElementById("coupans_container").offsetHeight) >= document.getElementById("coupans_container").scrollHeight) {
                 loadCoupons();
@@ -241,9 +262,9 @@ $(document).ready(function(){
     }, true);
 
 
-    $("#explore_coupons").on("click",function(){
-        if($(this).attr("data-loaded")=="false"){
-            $(this).attr("data-loaded","true"); 
+    $("#explore_coupons").on("click", function () {
+        if ($(this).attr("data-loaded") == "false") {
+            $(this).attr("data-loaded", "true");
             loadCoupons();
         }
         openModal('modal6');
