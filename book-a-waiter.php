@@ -32,6 +32,7 @@ if ($result = mysqli_query($conn, $sql)) {
   <link rel="stylesheet" href="components/css/style.css">
   <link rel="stylesheet" href="components/css/style_pop_up.css">
   <link rel="stylesheet" href="components/css/footer.css">
+  <link rel="stylesheet" href="components/css/togle.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
 
 </head>
@@ -351,7 +352,8 @@ if ($result = mysqli_query($conn, $sql)) {
             <div class="white_btn" id="explore_coupons" data-loaded="false">
               <button class="solid_smal" id="open_coupan_popups">EXPLORE OFFER</button>
             </div>
-            
+
+          </div>
     <div class="wallet_balanc_bx">
         <div class="wallet_blnc">
           <iconify-icon icon="fluent:wallet-credit-card-16-regular"></iconify-icon>
@@ -367,8 +369,6 @@ if ($result = mysqli_query($conn, $sql)) {
             </label>
           </div>
     </div>
-
-          </div>
 
           <!-- design after applied cuopon  -->
           <div class="summary_section space_ten " id="party2" style="display:none;">
