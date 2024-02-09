@@ -28,11 +28,11 @@
     height: calc(var(--sz) * 2);
     background: var(--of);
     border-radius: var(--sz);
-    box-shadow: 
+    /* box-shadow: 
       0 0 calc(var(--sz) / 50) calc(var(--sz) / 50) #0006, 
       0 -2px calc(var(--sz) / 10) calc(var(--sz) / 500) #000d, 
       0 0px calc(var(--sz) / 10) calc(var(--sz) / 50) #fff8, 
-      0 -2px calc(var(--sz) / 5) calc(var(--sz) / 50) #000c;
+      0 -2px calc(var(--sz) / 5) calc(var(--sz) / 50) #000c; */
   }	
   
   .track {
