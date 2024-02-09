@@ -1,10 +1,5 @@
 <?php
 include "config.php";
-if (isset($_SESSION['logged_user_id'])) {
-  $user_id = $_SESSION['logged_user_id'];
-} else {
-  header("Location:login?location=" . urlencode($_SERVER['REQUEST_URI']));
-}
 
   // get Service ID
   $service_name = "chef";

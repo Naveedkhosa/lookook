@@ -118,9 +118,9 @@ function sendOtp(contact) {
 // proceed login/signup
 $("#_proceed_btn").on("click", function () {
     var contact_number = $("#contacts").val();
-    var agree = $("#agree");
+   
     var otp = $("#otp").val();
-    if (contact_number == "" || otp == "" || !agree.prop("checked")) {
+    if (contact_number == "" || otp == "") {
         alertify.error("Please fill all fields");
     } else {
         $.ajax({
@@ -157,6 +157,46 @@ $("#_proceed_btn").on("click", function () {
     }
 });
 
+
+// proceed login/signup on services pages
+$("#_proceed_services_login_btn").on("click", function () {
+    var contact_number = $("#contacts").val();
+   
+    var otp = $("#otp").val();
+    if (contact_number == "" || otp == "") {
+        alertify.error("Please fill all fields");
+    } else {
+        $.ajax({
+            url: "ajax_calls/login",
+            type: "post",
+            data: {
+                contact: contact_number,
+                otp:otp,
+            },
+            dataType: "json",
+            beforeSend:function() {
+                $(this).attr("disabled","disabled");
+                $(this).html("authenticating...");
+            },
+            success: function (resp) {
+                $(this).html("proceed");
+                $(this).removeAttr("disabled");
+                console.log(resp);
+                if (resp.success) {
+                    alertify.success(resp.msg);
+                    closePopup('popupContainerLogin');
+                } else {
+                    alertify.error(resp.msg);
+                }
+            },
+            error: function () {
+                alertify.error("Something went wrong. Please try again later.");
+                $(this).html("proceed");
+                $(this).removeAttr("disabled");
+            }
+        });
+    }
+});
 
 
 

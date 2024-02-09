@@ -133,6 +133,8 @@ if (isset($_POST['event_adults']) && isset($_POST['service_id']) && isset($_POST
                     $result['coupon_discount'] = floor(($all_charges/ 100) * $coupon_sql_row['coupon_discount']);
                     $all_charges= $all_charges- $result['coupon_discount'];
                 }
+               
+
             } else {
                 $result['coupon_applied'] = false;
                 $result['coupan_msg'] = "Coupan has been expired or deleted.";
