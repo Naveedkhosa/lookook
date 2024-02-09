@@ -101,12 +101,11 @@ if(isset($_GET['refer'])){
                 }
                 echo '" />';
                ?>
-                <!-- <div class="_agree_box">
-                    <input type="checkbox" name="agree" id="agree">
-                    <p>
-                        I agree to all the <a target="_blank" href="terms-and-conditions">Terms &amp; Conditions</a>
-                    </p>
-                </div> -->
+               <div class="_agree_box">
+                <p>
+                  By continuing, you agree to  <a target="_blank" href="terms-and-conditions">Terms of Service & Privacy Policy</a>
+                </p>
+            </div>
 
                 <button type="submit" id="_proceed_btn" class="_proceed_btn">
                     Sign In | Sign Up

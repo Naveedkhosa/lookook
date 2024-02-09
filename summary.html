@@ -1,473 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Support</title>
-    <link rel="stylesheet" href="components/css/style.css" />
-    <link rel="stylesheet" href="components/css/style_pop_up.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-    />
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
-    </style>
-    <style>
-      *{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      .tab_body {
-        margin: 0;
-        font-family: "Arial", sans-serif;
-        box-sizing: border-box;
-        display: flex;
-        flex-direction: column;
-        height: 100vh;
-        background-color: #f0efef;
-        overflow: hidden;
-        
-      }
-      .tab_contnet_main {
-        background: #f0efef;
-      }
-      /* Style the tab */
-      .tab {
-        float: left;
-        background-color: #fff;
-        width: 80px;
-        overflow-y: auto;
-        height: calc(100vh - 105px);
-      }
 
-      /* Style the buttons inside the tab */
-      .tab button {
-        display: block;
-        background-color: inherit;
-        color: black;
-        padding: 10px 5px;
-        width: 100%;
-        border: none;
-        outline: none;
-        text-align: left;
-        cursor: pointer;
-        transition: 0.3s;
-        font-size: 13px;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> Signup / Login | Look My Cook</title>
+  <link rel="stylesheet" href="components/css/style.css" />
+  <link rel="stylesheet" href="components/css/style_pop_up.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+  <link rel="stylesheet" href="components/css/footer.css">
 
-      /* Change background color of buttons on hover */
-      .tab button:hover {
-        background-color: #fff;
-      }
+  <!-- alertify js -->
+  <link rel="stylesheet" href="libs/alertifyjs/css/alertify.min.css">
+  <link rel="stylesheet" href="libs/alertifyjs/css/themes/default.css">
+</head>
 
-      /* Create an active/current "tab button" class */
-      .tab button.active {
-        background: #02645d;
-        color: #ffff;
-      }
+<body>
+  <button onclick="openPopup('popupContainer5'); openDefaultCategory()">
+    this Buttun
+  </button>
 
-      /* Style the tab content */
-      .tabcontent {
-        float: left;
-        /* padding: 0px 5px; */
-        width: calc(100% - 80px);
-        border-left: none;
-        overflow-y: auto;
-        height: calc(100vh - 105px);
 
-      }
-      .popup_w_100 {
-        width: 100%;
-      }
-      .tabs_topspace {
-        margin-top: 55px;
-      }
-      .tabs_cards{
-        display: flex;
-        flex-wrap: wrap;
-      
-       
-      }
-      .tab_card {
-        width: calc(50% - 20px);
-        height: fit-content;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        padding: 15px;
-        border: 1px solid #f0efef;
-        background: #fff;
-        margin: 0px 0px 10px 10px;
-      }
-      .tabcard_center{
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-      }
-      .tabimg {
-        width: 45px;
-        height: 45px;
-      }
-      .tabimg img {
-        width: 100%;
-        height: 100%;
-      }
-      .tablink_img{
-        width: 30px;
-        height: 30px;
-        margin-bottom: 5px;
-      }
-      .tablink_img img{
-        width: 100%;
-        height: 100%;
-      }
-      .tablinks{
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        
-      }
-      .dieshes_search_container{
-        width: 90%;
-        margin: auto;
-      }
-      #searchbar {
-  background-image: url('/css/searchicon.png'); /* Add a search icon to input */
-  background-position: 10px 12px; /* Position the search icon */
-  background-repeat: no-repeat; /* Do not repeat the icon image */
-  width: 100%; /* Full-width */
-  font-size: 16px; /* Increase font-size */
-  padding: 12px 20px 12px 40px; /* Add some padding */
-  border: 1px solid #ddd; /* Add a grey border */
-  margin: 10px 0px; /* Add some space below the input */
-  border-radius: 30px;
-  
-}
-
-#myUL {
-  /* Remove default list styling */
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-#myUL li a {
-  border: 1px solid #ddd; /* Add a border to all links */
-  margin-top: -1px; /* Prevent double borders */
-  background-color: #f6f6f6; /* Grey background color */
-  padding: 12px; /* Add some padding */
-  text-decoration: none; /* Remove default text underline */
-  font-size: 18px; /* Increase the font-size */
-  color: black; /* Add a black text color */
-  display: block; /* Make it into a block element to fill the whole list */
-}
-
-#myUL li a:hover:not(.header) {
-  background-color: #eee; /* Add a hover effect to all links, except for headers */
-}
-    </style>
-  </head>
-  <body>
-    <button onclick="openPopup('popupContainer120'); openDefaultCategory()">
-      this Buttun
-
-    
-    <!-- select dishes 120> popup of payment -->
+    <!-- select dishes 5> popup of payment -->
     <!-- Add more popup containers with different IDs -->
-    <div
-      id="popupContainer120"
-      class="popup-container tab_body"
-      style="display: none"
-    >
-      <button class="back-button" onclick="closePopup('popupContainer120')">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="512"
-          height="512"
-          viewBox="0 0 512 512"
-        >
-          <path
-            fill="none"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="48"
-            d="M244 400L100 256l144-144M120 256h292"
-          />
+    <div id="popupContainer5" class="popup-container tab_body" style="display: none">
+      <button class="back-button" onclick="closePopup('popupContainer5')">
+        <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+          <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48"
+            d="M244 400L100 256l144-144M120 256h292" />
         </svg>
-        Select Dishes Now
+        Signup | Login
       </button>
-      <div class="popup popup_w_100">
-        <div class="tab_contnet_main popup-content">
+      <div class="popup login_popup">
+        <div class="popup-content">
           <!-- Your scrollable content goes here -->
-
-          <div class="tabs_topspace"></div>
-          <div class="dieshes_search_container">
-            <input type="text" name="search" id="searchbar" onkeyup="search_animal()" placeholder="Search for names..">
-          </div>
-
-          <div id="tabs-container">
-            <div class="tab">
-              
-              <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">
-              <div class="tablinks_container" style="margin: 0 auto; width: fit-content;">
-                <div class="tablink_img">
-                  <img src="components/imag/categorie_tab/Indian-Food-PNG-Clipart.png" alt="">
+          <div class="logi_content">
+            <!-- <div class="apply_coupon_img signup_img">
+                <img src="components/imag/animation_gif.gif" alt="" loading="lazy">
+            </div>
+   <h4>Welcome Back</h4>
+   <div class="form_1st">
+    <p class="space_botom" style="text-align: center;">Signup and Get <span id="responseMsg">Rs. <?= $signup_reward ?? 250 ?></span> in your wallet </p>
+    </div> -->
+            <!-- sign section start here..  -->
+            <div class="_from_container_">
+              <div class="_form_">
+                <div class="_form_title" style="display: flex; flex-direction: column;">
+                  <div class="logo">
+                    Signup | Login
+                  </div>
+                  <div class="logo" style="font-size: 16px; font-weight: bold; margin-top: 7px;">
+                    GET &nbsp; <b class="malta"> &#8377; 250 </b> &nbsp; FREE CASH ON SIGNUP
+                  </div>
                 </div>
-                Paris
-              </div>
-              </button>
+                <div class="_form_content">
 
-              <button class="tablinks" onclick="openCity(event, 'Paris')">
-                  <div class="tablinks_container" style="margin: 0 auto; width: fit-content;">
-                    <div class="tablink_img">
-                      <img src="components/imag/categorie_tab/Indian-Food-PNG-Pic.png" alt="">
+                  <div class="_form_field">
+                    <div class="label_field">
+                      <label>Mobile Number</label>
                     </div>
-                    Paris
-                  </div>
-              </button>
+                    <input type="test" maxlength="10" name="contacts" required="" id="contacts"
+                      placeholder="10 digit number">
+                    <div class="_change_number"><span id="change_num">change Number ?</span></div>
 
-              <button class="tablinks" onclick="openCity(event, 'Tokyo')">
-                <div class="tablinks_container" style="margin: 0 auto; width: fit-content;">
-                  <div class="tablink_img">
-                    <img src="components/imag/categorie_tab/Indian-Food-PNG-Image.png" alt="">
                   </div>
-                  Paris
-                </div>
-              </button>
-              
-              <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">
-              <div class="tablinks_container" style="margin: 0 auto; width: fit-content;">
-                <div class="tablink_img">
-                  <img src="components/imag/categorie_tab/Indian-Food-PNG-Clipart.png" alt="">
-                </div>
-                Paris
-              </div>
-              </button>
 
-              <button class="tablinks" onclick="openCity(event, 'Paris')">
-                  <div class="tablinks_container" style="margin: 0 auto; width: fit-content;">
-                    <div class="tablink_img">
-                      <img src="components/imag/categorie_tab/Indian-Food-PNG-Pic.png" alt="">
+                  <div class="_form_field">
+                    <label>OTP</label>
+                    <div class="_input_container">
+                      <input type="text" name="number" id="otp" placeholder="xxxxxx" maxlength="6">
+                      <div class="_timer" id="_timer">0</div>
                     </div>
-                    Paris
-                  </div>
-              </button>
-
-              <button class="tablinks" onclick="openCity(event, 'Tokyo')">
-                <div class="tablinks_container" style="margin: 0 auto; width: fit-content;">
-                  <div class="tablink_img">
-                    <img src="components/imag/categorie_tab/Indian-Food-PNG-Image.png" alt="">
-                  </div>
-                  Paris
-                </div>
-              </button>
-
-              <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">
-              <div class="tablinks_container" style="margin: 0 auto; width: fit-content;">
-                <div class="tablink_img">
-                  <img src="components/imag/categorie_tab/Indian-Food-PNG-Clipart.png" alt="">
-                </div>
-                Paris
-              </div>
-              </button>
-
-              <button class="tablinks" onclick="openCity(event, 'Paris')">
-                  <div class="tablinks_container" style="margin: 0 auto; width: fit-content;">
-                    <div class="tablink_img">
-                      <img src="components/imag/categorie_tab/Indian-Food-PNG-Pic.png" alt="">
+                    <div class="_send_otp_btn">
+                      <div id="responseMsg"></div>
+                      <button class="_otp_btn" id="_otp_btn_again" style="visibility: hidden;">
+                        Send Again
+                      </button>
                     </div>
-                    Paris
                   </div>
-              </button>
-
-              <button class="tablinks" onclick="openCity(event, 'Tokyo')">
-                <div class="tablinks_container" style="margin: 0 auto; width: fit-content;">
-                  <div class="tablink_img">
-                    <img src="components/imag/categorie_tab/Indian-Food-PNG-Image.png" alt="">
-                  </div>
-                  Paris
-                </div>
-              </button>
-
-              <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">
-              <div class="tablinks_container" style="margin: 0 auto; width: fit-content;">
-                <div class="tablink_img">
-                  <img src="components/imag/categorie_tab/Indian-Food-PNG-Clipart.png" alt="">
-                </div>
-                Paris
-              </div>
-              </button>
-
-              <button class="tablinks" onclick="openCity(event, 'Paris')">
-                  <div class="tablinks_container" style="margin: 0 auto; width: fit-content;">
-                    <div class="tablink_img">
-                      <img src="components/imag/categorie_tab/Indian-Food-PNG-Pic.png" alt="">
-                    </div>
-                    Paris
-                  </div>
-              </button>
-
-              <button class="tablinks" onclick="openCity(event, 'Tokyo')">
-                <div class="tablinks_container" style="margin: 0 auto; width: fit-content;">
-                  <div class="tablink_img">
-                    <img src="components/imag/categorie_tab/Indian-Food-PNG-Image.png" alt="">
-                  </div>
-                  Paris
-                </div>
-              </button>
-
+                  <?php
+            echo '<input type="hidden" id="location" value="';
+            if(isset($_GET['location'])) {
+                echo htmlspecialchars($_GET['location']);
+            }
+            echo '" />';
+           ?>
+                  <div class="_agree_box">
+                <p>
+                  By continuing, you agree to  <a target="_blank" href="terms-and-conditions">Terms of Service & Privacy Policy</a>
+                </p>
             </div>
 
-            <div id="London" class="tabcontent">
-              <!-- categoris card.. start -->
-              <div id="myUL" class="tabs_cards">
-                   <!-- tabs card..  -->
-                   <div class="tab_card">
-                    <div class="tabcard_center">
-                      <div class="tabimg">
-                        <img src="components/imag/bartendar_11zon.png" alt="" />
-                      </div>
-                      <p>Khosa</p>
-                    </div>
-                  </div>
-                  <!-- tabs card..  -->
-                  
-                     <!-- tabs card..  -->
-                <div class="tab_card">
-                  <div class="tabcard_center">
-                    <div class="tabimg">
-                      <img src="components/imag/bartendar_11zon.png" alt="" />
-                    </div>
-                    <p>Khosa</p>
-                  </div>
+                  <button type="submit" id="_proceed_btn" class="_proceed_btn">
+                    Sign In | Sign Up
+                  </button>
                 </div>
-                <!-- tabs card..  -->
-                   <!-- tabs card..  -->
-                   <div class="tab_card">
-                    <div class="tabcard_center">
-                      <div class="tabimg">
-                        <img src="components/imag/bartendar_11zon.png" alt="" />
-                      </div>
-                      <p>Khosa</p>
-                    </div>
-                  </div>
-                  <!-- tabs card..  -->
-              </div>
-              <!-- categoris card.. end -->
-            </div>
 
-            <div id="Paris" class="tabcontent">
-              <!-- categoris card.. start -->
-              <div class="tabs_cards">
-                   <!-- tabs card..  -->
-                   <div class="tab_card">
-                    <div class="tabcard_center">
-                      <div class="tabimg">
-                        <img src="components/imag/bartendar_11zon.png" alt="" />
-                      </div>
-                      <p>Khosa</p>
-                    </div>
-                  </div>
-                  <!-- tabs card..  -->
-                     <!-- tabs card..  -->
-                <div class="tab_card">
-                  <div class="tabcard_center">
-                    <div class="tabimg">
-                      <img src="components/imag/bartendar_11zon.png" alt="" />
-                    </div>
-                    <p>Khosa</p>
-                  </div>
-                </div>
-                <!-- tabs card..  -->
               </div>
-              <!-- categoris card.. end -->
-            </div>
-
-            <div id="Tokyo" class="tabcontent">
-              <!-- categoris card.. start -->
-              <div class="tabs_cards">
-                 <!-- tabs card..  -->
-                 <div class="tab_card">
-                  <div class="tabcard_center">
-                    <div class="tabimg">
-                      <img src="components/imag/bartendar_11zon.png" alt="" />
-                    </div>
-                    <p>Khosa</p>
-                  </div>
-                </div>
-                <!-- tabs card..  -->
-              </div>
-              <!-- categoris card.. end -->
             </div>
           </div>
+
         </div>
-      </div>
-      <!-- bottom menu start ... -->
-      <div class="bottm_menu_container">
-        <div class="bottom_menu_box">
-          <a href="index.html"
-            ><iconify-icon icon="carbon:home"></iconify-icon
-          ></a>
-          <a href="Bookings.html"
-            ><iconify-icon icon="tabler:brand-booking"></iconify-icon
-          ></a>
-          <a href=""><iconify-icon icon="carbon:star-review"></iconify-icon></a>
-          <a href="Help.html"
-            ><iconify-icon icon="fluent:person-support-16-filled"></iconify-icon
-          ></a>
         </div>
-      </div>
-      <!-- bottom menu start ... -->
-    </div>
+        </div>
 
-    <!-- select dishes popup 120> popup of payment end-->
+        <!-- select dishes popup 5> popup of payment end-->
 
-    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
-    <script src="components/js/js.js"></script>
-    <script>
-      function openCity(evt, cityName) {
-        var i, tabcontent, tablinks;
-        tabcontent = document.getElementsByClassName("tabcontent");
-        for (i = 0; i < tabcontent.length; i++) {
-          tabcontent[i].style.display = "none";
-        }
-        tablinks = document.getElementsByClassName("tablinks");
-        for (i = 0; i < tablinks.length; i++) {
-          tablinks[i].className = tablinks[i].className.replace(" active", "");
-        }
-        document.getElementById(cityName).style.display = "block";
-        evt.currentTarget.className += " active";
-      }
+        <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+        <script src="components/js/js.js"></script>
+</body>
 
-      // Get the element with id="defaultOpen" and click on it
-      document.getElementById("defaultOpen").click();
-    </script>
-
-    <script>
-// JavaScript code
-
-function search_animal() {
-let input = document.getElementById('searchbar').value
-input = input.toLowerCase();
-let x = document.getElementsByClassName('tab_card');
-
-for (i = 0; i < x.length; i++) {
-	if (!x[i].innerHTML.toLowerCase().includes(input)) {
-	x[i].style.display = "none";
-	}
-	else {
-	x[i].style.display = "list-item";
-	}
-}
-}
-
-    </script>
-  </body>
 </html>
