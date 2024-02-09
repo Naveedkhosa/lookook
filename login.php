@@ -52,19 +52,11 @@ if(isset($_GET['refer'])){
         Signup | Login
     </button>
      <div class="logi_content">
-                <!-- <div class="apply_coupon_img signup_img">
-                    <img src="components/imag/animation_gif.gif" alt="" loading="lazy">
-                </div>
-       <h4>Welcome Back</h4>
-       <div class="form_1st">
-        <p class="space_botom" style="text-align: center;">Signup and Get <span id="responseMsg">Rs. <?= $signup_reward ?? 250 ?></span> in your wallet </p>
-        </div> -->
-    <!-- sign section start here..  -->
     <div class="_from_container_">
         <div class="_form_">
         <div class="_form_title" style="display: flex; flex-direction: column;">
                    <div class="logo">
-                    Signup | Login
+                    Signup / Login
                   </div>
                   <div class="logo" style="font-size: 16px; font-weight: bold; margin-top: 7px;">
                     GET &nbsp; <b class="malta"> &#8377; 250 </b> &nbsp; FREE CASH ON SIGNUP
@@ -101,15 +93,16 @@ if(isset($_GET['refer'])){
                 }
                 echo '" />';
                ?>
-               <div class="_agree_box">
-                <p>
-                  By continuing, you agree to  <a target="_blank" href="terms-and-conditions">Terms of Service & Privacy Policy</a>
-                </p>
-            </div>
+             
 
                 <button type="submit" id="_proceed_btn" class="_proceed_btn">
                     Sign In | Sign Up
                 </button>
+                <div class="_agree_box">
+                <p>
+                  By continuing, you agree to  <a target="_blank" href="terms-and-conditions">Terms of Service & Privacy Policy</a>
+                </p>
+            </div>
             </div>
 
         </div>
