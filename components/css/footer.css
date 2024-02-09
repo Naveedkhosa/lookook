@@ -301,6 +301,8 @@
     border: none;
     outline: none;
     visibility: hidden;
+    margin: 5px 0px;
+    margin-bottom: 10px;
 }
 
 ._otp_btn:disabled {
