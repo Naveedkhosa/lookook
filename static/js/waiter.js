@@ -157,17 +157,83 @@ $("#open_coupan_popups").on("click",function(){
 
 });
 // apply coupan
-$("#apply_coupan").on("click",function() {
-    coupon_code = $(this).attr("data-coupan");
-    $("#coupon1000").show();
-    setTimeout(function(){
-        $("#party1").hide();
-        $("#party2").show();
-        $("#coupon1000").hide();
-    },2000);
+$(document).on("click",".apply_coupan",function() {
+    $("#modal6 .close").click();
+    coupon_code = $(this).attr("data-coupon_code");
+    calculateAll(coupon_code);
 });
 // remove coupan
-$("#removeCoupan").on("click",function(){
+$(document).on("click","#removeCoupan",function(){
     $("#party2").hide();
     $("#party1").show();
+    calculateAll();
+});
+
+var start = -3;
+var limit = 3;
+var total = 3;
+var started = false;
+// load coupans
+$(document).ready(function(){
+    function loadCoupons(){
+        if(total > start){
+            start = start+limit;
+        
+        $.ajax({
+            url: "ajax_calls/bookings/loadCoupans",
+            type: "post",
+            data: {
+                start:start
+            },
+            dataType: "json",
+            success: function (resp) {
+                console.log(resp);
+                if(resp.success){
+                    if("total" in resp){
+                        total = resp.total;
+                    }
+                    start = resp.start;
+                    limit = resp.limit;
+
+                    resp.coupans.forEach(coupan => {
+                        $("#coupans_container").append(`<div class="avail_copon">
+                        <div class="space_ten summary_top_box">
+                          <p class="solid_smal">${coupan.coupon_code}</p>
+                          <p class="solid_smal malta curser apply_coupan" data-coupon_code="${coupan.coupon_code}">TAP TO APPLY</p>
+                        </div>
+                        <div class="space_ten summary_top_box">
+                          <p class="para_gray">You will save&nbsp;<span class="solid_smal"> ${coupan.coupon_discount} ${coupan.coupon_type=='flat'?'':'%'} </span></p>
+                        </div>
+                      </div>`);
+                    });
+                }else{
+                    if("zero" in resp){
+                        $("#coupans_container").html(`<p class="para_gray">${resp.msg}</p>`);
+                    }
+                }
+            }
+        });
+      }
+    }
+
+
+
+    // load more coupans - lazy loading
+    document.addEventListener('scroll', function(event) {
+        if (event.target.id === 'coupans_container') {
+            if (Math.ceil(document.getElementById("coupans_container").scrollTop + document.getElementById("coupans_container").offsetHeight) >= document.getElementById("coupans_container").scrollHeight) {
+                loadCoupons();
+            }
+        }
+    }, true);
+
+
+    $("#explore_coupons").on("click",function(){
+        if($(this).attr("data-loaded")=="false"){
+            $(this).attr("data-loaded","true"); 
+            loadCoupons();
+        }
+        openModal('modal6');
+    });
+
 });

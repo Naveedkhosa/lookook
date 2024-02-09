@@ -259,23 +259,20 @@ $("#confirm_guests_others").on("click", function () {
 
 
 // calculate all prices
-function calculateAll() {
+function calculateAll(coupon_code=null) {
     var service_id = $("#service_id").val();
     var event_adults = $("#event_adults").val();
     var event_addon_cleaner = $("#event_addon_cleaner").val();
     var event_addon_bartender = $("#event_addon_bartender").val();
     var event_workers = $("#event_workers").val();
-
     var form_data = {
         service_id:service_id,
         event_adults: event_adults,
         event_addon_cleaner: event_addon_cleaner,
         event_addon_bartender: event_addon_bartender,
-        event_workers: event_workers
+        event_workers: event_workers,
+        coupon_code:coupon_code
     };
-
-    
-
     $.ajax({
         url: "ajax_calls/bookings/calculateCharges",
         type: "post",
@@ -295,6 +292,31 @@ function calculateAll() {
                 $("#b_adv_pay").val(resp.adv_pay);
                 $("#b_balance_pay").val(resp.balance_pay);
                 $("#b_total").val(resp.total_charges);
+                
+                if("coupon_applied" in resp && resp.coupon_applied){
+                    // coupon animation
+                    $("#coupon1000").show();
+                    setTimeout(function(){
+                        $("#party1").hide();
+                        $("#party2").show();
+                        $("#coupon1000").hide();
+                    },2500);
+
+                    $("#b_discount").val(resp.coupon_discount);
+                    $(".f_b_discount").text(resp.coupon_discount);
+                    $(".f_coupon_code").text(coupon_code);
+
+                    if(resp.coupon_discount_type=="flat"){
+                        $(".f_coupon_discount_value").text(resp.coupon_discount_value);
+                    }else{
+                        $(".f_coupon_discount_value").text(resp.coupon_discount_value+"%");
+                    }
+                }else{
+                    $("#party2").hide();
+                    $("#party1").show();
+                    $("#b_discount").val(0);
+                    $(".f_b_discount").text(0);
+                }
 
                 // front looks
                 $(".f_adv_pay").text(resp.adv_pay);

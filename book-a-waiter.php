@@ -159,7 +159,7 @@ if ($result = mysqli_query($conn, $sql)) {
                   <i class="fa-solid fa-minus"></i>
                 </div>
                 <div class="decree_w incre_no_dcree number">
-                  <p class="number" id="displayedNumber12"  data-max="100" data-min="0">0</p>
+                  <p class="number" id="displayedNumber12" data-max="100" data-min="0">0</p>
                 </div>
                 <div class="decree_w decree plus_minus incree" id="plusButton12">
                   <i class="fa-solid fa-plus"></i>
@@ -189,12 +189,12 @@ if ($result = mysqli_query($conn, $sql)) {
     <!-- summary popup 4> popup of payment -->
     <!-- Add more popup containers with different IDs -->
     <div id="popupContainer4" class="popup-container" style="display: none;">
-      <button  class="back-button" style=" justify-content:space-between; align-items:center;" >
+      <button class="back-button" style=" justify-content:space-between; align-items:center;">
         <div class="s_left_top" onclick="closePopup('popupContainer4')">
-        <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
-          <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M244 400L100 256l144-144M120 256h292" />
-        </svg>
-        Summary
+          <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M244 400L100 256l144-144M120 256h292" />
+          </svg>
+          Summary
         </div>
         <div class="s_right_top" onclick="closePopup('popupContainer4')">
           Edit
@@ -244,7 +244,7 @@ if ($result = mysqli_query($conn, $sql)) {
               <span class="line"></span>
               <p class="para_gray" id="f_addon_bartender_count">-</p>
             </div>
-            
+
             <div class="space_ten summary_top_box note_summary">
               <ul>
                 <li class="para_li">Waiter will arrive <span class="malta">30 Minutes</span> before Serving Time</li>
@@ -275,7 +275,7 @@ if ($result = mysqli_query($conn, $sql)) {
             <span class="line"></span>
             <p class="para_gray"> &#x20B9; <span class="f_worker_charges">0</span></p>
           </div>
-          
+
           <!-- additional services -->
           <div class="space_ten summary_top_box">
             <p class="para_gray">Adds On</p>
@@ -294,7 +294,7 @@ if ($result = mysqli_query($conn, $sql)) {
           <div class="border_btm summary_top_box">
             <p class="para_gray malta">Discount</p>
             <span class="line"></span>
-            <p class="para_gray malta"> &#x20B9;0</p>
+            <p class="para_gray malta"> &#x20B9;<span class="f_b_discount">0</span></p>
           </div>
 
           <div class=" border_btm summary_top_box">
@@ -330,27 +330,33 @@ if ($result = mysqli_query($conn, $sql)) {
           </div>
           <!-- before coupon -->
           <div class="summary_section space_ten" id="party1">
-            <div class="space_ten summary_top_box">
-              <p class="solid_smal">PARTY 15
-              <p class="green_para_back">BEST OFFER</p>
+            <!-- one coupon selected - by default -->
+            <!-- <div class="space_ten summary_top_box">
+              <p class="solid_smal">
+                <span id="selected_coupin_code">
+                  BESTOFFER
+                </span>
+                <p class="green_para_back">BEST OFFER</p>
               </p>
               <p id="apply_coupan" data-coupan="LIFEHAI" class="solid_smal malta curser">TAP TO APPLY</p>
             </div>
             <div class="space_ten summary_top_box">
               <p class="para_gray">You will save change<span style="margin-left: 10px;" class="solid_smal coupan_save_amount">350</span></p>
-            </div>
-            <div class="white_btn" onclick="openModal('modal6')">
+            </div> -->
+
+            <div class="white_btn" id="explore_coupons" data-loaded="false">
               <button class="solid_smal" id="open_coupan_popups">EXPLORE OFFER</button>
             </div>
           </div>
+          
           <!-- design after applied cuopon  -->
           <div class="summary_section space_ten " id="party2" style="display:none;">
             <div class="space_ten summary_top_box">
-              <p class="solid_smal">PARTY 15 <iconify-icon icon="icons8:checked" style="color: #02645e;"></iconify-icon></p>
+              <p class="solid_smal"><span class="f_coupon_code"></span><iconify-icon icon="icons8:checked" style="color: #02645e;"></iconify-icon></p>
               <p id="removeCoupan" class="solid_smal malta curser">Remove</p>
             </div>
             <div class="space_ten summary_top_box">
-              <p class="para_gray"><span style="margin-right: 10px;" class="solid_smal"> 15% </span>discount applied </p>
+              <p class="para_gray"><span class="solid_smal f_coupon_discount_value">15%</span>&nbsp;discount applied </p>
             </div>
           </div>
 
@@ -374,8 +380,8 @@ if ($result = mysqli_query($conn, $sql)) {
   <div class="amnt_detail_btn">
     <div class="amnt_det">
       <p class="para_h_"><iconify-icon icon="ph:currency-inr-duotone"></iconify-icon>
-      <span class="f_total">0</span>
-    </p>
+        <span class="f_total">0</span>
+      </p>
       <p onclick="openModal('modal16')" class="para_gray">Amount Payable <span class="malta"> (DETAILS)</span> </p>
     </div>
     <div id="booking_proceed_step1" class="continuebtnn">
@@ -537,7 +543,7 @@ if ($result = mysqli_query($conn, $sql)) {
           <span class="line"></span>
           <p class="para_gray"><span class="f_worker_charges">0</span></p>
         </div>
-      
+
         <div class="space_ten summary_top_box">
           <p class="para_gray">Adds On</p>
           <span class="line"></span>
@@ -549,6 +555,13 @@ if ($result = mysqli_query($conn, $sql)) {
           <span class="line"></span>
           <p class="para_gray"><span class="f_tax_amount"></span></p>
         </div>
+
+        <div class="space_ten summary_top_box">
+          <p class="para_gray">Discount</p>
+          <span class="line"></span>
+          <p class="para_gray"><span class="f_b_discount">0</span></p>
+        </div>
+
         <hr>
         <div class="space_ten summary_top_box">
           <p class="solid_smal">Net Payable</p>
@@ -570,14 +583,14 @@ if ($result = mysqli_query($conn, $sql)) {
         <div class="apply_coupon_img">
           <img src="components/imag/animation_gif.gif" alt="" loading="lazy">
         </div>
-        <p class="para_h">Hurray! You just saved <span class="coupan_discount">15%</span></p>
+        <p class="para_h">Hurray! You just saved&nbsp;<span class="f_coupon_discount_value">15%</span></p>
         <p class="para_gray">Coupon code applied!</p>
 
       </div>
     </div>
   </div>
-   <!-- pop up of filter -->
-   <div id="modal6" class="modal">
+  <!-- pop up of filter -->
+  <div id="modal6" class="modal">
     <div class="popup1">
       <p class="heading_p">Apply Coupon</p>
       <div class="close"><svg width="20" height="20" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
@@ -585,21 +598,8 @@ if ($result = mysqli_query($conn, $sql)) {
         </svg></div>
       <div class="content1 copon_input">
         <div class="space_ten summary_top_box"></div>
-        <!-- <p class=" space_ten solid_smal">Enter Coupon Code</p>
-        <div class="buttonIn"> 
-          <input type="text" name="" id="" placeholder="Enter coupon code">
-          <p id="clear" onclick="openCoupon('coupon1000', 'party1')" class="solid_smal malta curser">APPLY</p>
-        </div>  -->
         <p class=" space_ten  margin-top solid_smal">Available Coupons</p>
-        <div class="avail_copon">
-          <div class="space_ten summary_top_box">
-            <p class="solid_smal">PARTY 15</p>
-            <p onclick="openCoupon('coupon1000', 'party1')" class="solid_smal malta curser">TAP TO APPLY</p>
-          </div>
-          <div class="space_ten summary_top_box">
-            <p class="para_gray">You will save change<span style="margin-left: 10px;" class="solid_smal"> 15% </span></p>
-          </div>
-        </div>
+        <div class="coupans_container" id="coupans_container"></div>
       </div>
     </div>
   </div>
