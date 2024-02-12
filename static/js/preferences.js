@@ -190,47 +190,6 @@ function update_timeslots() {
 }
 
 
-/**
- * Guests Handling for chef
- * 
- */
-
-$("#confirm_guests").on("click", function () {
-    var childrens = 0;
-    var adults = 1;
-
-    adults = parseInt($("#displayedNumber5").attr("data-val"));
-    childrens = parseInt($("#displayedNumber6").attr("data-val"));
-
-    if (adults > 0) {
-        $("#event_adults").val(adults);
-        $("#event_childrens").val(childrens);
-
-        if (childrens > 0) {
-            if (adults > 1) {
-                if (childrens > 1) {
-                    $("#number_of_people").text(adults + " Adults & " + childrens + " Childrens");
-                } else {
-                    $("#number_of_people").text(adults + " Adults & " + childrens + " Children");
-                }
-
-            } else {
-                if (childrens > 1) {
-                    $("#number_of_people").text(adults + " Adult & " + childrens + " Childrens");
-                } else {
-                    $("#number_of_people").text(adults + " Adult & " + childrens + " Children");
-                }
-            }
-        } else {
-            if (adults > 1) {
-                $("#number_of_people").text(adults + " Adults");
-            } else {
-                $("#number_of_people").text(adults + " Adult");
-            }
-        }
-        $("#modal2 .close").click();
-    }
-});
 
 
 

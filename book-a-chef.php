@@ -1,23 +1,23 @@
 <?php
 include "config.php";
 
-  // get Service ID
-  $service_name = "chef";
-  $sql = "SELECT services_id FROM services WHERE services_name='{$service_name}'";
-  if ($result = mysqli_query($conn, $sql)) {
-    if (mysqli_num_rows($result) > 0) {
-      $service_id = mysqli_fetch_assoc($result)['services_id'];
-    } else {
-      echo "<script>
-      alert('Chef Service is not available currently.');
-      window.history.back();</script>";
-    }
+// get Service ID
+$service_name = "chef";
+$sql = "SELECT services_id FROM services WHERE services_name='{$service_name}'";
+if ($result = mysqli_query($conn, $sql)) {
+  if (mysqli_num_rows($result) > 0) {
+    $service_id = mysqli_fetch_assoc($result)['services_id'];
   } else {
     echo "<script>
+      alert('Chef Service is not available currently.');
+      window.history.back();</script>";
+  }
+} else {
+  echo "<script>
     alert('Something went wrong, Please try again later');
     window.history.back();
     </script>";
-  }
+}
 
 ?>
 
@@ -32,7 +32,6 @@ include "config.php";
   <link rel="stylesheet" href="components/css/style.css">
   <link rel="stylesheet" href="components/css/style_pop_up.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
-
 </head>
 
 <body>
@@ -45,6 +44,35 @@ include "config.php";
   <input type="hidden" id="event_addon_waiter" value="0">
   <input type="hidden" id="event_addon_cleaner" value="0">
   <input type="hidden" id="event_addon_bartender" value="0">
+
+  <!-- dishes count -->
+
+  <input type="hidden" id="dishes_charges" value="0" data-dishes="">
+
+  <input type="hidden" id="menu_starters_count" value="0">
+  <input type="hidden" id="menu_main_course_count" value="0">
+  <input type="hidden" id="menu_breads_and_rice_count" value="0">
+  <input type="hidden" id="menu_desserts_count" value="0">
+  <input type="hidden" id="menu_soup_and_bev_count" value="0">
+
+  <!-- dishes count -->
+
+
+
+  <input type="hidden" id="b_guest_charges" value="0">
+  <input type="hidden" id="b_gst_tax" value="0">
+  <input type="hidden" id="b_discount" value="0">
+  <input type="hidden" id="b_addon_waiter_guest_charges" value="0">
+  <input type="hidden" id="b_addon_waiter_per_worker_charges" value="0">
+  <input type="hidden" id="b_addon_cleaner_guest_charges" value="0">
+  <input type="hidden" id="b_addon_cleaner_per_worker_charges" value="0">
+  <input type="hidden" id="b_addon_bartender_guest_charges" value="0">
+  <input type="hidden" id="b_addon_bartender_per_worker_charges" value="0">
+  <input type="hidden" id="b_addon_all_charges" value="0">
+  <input type="hidden" id="b_adv_pay" value="0">
+  <input type="hidden" id="b_balance_pay" value="0">
+  <input type="hidden" id="b_total" value="0">
+  <input type="hidden" id="b_coupon_code" value="0">
 
   <div class="pre_bk_kart_mainpage">
 
@@ -87,7 +115,7 @@ include "config.php";
       <a onclick="openModal('modal1')" class="pre_bk_slect_sec">
         <p class="para_p_active">Number of dishes</p>
         <div class="pre_bk_box">
-          <p class="para_h_">Select number of dishes</p>
+          <p class="para_h_" id="select_no_of_dishes">Select number of dishes</p>
           <i class="fa-solid fa-chevron-down"></i>
         </div>
       </a>
@@ -116,7 +144,7 @@ include "config.php";
                   <i class="fa-solid fa-minus"></i>
                 </div>
                 <div class="decree_w incre_no_dcree number">
-                  <p class="number" id="displayedNumber13" data-min="0" data-max="100">0</p>
+                  <p class="number" id="displayedNumber13" data-min="0" data-max="100" data-val="0">0</p>
                 </div>
                 <div class="decree_w decree plus_minus incree" id="plusButton13">
                   <i class="fa-solid fa-plus"></i>
@@ -145,15 +173,15 @@ include "config.php";
                   <i class="fa-solid fa-minus"></i>
                 </div>
                 <div class="decree_w incre_no_dcree number">
-                  <p class="number" id="displayedNumber12" data-min="0" data-max="100">0</p>
+                  <p class="number" id="displayedNumber12" data-min="0" data-max="100" data-val="0">0</p>
                 </div>
                 <div class="decree_w decree plus_minus incree" id="plusButton12">
                   <i class="fa-solid fa-plus"></i>
                 </div>
               </div>
             </div>
-
           </div>
+
         </div>
         <!-- booking card  -->
         <!-- booking card  -->
@@ -328,7 +356,7 @@ include "config.php";
           <!-- design after applied cuopon  -->
           <!-- <div class="summary_section space_ten " id="party2">
             <div class="space_ten summary_top_box">
-              <p class="solid_smal">PARTY 15 <iconify-icon icon="icons8:checked" style="color: #02645e;"></iconify-icon></p>
+              <p class="solid_smal">PARTY 15 <iconify-icon icon="icons8:" style="color: #02645e;"></iconify-icon></p>
               <p onclick="openCoupon('party2');" class="solid_smal malta curser">Remove</p>
             </div>
             <div class="space_ten summary_top_box">
@@ -351,10 +379,8 @@ include "config.php";
       </div>
 
     </div>
-
-
-
   </div>
+
   <div class="amnt_detail_btn">
     <div class="amnt_det">
       <p class="para_h_"><iconify-icon icon="ph:currency-inr-duotone"></iconify-icon>2350.00</p>
@@ -365,9 +391,7 @@ include "config.php";
     </div>
   </div>
 
-  <!-- bottom menu start ... -->
-  <!-- bottom nav include -->
-  <?php include "inc/bottom_nav.php"; ?>
+
 
   <!-- summary popup 4> popup of payment end-->
 
@@ -393,7 +417,7 @@ include "config.php";
                 <i class="fa-solid fa-minus"></i>
               </div>
               <div class="decree_w incre_no_dcree number">
-                <p class="number" id="displayedNumber1" data-min="0" data-max="100">0</p>
+                <p class="number" id="displayedNumber1" data-min="0" data-max="100" data-val="0">0</p>
               </div>
               <div class="decree_w decree plus_minus incree" id="plusButton1">
                 <i class="fa-solid fa-plus"></i>
@@ -413,7 +437,7 @@ include "config.php";
                 <i class="fa-solid fa-minus"></i>
               </div>
               <div class="decree_w incre_no_dcree number">
-                <p class="number" id="displayedNumber2" data-min="0" data-max="100">0</p>
+                <p class="number" id="displayedNumber2" data-min="1" data-max="100" data-val="1">1</p>
               </div>
               <div class="decree_w decree plus_minus incree" id="plusButton2">
                 <i class="fa-solid fa-plus"></i>
@@ -432,7 +456,7 @@ include "config.php";
                 <i class="fa-solid fa-minus"></i>
               </div>
               <div class="decree_w incre_no_dcree number">
-                <p class="number" id="displayedNumber3" data-min="0" data-max="100">0</p>
+                <p class="number" id="displayedNumber3" data-min="0" data-max="100" data-val="0">0</p>
               </div>
               <div class="decree_w decree plus_minus incree" id="plusButton3">
                 <i class="fa-solid fa-plus"></i>
@@ -452,7 +476,7 @@ include "config.php";
                 <i class="fa-solid fa-minus"></i>
               </div>
               <div class="decree_w incre_no_dcree number">
-                <p class="number" id="displayedNumber7" data-min="0" data-max="100">0</p>
+                <p class="number" id="displayedNumber7" data-min="0" data-max="100" data-val="0">0</p>
               </div>
               <div class="decree_w decree plus_minus incree" id="plusButton7">
                 <i class="fa-solid fa-plus"></i>
@@ -473,7 +497,7 @@ include "config.php";
                 <i class="fa-solid fa-minus"></i>
               </div>
               <div class="decree_w incre_no_dcree number">
-                <p class="number" id="displayedNumber4" data-min="0" data-max="100">0</p>
+                <p class="number" id="displayedNumber4" data-min="0" data-max="100" data-val="0">0</p>
               </div>
               <div class="decree_w decree plus_minus incree" id="plusButton4">
                 <i class="fa-solid fa-plus"></i>
@@ -482,8 +506,8 @@ include "config.php";
           </div>
           <!-- dishes box -->
           <div class="two_btn">
-            <a href="Dishes_menu.php" class="twobatun">Select Dishes Now</a>
-            <button class="malta_bg twobatun">Select Dishes Later</button>
+            <a href="#" id="selectDishesNow" class="twobatun">Select Dishes Now</a>
+            <button class="malta_bg twobatun" id="selectDishesLatter">Select Dishes Later</button>
           </div>
 
         </div>
@@ -533,7 +557,7 @@ include "config.php";
                 <i class="fa-solid fa-minus"></i>
               </div>
               <div class="decree_w incre_no_dcree number">
-                <p class="number" id="displayedNumber6" data-min="0" data-max="100">0</p>
+                <p class="number" id="displayedNumber6" data-min="0" data-max="100" data-val="0">0</p>
               </div>
               <div class="decree_w decree plus_minus incree" id="plusButton6">
                 <i class="fa-solid fa-plus"></i>
@@ -597,7 +621,6 @@ include "config.php";
         </div>
 
 
-
         <div class="space_ten summary_top_box">
           <p class="para_gray">No. of people - 5</p>
           <span class="line"></span>
@@ -623,6 +646,7 @@ include "config.php";
           <p class="green_para_back_h">Pay 200.00 to place your request</p>
         </div>
       </div>
+
     </div>
   </div>
   <!-- pop up of filter -->
@@ -640,9 +664,357 @@ include "config.php";
     </div>
   </div>
   <!-- pop up popup of coupon -->
+
+
+  <!-- select dishes now - popup -->
+  <div id="popupContainer120" class="popup-container tab_body" style="display:none;">
+    <button class="back-button" id="closeDishesPopup" style="/*display:flex;align-items:center;justify-content:space-between;*/">
+       <!-- <div class="close-btn"> -->
+       <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M244 400L100 256l144-144M120 256h292"></path>
+      </svg>
+      Select Dishes Now
+       <!-- </div>
+       <div class="don_btn" style="padding:3px 10px;color:#fff;border-radius:3px;margin-right:10px;background:green;">Confirm</div> -->
+    </button>
+
+    <!-- Your scrollable content goes here -->
+
+    <div class="tabs_topspace"></div>
+
+    <div class="dishes_page_top_">
+
+
+      <form class="dieshes_search_container">
+        <input autocomplete="false" name="hidden" type="text" style="display:none;">
+        <input type="text" autocomplete="off" name="search" id="searchbar" placeholder="Search for by names">
+      </form>
+      <!-- 
+        --
+      <div class="inner_top" style="width:100%;display:flex;align-items:center;justify-content:space-between;height:fit-content;padding:0px 10px 7px 0px;border-bottom:1px solid #ddd;">
+          <div class="inner_top_left">
+            <div class="increase_dec_selected_dish">
+              <p class="solid_smal" style="margin:5px;">Starters</p>
+              <div style="height:25px;box-shadow:none;width:fit-content;border: 1px solid #ddd; background:#fff;" class="incre_dcre_daba">
+                <div style="height:25px;" class="decree_w decree minus_plus" id="minusButton14">
+                  <i class="fa-solid fa-minus"></i>
+                </div>
+                <div style="height:25px;" class="decree_w incre_no_dcree number">
+                  <p class="number" id="displayedNumber14" data-val="0">0</p>
+                </div>
+                <div style="height:25px;" class="decree_w decree plus_minus incree" id="plusButton14">
+                  <i class="fa-solid fa-plus"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+          <div class="inner_top_right" style="display:flex;flex-direction:row;">
+            <div class="toggle_box" style="margin-right:15px;display:flex;align-items:flex-start;flex-direction:column">
+              <label for="veg" class="solid_smal" style="margin:0 0 5px 0;">Veg</label>
+              <label class="switch">
+                <input type="checkbox" id="veg_toggle" class="toggle_input" checked>
+                <span class="slider veg_slider round"></span>
+              </label>
+            </div>
+            <div class="toggle_box" style="display:flex;align-items:flex-start;flex-direction:column">
+              <label for="veg" class="solid_smal" style="margin:0 0 5px 0;">Non Veg</label>
+              <label class="switch">
+                <input type="checkbox" id="non_veg_toggle" class="toggle_input" checked >
+                <span class="slider non_veg_slider round"></span>
+              </label>
+            </div>
+          </div>
+
+        </div>
+       -->
+    </div>
+
+
+    <div id="tabs-container">
+
+      <div class="tab" style="border-right:1px solid #ddd;border-top:1px solid #ddd;">
+        <button class="tablinks active" onclick="changeTabs(event, 'starters')">
+          <div class="tablinks_container">
+            <div class="tablink_img">
+              <img src="components/imag/categorie_tab/Indian-Food-PNG-Clipart.png" alt="">
+            </div>
+            Starters
+          </div>
+        </button>
+
+        <button class="tablinks" onclick="changeTabs(event, 'main_course')">
+          <div class="tablinks_container">
+            <div class="tablink_img">
+              <img src="components/imag/categorie_tab/Indian-Food-PNG-Pic.png" alt="">
+            </div>
+            Main Course
+          </div>
+        </button>
+
+        <button class="tablinks" onclick="changeTabs(event, 'breads_and_rice')">
+          <div class="tablinks_container">
+            <div class="tablink_img">
+              <img src="components/imag/categorie_tab/Indian-Food-PNG-Image.png" alt="">
+            </div>
+            Breads &amp; Rice
+          </div>
+        </button>
+
+        <button class="tablinks" onclick="changeTabs(event, 'desserts')">
+          <div class="tablinks_container">
+            <div class="tablink_img">
+              <img src="components/imag/categorie_tab/Indian-Food-PNG-Clipart.png" alt="">
+            </div>
+            Desserts
+          </div>
+        </button>
+
+        <button class="tablinks" onclick="changeTabs(event, 'soup_and_bev')">
+          <div class="tablinks_container">
+            <div class="tablink_img">
+              <img src="components/imag/categorie_tab/Indian-Food-PNG-Pic.png" alt="">
+            </div>
+            Soups &amp; Beverages
+          </div>
+        </button>
+      </div>
+
+    
+
+      <div id="starters" class="tabcontent default">
+        <!-- dishes-top -->
+        <div class="inner_top" style="position:fixed;top:119px;left:80px;width:calc(100% - 80px);z-index:10;background:#fff;display:flex;align-items:center;justify-content:space-between;height:fit-content;padding:8px 10px;border-bottom:1px solid #ddd;border-top:1px solid #ddd;">
+          <div class="inner_top_left">
+            <div class="increase_dec_selected_dish">
+              <p class="solid_smal" style="margin:5px;">Starters</p>
+              <div style="height:25px;box-shadow:none;width:fit-content;border: 1px solid #ddd; background:#fff;" class="incre_dcre_daba">
+                <div style="height:25px;" class="decree_w decree minus_plus" id="minusButton_starters">
+                  <i class="fa-solid fa-minus"></i>
+                </div>
+                <div style="height:25px;" class="decree_w incre_no_dcree number">
+                  <p class="number" id="displayedNumber_starters" data-min="0" data-max="100" data-val="0">0</p>
+                </div>
+                <div style="height:25px;" class="decree_w decree plus_minus incree" id="plusButton_starters">
+                  <i class="fa-solid fa-plus"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="inner_top_right" style="display:flex;flex-direction:row;">
+            <div class="toggle_box" style="margin-right:15px;display:flex;align-items:flex-start;flex-direction:column">
+              <label for="veg" class="solid_smal" style="margin:0 0 5px 0;">Veg</label>
+              <label class="switch">
+                <input type="checkbox" id="starters_veg_toggle" class="toggle_input" checked>
+                <span class="slider veg_slider round"></span>
+              </label>
+            </div>
+            <div class="toggle_box" style="display:flex;align-items:flex-start;flex-direction:column">
+              <label for="veg" class="solid_smal" style="margin:0 0 5px 0;">Non Veg</label>
+              <label class="switch">
+                <input type="checkbox" id="starters_non_veg_toggle" class="toggle_input" checked >
+                <span class="slider non_veg_slider round"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <!-- dishes top -->
+       
+        <div id="starters_dishes" class="tabs_cards" style="margin-top:85px;margin-bottom:10px;">
+          <!-- dish card -->
+          <!-- <div class="tab_card">
+            <div class="tabcard_center">
+              <div class="tabimg">
+                <img src="components/imag/bartendar_11zon.png" alt="">
+              </div>
+              <p class="para_p">Naveed</p>
+              <div class="tab_c_b_pric">
+                <p>&#x20B9; 2500</p>
+                <button class="add_btn" disabled>Add</button>
+              </div>
+            </div>
+          </div> -->
+          <!-- dish card -->
+        </div>
+      </div>
+
+      <div id="main_course" class="tabcontent">
+         <!-- dishes-top -->
+         <div class="inner_top" style="position:fixed;top:119px;left:80px;width:calc(100% - 80px);z-index:10;background:#fff;display:flex;align-items:center;justify-content:space-between;height:fit-content;padding:8px 10px;border-bottom:1px solid #ddd;border-top:1px solid #ddd;">
+          <div class="inner_top_left">
+            <div class="increase_dec_selected_dish">
+              <p class="solid_smal" style="margin:5px;">Main Course</p>
+              <div style="height:25px;box-shadow:none;width:fit-content;border: 1px solid #ddd; background:#fff;" class="incre_dcre_daba">
+                <div style="height:25px;" class="decree_w decree minus_plus" id="minusButton_main_course">
+                  <i class="fa-solid fa-minus"></i>
+                </div>
+                <div style="height:25px;" class="decree_w incre_no_dcree number">
+                  <p class="number" id="displayedNumber_main_course" data-val="1" data-min="1" data-max="100">0</p>
+                </div>
+                <div style="height:25px;" class="decree_w decree plus_minus incree" id="plusButton_main_course">
+                  <i class="fa-solid fa-plus"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="inner_top_right" style="display:flex;flex-direction:row;">
+            <div class="toggle_box" style="margin-right:15px;display:flex;align-items:flex-start;flex-direction:column">
+              <label for="veg" class="solid_smal" style="margin:0 0 5px 0;">Veg</label>
+              <label class="switch">
+                <input type="checkbox" id="main_course_veg_toggle" class="toggle_input" checked>
+                <span class="slider veg_slider round"></span>
+              </label>
+            </div>
+            <div class="toggle_box" style="display:flex;align-items:flex-start;flex-direction:column">
+              <label for="veg" class="solid_smal" style="margin:0 0 5px 0;">Non Veg</label>
+              <label class="switch">
+                <input type="checkbox" id="main_course_non_veg_toggle" class="toggle_input" checked >
+                <span class="slider non_veg_slider round"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <!-- dishes top -->
+        <div id="main_course_dishes" class="tabs_cards" style="margin-top:85px;margin-bottom:10px;">
+        </div>
+      </div>
+
+      <div id="breads_and_rice" class="tabcontent">
+         <!-- dishes-top -->
+         <div class="inner_top" style="position:fixed;top:119px;left:80px;width:calc(100% - 80px);z-index:10;background:#fff;display:flex;align-items:center;justify-content:space-between;height:fit-content;padding:8px 10px;border-bottom:1px solid #ddd;border-top:1px solid #ddd;">
+          <div class="inner_top_left">
+            <div class="increase_dec_selected_dish">
+              <p class="solid_smal" style="margin:5px;">Breads and Rice</p>
+              <div style="height:25px;box-shadow:none;width:fit-content;border: 1px solid #ddd; background:#fff;" class="incre_dcre_daba">
+                <div style="height:25px;" class="decree_w decree minus_plus" id="minusButton_breads_and_rice">
+                  <i class="fa-solid fa-minus"></i>
+                </div>
+                <div style="height:25px;" class="decree_w incre_no_dcree number">
+                  <p class="number" id="displayedNumber_breads_and_rice" data-val="0" data-min="0" data-max="100">0</p>
+                </div>
+                <div style="height:25px;" class="decree_w decree plus_minus incree" id="plusButton_breads_and_rice">
+                  <i class="fa-solid fa-plus"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="inner_top_right" style="display:flex;flex-direction:row;">
+            <div class="toggle_box" style="margin-right:15px;display:flex;align-items:flex-start;flex-direction:column">
+              <label for="veg" class="solid_smal" style="margin:0 0 5px 0;">Veg</label>
+              <label class="switch">
+                <input type="checkbox" id="bread_and_rice_veg_toggle" class="toggle_input" checked>
+                <span class="slider veg_slider round"></span>
+              </label>
+            </div>
+            <div class="toggle_box" style="display:flex;align-items:flex-start;flex-direction:column">
+              <label for="veg" class="solid_smal" style="margin:0 0 5px 0;">Non Veg</label>
+              <label class="switch">
+                <input type="checkbox" id="bread_and_rice_non_veg_toggle" class="toggle_input" checked >
+                <span class="slider non_veg_slider round"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <!-- dishes top -->
+        <div id="breads_and_rice_dishes" class="tabs_cards" style="margin-top:85px;margin-bottom:10px;">
+        </div>
+      </div>
+
+      <div id="desserts" class="tabcontent">
+         <!-- dishes-top -->
+         <div class="inner_top" style="position:fixed;top:119px;left:80px;width:calc(100% - 80px);z-index:10;background:#fff;display:flex;align-items:center;justify-content:space-between;height:fit-content;padding:8px 10px;border-bottom:1px solid #ddd;border-top:1px solid #ddd;">
+          <div class="inner_top_left">
+            <div class="increase_dec_selected_dish">
+              
+              <p class="solid_smal" style="margin:5px;">Desserts</p>
+              <div style="height:25px;box-shadow:none;width:fit-content;border: 1px solid #ddd; background:#fff;" class="incre_dcre_daba">
+                <div style="height:25px;" class="decree_w decree minus_plus" id="minusButton_desserts">
+                  <i class="fa-solid fa-minus"></i>
+                </div>
+                <div style="height:25px;" class="decree_w incre_no_dcree number">
+                  <p class="number" id="displayedNumber_desserts" data-min="0" data-max="100" data-val="0">0</p>
+                </div>
+                <div style="height:25px;" class="decree_w decree plus_minus incree" id="plusButton_desserts">
+                  <i class="fa-solid fa-plus"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="inner_top_right" style="display:flex;flex-direction:row;">
+            <div class="toggle_box" style="margin-right:15px;display:flex;align-items:flex-start;flex-direction:column">
+              <label for="veg" class="solid_smal" style="margin:0 0 5px 0;">Veg</label>
+              <label class="switch">
+                <input type="checkbox" id="desserts_veg_toggle" class="toggle_input" checked>
+                <span class="slider veg_slider round"></span>
+              </label>
+            </div>
+            <div class="toggle_box" style="display:flex;align-items:flex-start;flex-direction:column">
+              <label for="veg" class="solid_smal" style="margin:0 0 5px 0;">Non Veg</label>
+              <label class="switch">
+                <input type="checkbox" id="desserts_non_veg_toggle" class="toggle_input" checked >
+                <span class="slider non_veg_slider round"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <!-- dishes top -->
+        <div id="desserts_dishes" class="tabs_cards" style="margin-top:85px;margin-bottom:10px;">
+        </div>
+      </div>
+
+      <div id="soup_and_bev" class="tabcontent">
+       <!-- dishes-top -->
+       <div class="inner_top" style="position:fixed;top:119px;left:80px;width:calc(100% - 80px);z-index:10;background:#fff;display:flex;align-items:center;justify-content:space-between;height:fit-content;padding:8px 10px;border-bottom:1px solid #ddd;border-top:1px solid #ddd;">
+          <div class="inner_top_left">
+            <div class="increase_dec_selected_dish">
+              <p class="solid_smal" style="margin:5px;">Soups and Beverages</p>
+              <div style="height:25px;box-shadow:none;width:fit-content;border: 1px solid #ddd; background:#fff;" class="incre_dcre_daba">
+                <div style="height:25px;" class="decree_w decree minus_plus" id="minusButton_soup_and_bev">
+                  <i class="fa-solid fa-minus"></i>
+                </div>
+                <div style="height:25px;" class="decree_w incre_no_dcree number">
+                  <p class="number" id="displayedNumber_soup_and_bev" data-val="0" data-min="0" data-max="100">0</p>
+                </div>
+                <div style="height:25px;" class="decree_w decree plus_minus incree" id="plusButton_soup_and_bev">
+                  <i class="fa-solid fa-plus"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="inner_top_right" style="display:flex;flex-direction:row;">
+            <div class="toggle_box" style="margin-right:15px;display:flex;align-items:flex-start;flex-direction:column">
+              <label for="veg" class="solid_smal" style="margin:0 0 5px 0;">Veg</label>
+              <label class="switch">
+                <input type="checkbox" id="soup_and_bev_veg_toggle" class="toggle_input" checked>
+                <span class="slider veg_slider round"></span>
+              </label>
+            </div>
+            <div class="toggle_box" style="display:flex;align-items:flex-start;flex-direction:column">
+              <label for="veg" class="solid_smal" style="margin:0 0 5px 0;">Non Veg</label>
+              <label class="switch">
+                <input type="checkbox" id="soup_and_bev_non_veg_toggle" class="toggle_input" checked >
+                <span class="slider non_veg_slider round"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <!-- dishes top -->
+        <div id="soup_and_bev_dishes" class="tabs_cards" style="margin-top:85px;margin-bottom:10px;">
+        </div>
+      </div>
+
+    </div>
   </div>
+  <!-- select dishes now - popup -->
 
-
+  <!-- bottom menu start ... -->
+  <!-- bottom nav include -->
+  <?php include "inc/bottom_nav.php"; ?>
 
   <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
   <script src="components/js/js.js"></script>

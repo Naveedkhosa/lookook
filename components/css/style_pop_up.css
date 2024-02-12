@@ -211,20 +211,43 @@ a{
 }
 .add_btn{
   border: 1px solid #02645e;
-  margin: 10px 0px 0px 0px;
-  width: 100%;
+  width: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   border-radius: 25px;
-  height: 30px;
-
-}
-.add_btn button{
+  height: 25px;
   font-size: 12px;
   font-weight: 550;
+
 }
+
+.tab_c_b_pric{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+  margin: 10px 0px 0px 0px;
+  font-weight: 550;
+  
+
+}
+.tab_c_b_pric p{
+  color: #02645d;
+}
+.add_btn.added{
+  color: #e90573;
+  border: 1px solid #e90573;
+}
+
+.add_btn:disabled{
+  color: #bab1b5;
+  border: 1px solid #95898f;
+}
+
+
 .tab_contnet_main {
   background: #f0efef;
 }
@@ -266,15 +289,64 @@ a{
   border-radius: 5px;
 }
 
+#popupContainer120{
+  background-color: #fff;
+}
 /* Style the tab content */
+
 .tabcontent {
   float: left;
-  /* padding: 0px 5px; */
+  flex-wrap: wrap;
   width: calc(100% - 80px);
+  height: calc(100vh - 120px);
   border-left: none;
   overflow-y: auto;
-  height: calc(100vh - 105px);
+  display: none;
+  position: relative;
+  
+}
 
+/* loading for tabcontent */
+.loading{
+  width: 100%;
+  position: relative;
+  height: 70px;  
+}
+.loading::after {
+  content: "";
+  position: absolute;
+  left: calc(50% - 24px);
+  top: calc(50% - 24px);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 4px solid grey;
+  border-top-color: #02645d;
+  -webkit-animation: loading 2s linear infinite;
+          animation: loading 2s linear infinite;
+}
+
+@-webkit-keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+.tabcontent.default{
+  display: flex;
 }
 .popup_w_100 {
   width: 100%;
@@ -294,9 +366,132 @@ a{
 .tabs_cards{
   display: flex;
   flex-wrap: wrap;
-
- 
+  overflow-y: auto;
+  width: 100%;
+  height: fit-content;
 }
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 54px;
+  height: 25px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+/* .veg_slider{
+  background: red;
+}
+
+.veg_slider{
+  background: green;
+} */
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 3px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.toggle_input:checked + .veg_slider {
+  background-color: #01c962;
+}
+
+span.veg_box,span.non_veg_box{
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  border: 1px solid #ddd;
+  margin: 0px 3px;
+  position: relative;
+  z-index: 1;
+}
+
+span.veg_box::after,span.non_veg_box::after{
+  content: "";
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #01c962;
+  position: absolute;
+  top: calc(50% - 2px);
+  left: calc(50% - 2px);
+}
+
+span.non_veg_box::after{
+  background-color: #e90573;
+}
+
+.toggle_input:focus + .veg_slider {
+  box-shadow: 0 0 1px #01c962;
+}
+
+.toggle_input:checked + .non_veg_slider {
+  background-color: #e90573;
+}
+
+.toggle_input:focus + .non_veg_slider {
+  box-shadow: 0 0 1px #e90573;
+}
+
+.toggle_input:checked + .slider:before {
+  -webkit-transform: translateX(27px);
+  -ms-transform: translateX(27px);
+  transform: translateX(27px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.tabs_cards .zero_dishes,
+.tabs_cards .network_error_dishes{
+  width: calc(100% - 20px);
+  margin: 0 10px;
+  height: fit-content;
+  font-size: 14px;
+  padding:30px 0px;
+  text-align: center;
+  background: #fff;
+  color: #5d5d5d;
+}
+.zero_dishes .no_dishes_error,.network_error_dishes .error_box{
+  padding: 7px 0;
+  width: 100%;
+}
+
+.network_error_dishes .error_box .reload_btn{
+  color: #0e00ce;
+  cursor: pointer;
+}
+
 .tab_card {
   width: calc(50% - 20px);
   max-width: 200px;
@@ -305,11 +500,14 @@ a{
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 15px;
   border: 1px solid #f0efef;
   background: #fff;
   margin: 0px 0px 10px 10px;
   border-radius: 10px;
+}
+.tab_card .para_p{
+  text-align: center;
+  padding: 5px 5px 0px 0px;
 }
 .tabcard_center{
   width: 100%;
@@ -319,12 +517,19 @@ a{
   flex-direction: column;
 }
 .tabimg {
-  width: 45px;
-  height: 45px;
+  width: 100%;
+  height: 105px;
 }
 .tabimg img {
   width: 100%;
   height: 100%;
+}
+.tab_c_b_pric{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 5px 10px 5px;
 }
 .tablink_img{
   width: 30px;

@@ -354,21 +354,21 @@ if ($result = mysqli_query($conn, $sql)) {
             </div>
 
           </div>
-    <div class="wallet_balanc_bx">
-        <div class="wallet_blnc">
-          <iconify-icon icon="fluent:wallet-credit-card-16-regular"></iconify-icon>
-           <p>Licious Wallet Balance : &#8377;250 </p>
-        </div>
-        <div class="toggle">
-            <input type="checkbox" id="btn">
-            <label for="btn">
-              <span class="track"></span>
-              <span class="thumb">
-                <span class="eye"></span>
-              </span>
-            </label>
+          <div class="wallet_balanc_bx">
+            <div class="wallet_blnc">
+              <iconify-icon icon="fluent:wallet-credit-card-16-regular"></iconify-icon>
+              <p>Licious Wallet Balance : &#8377;250 </p>
+            </div>
+            <div class="toggle">
+              <input type="checkbox" id="btn">
+              <label for="btn">
+                <span class="track"></span>
+                <span class="thumb">
+                  <span class="eye"></span>
+                </span>
+              </label>
+            </div>
           </div>
-    </div>
 
           <!-- design after applied cuopon  -->
           <div class="summary_section space_ten " id="party2" style="display:none;">
@@ -682,7 +682,7 @@ if ($result = mysqli_query($conn, $sql)) {
                     </button>
                   </div>
                 </div>
-            
+
 
                 <button type="submit" id="_proceed_services_login_btn" class="_proceed_btn">
                   Sign In | Sign Up

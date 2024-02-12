@@ -225,10 +225,12 @@ $(document).ready(function () {
                     if (resp.success) {
                         if ("total" in resp) {
                             total = resp.total;
+                            $("#coupans_container").html("");
                         }
+                        
                         start = resp.start;
                         limit = resp.limit;
-
+                        
                         resp.coupans.forEach(coupan => {
                             $("#coupans_container").append(`<div class="avail_copon">
                         <div class="space_ten summary_top_box">
